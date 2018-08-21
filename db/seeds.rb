@@ -5,48 +5,52 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Organization.destroy_all
 
 anade = Organization.create!(
   name: "ANADE - Association Nantaise d'Alphabétisation Des Etrangers",
   description: "Les cours du soir dispensés s'adressent aux adultes de toute âge et de toutes nationalités désireux d'apprendre ou de se perfectionner dans la pratique du français",
   email: "anade@sfr.fr",
-  kind: "Education",
-  total_volunteers:
-  siren: 756 867 453,
-  category: "Alphabétisation",
+  password: "azerty",
+  phone_number: "07 61 47 72 65",
+  kind: "Association",
+  total_volunteers: 12,
+  siren: "756 867 453",
+  category: "Education & Jeunesse",
   website: "https://anadeasso.wordpress.com",
-  facebook: ,
-  linkedin: ,
-  twitter: ,
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "42 rue des Hauts Pavés 44000 NANTES",
-  creation_date: 1978,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1978,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"07 61 47 72 65"
-association aurore = Organization.create!(
+
+association_aurore = Organization.create!(
   name: "Association Aurore",
   description: "Créée en 1871, l’association Aurore héberge, soigne et accompagne plus de 37 000 personnes en situation de précarité ou d’exclusion vers une insertion sociale et professionnelle.
   Reconnue d’utilité publique depuis 1875, Aurore s’appuie sur son expérience pour proposer et expérimenter des formes innovantes de prises en charge, qui s’adaptent à l’évolution des phénomènes de précarité et d’exclusion.",
   email: "f.beliarde@aurore.asso.fr",
-  kind: "Logement, Aide médical",
+  password: "azerty",
+  phone_number: "02 51 82 60 99",
+  kind: "Association",
   total_volunteers: 2996,
-  siren: 775 684 970,
-  category:
+  siren: "775 684 970",
+  category: "Solidarité & Santé",
   website: "https://www.aurore.asso.fr",
   facebook: "www.facebook.com/associationaurore",
   linkedin: "https://fr.linkedin.com/company/association-aurore",
   twitter: "@AssoAurore",
   address: "29, allée de l'Indre, 44000 Nantes",
-  creation_date: 1871,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1871,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"02 51 82 60 99"
 
 cfda = Organization.create!(
   name: "CFDA Coordination Française pour le Droit d'Asile",
@@ -80,20 +84,22 @@ cfda = Organization.create!(
   présentent 10 conditions minimales pour que l'asile soit un droit réel.
   ",
   email: "cfda44@numericable.fr",
-  kind:
-  total_volunteers:
-  siren: 787 756 568,
-  category:
+  password: "azerty",
+  phone_number: "",
+  kind: "Collectif",
+  total_volunteers: 250,
+  siren: "787 756 568",
+  category: "Défense des droits et des intérêts",
   website: "http://cfda.rezo.net",
-  facebook:
-  linkedin:
-  twitter:
-  address:
-  creation_date: 2000,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
+  address: "36 quai de la fosse 44100 Nantes",
+  creation_year: 2000,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
 
 croix_rouge = Organization.create!(
@@ -107,41 +113,45 @@ croix_rouge = Organization.create!(
   inaltérable de solidarité, en privilégiant les actions de proximité qui
   apportent des réponses concrètes et durables.",
   email: "ul.nantes@croix-rouge.fr",
-  kind:
+  password: "azerty",
+  phone_number: "02 40 74 66 82",
+  kind: "Association",
   total_volunteers: 58000,
-  siren: 775 672 272,
-  category:
+  siren: "775 672 272",
+  category: "Solidarité & Santé",
   website: "https://www.croix-rouge.fr",
   facebook: "https://fr-fr.facebook.com/fr.CroixRouge",
   linkedin: "https://fr.linkedin.com/company/croix-rouge-fran-aise",
   twitter: "https://twitter.com/croixrouge",
   address: "10, rue d'Athènes, 44300 Nantes",
-  creation_date: "1859",
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: "1859",
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"02 40 74 66 82"
+
 diaconat = Organization.create!(
   name: "Diaconat Protestant",
   description: "> Des chauffeurs / interprète de langue russe
-> Du matériel pour remplacer un ordinateur portable",
+  > Du matériel pour remplacer un ordinateur portable",
   email: "diaconat.nantes@gmail.com",
-  kind:
+  password: "azerty",
+  phone_number: "",
+  kind: "Collectif",
   total_volunteers: 300,
-  siren: 779 469 691,
-  category:
+  siren: "779 469 691",
+  category: "Vie locale & citoyenne",
   website: "http://www.fep.asso.fr/membre/le-diaconat-protestant-de-nantes/",
   facebook: "https://www.facebook.com/FEPasso/",
-  linkedin:
+  linkedin: "www.linkedin.com",
   twitter: "https://twitter.com/FeProtest",
   address: "15bis place Edouard Normand, 44000 Nantes",
-  creation_date: 1984,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1984,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
 
 emmaus = Organization.create!(
@@ -151,24 +161,26 @@ emmaus = Organization.create!(
   le est située à Bouguenais, au sud de Nantes. Créées sous l’impulsion de groupes
   de bénévoles, là où la misère criait, les communautés, aujourd’hui au nombre
   de 115, demeurent le reflet de cette indignation, de cette volonté de lutter
-  contre l’injustice sociale."
+  contre l’injustice sociale.",
   email: "contact@emmaus44.fr",
-  kind:
+  password: "azerty",
+  phone_number: "02 40 75 63 36",
+  kind: "Collectif",
   total_volunteers: 10000,
-  siren: 776 756 780,
-  category:
+  siren: "776 756 780",
+  category: "Défense des droits & des intérêts",
   website: "http://www.emmaus44.fr/nantes/la-communaute/",
   facebook: "https://fr-fr.facebook.com/emmausfrance/",
   linkedin: "https://fr.linkedin.com/company/emmaus",
   twitter: "https://twitter.com/croixrouge",
   address: "La Guilloterie Rue d'Emmaüs 44340 Bouguenais",
-  creation_date: 1950,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1950,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"02 40 75 63 36"
+
 fbna = Organization.create!(
   name: "FBNA - France Bénévolat Nantes Atlantique",
   description: "Association ressource, France Bénévolat Nantes Atlantique
@@ -177,46 +189,50 @@ fbna = Organization.create!(
   ORIENTE et MET EN RELATION des associations et des bénévoles
   ACCOMPAGNE les associations dans la recherche et l'animation de leurs bénévoles
   VALORISE l'engagement bénévole et les ressources humaines bénévoles",
-  email: "francebenevolat@yahoo.fr"
-  kind:
+  email: "francebenevolat@yahoo.fr",
+  password: "azerty",
+  phone_number: "02 40 35 12 17",
+  kind: "Association",
   total_volunteers: 1250,
-  siren: 767 343 567,
-  category:
+  siren: "767 343 567",
+  category: "Vie locale & citoyenne",
   website: "http://nantes.francebenevolat.org/",
   facebook: "https://www.facebook.com/France-B%C3%A9n%C3%A9volat-304694849663/",
-  linkedin:
+  linkedin: "www.linkedin.com",
   twitter: "https://twitter.com/francebenevolat",
   address: "9 Place Mangin 44200 Nantes",
-  creation_date: 1965,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1965,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"02 40 35 12 17"
+
 gasprom = Organization.create!(
   name: "Gasprom",
-  description: "epuis 1970 l'association accueille et aide les travailleurs
+  description: "Depuis 1970 l'association accueille et aide les travailleurs
   immigrés. L'association se bat : contre le racisme et les discriminations,
   qu'elles soient sociales, raciales ou sexistes. Pour la liberté de circulation
   et d'installation des personnes et des idées. Pour l'égalité des droits dans
   une société interculturelle. Pour l'élargissement de la citoyenneté à toutes
-  et à tous, indépendamment de la nationalité de chacun(e)."
+  et à tous, indépendamment de la nationalité de chacun(e).",
   email: "gasprom@nantes.fr",
-  kind:
-  total_volunteers:
-  siren: 773 564 344,
-  category:
-  website:
-  facebook:
-  linkedin:
-  twitter:
+  password: "azerty",
+  phone_number: "",
+  kind: "Association",
+  total_volunteers: 150,
+  siren: "773 564 344",
+  category: "Défense des droits & des intérêts",
+  website: "www.google.com",
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "24 rue Fouré 44000 Nantes",
-  creation_date: 1970,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1970,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
 
 gref = Organization.create!(
@@ -237,24 +253,26 @@ gref = Organization.create!(
   linguistique
   Faciliter la mise en réseau des différents acteurs pour assurer efficacité et
   pérennité
-  Développer l’éducation au développement et à la solidarité"
+  Développer l’éducation au développement et à la solidarité",
   email: "grefnantesfle@gmail.com",
-  kind:
-  total_volunteers:
-  siren:
-  category:
+  password: "azerty",
+  phone_number: "06 88 21 81 65 - 02 40 73 94 00",
+  kind: "Collectif",
+  total_volunteers: 1500,
+  siren: "786 765 777",
+  category: "Education & Jeunesse",
   website: "http://www.gref.asso.fr",
-  facebook:
-  linkedin:
-  twitter:
-  address:
-  creation_date: 1980,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
+  address: "Rue meuris, Nantes",
+  creation_year: 1980,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"06 88 21 81 65 - 02 40 73 94 00"
+
 acceuil = Organization.create!(
   name: "L'Acceuil d'abord",
   description: "> Des logements mis à disposition gratuitement dans l’agglomération
@@ -263,22 +281,24 @@ acceuil = Organization.create!(
   compétences linguistiques appréciées)
   > Des financements pour les fluides, et tous les frais afférents aux logements",
   email: "accueil.dabord@gmail.com",
-  kind:
-  total_volunteers:
-  siren:
-  category:
-  website:
-  facebook:
-  linkedin:
-  twitter:
+  password: "azerty",
+  phone_number: "07 57 51 21 87",
+  kind: "Collectif",
+  total_volunteers: 44,
+  siren: "756 334 344",
+  category: "Solidarité & Santé",
+  website: "www.google.com",
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "7 chemin de la Censive du Tertre 44300 Nantes",
-  creation_date:
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1987,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"07 57 51 21 87"
+
 pastorale = Organization.create!(
   name: "La Pastorale des Migrants",
   description: "une organisation œcuménique, créée il y a douze ans par des
@@ -289,22 +309,24 @@ pastorale = Organization.create!(
   Depuis sa création, l’association a accompagné efficacement des dizaines de
   familles afin qu’elles trouvent un nouveau départ.",
   email: "pastorale.migrants@nantes.cef.fr",
-  kind:
+  password: "azerty",
+  phone_number: "02 40 74 64 17 - 06 21 13 33 89",
+  kind: "Collectif",
   total_volunteers: 20,
-  siren:
-  category:
-  website:
-  facebook:
-  linkedin:
-  twitter:
+  siren: "765 345 654",
+  category: "humanitaire & Solidarité Internationale",
+  website: "www.google.com",
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "43 Rue Gaston Turpin 44000 Nantes",
-  creation_date: 2006,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 2006,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"02 40 74 64 17 - 06 21 13 33 89"
+
 gout_des_autres = Organization.create!(
   name: "Le Goût des Autres",
   description: "L’association créée fin 2009 a pour objet la découverte, la
@@ -325,25 +347,26 @@ gout_des_autres = Organization.create!(
   Pour favoriser le lien intergénérationnel à travers la rencontre et le partage
   entre individus ;
   Pour encourager le développement des solidarités et l’établissement d’un mieux
-  vivre ensemble.
-"
+  vivre ensemble.",
   email: "legoutdesautres@ml.free.fr",
-  kind:
+  password: "azerty",
+  phone_number: "06 08 16 52 61",
+  kind: "Association",
   total_volunteers: 500,
-  siren: 773 567 425,
-  category:
+  siren: "773 567 425",
+  category: "Arts & Culturel",
   website: "http://www.legoutdesautres.org/",
-  facebook:
-  linkedin:
-  twitter:
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "23, rue Henri Brunelière 44000 Nantes",
-  creation_date: 2009,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 2009,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"06 08 16 52 61"
+
 ligue_droits_de_lhomme = Organization.create!(
   name: "Ligue des Droits de l'Homme",
   description: "En 1898, des citoyens, révoltés par l’injustice dont était victime
@@ -354,43 +377,47 @@ ligue_droits_de_lhomme = Organization.create!(
   exigence d’une lutte contre « toutes les formes d’intolérance et d’arbitraire »
   que nous voulons construire le mouvement civique de demain.",
   email: "ldh.nantes@orange.fr",
-  kind:
+  password: "azerty",
+  phone_number: "07 86 51 74 99",
+  kind: "Collectif",
   total_volunteers: 150,
-  siren: 775 345 245,
-  category:
+  siren: "775 345 245",
+  category: "Défense des droits & des intérêts",
   website: "http://site.ldh-france.org/nantes/",
-  facebook:
-  linkedin:
-  twitter:
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "4 Place de la Manu 44000 Nantes",
-  creation_date: 1898,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1898,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"07 86 51 74 99"
+
 saint_jean = Organization.create!(
   name: "Logis St Jean",
   description: "Offrir un lieu de rencontres et accompagner les pesonnes isolées,
   demandeurs d'asile et déboutés du droit d'asile.",
   email: "logissaintjean@gmail.com",
-  kind:
+  password: "azerty",
+  phone_number: "02 49 44 36 91",
+  kind: "Collectif",
   total_volunteers: 60,
-  siren:
-  category:
-  website:
-  facebook:
-  linkedin:
-  twitter:
+  siren: "",
+  category: "Solidarité & Santé",
+  website: "www.google.com",
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "11 Rue du Chapeau Rouge 44000 Nantes",
-  creation_date: 2010,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 2010,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"02 49 44 36 91"
+
 mrap = Organization.create!(
   name: "MRAP - Mouvement contre le racisme et pour l'amitié entre les peuples",
   description: "Association française non gouvernementale, créée en 1949 par
@@ -398,22 +425,24 @@ mrap = Organization.create!(
   omme un moyen de revendication pour « l'égalité des droits entre tous les
   citoyens »",
   email: "mrapnantes@hotmail.com",
-  kind:
-  total_volunteers:
-  siren: 537 929 192,
-  category:
+  password: "azerty",
+  phone_number: "02 40 58 08 09",
+  kind: "Collectif",
+  total_volunteers: 1400,
+  siren: "537 929 192",
+  category: "Défense des droits & des intérêts",
   website: "http://mrap.fr/",
-  facebook:
-  linkedin:
-  twitter:
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "11 rue de Prinquiau 44100 Nantes",
-  creation_date: 1949,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1949,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
-"02 40 58 08 09"
+
 medecins_du_monde = Organization.create!(
   name: "Médecins du Monde",
   description: "Présent en France et dans 80 pays, Médecins du Monde est un
@@ -423,20 +452,22 @@ medecins_du_monde = Organization.create!(
   exclues et leurs communautés en capacité d’accéder à la santé tout en se battant
   pour un accès universel aux soins.​",
   email: "pays-de-la-loire@medecinsdumonde.net",
-  kind:
+  password: "azerty",
+  phone_number: "",
+  kind: "Association",
   total_volunteers: 14000,
-  siren: 305 009 102,
-  category:
+  siren: "305 009 102",
+  category: "Solidarité & Santé",
   website: "https://www.medecinsdumonde.org/fr",
-  facebook:
-  linkedin:
-  twitter:
+  facebook: "www.facebook.com",
+  linkedin: "www.linkedin.com",
+  twitter: "www.twitter.com",
   address: "33 Rue Fouré 44000 Nantes",
-  creation_date: 1954,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
+  creation_year: 1954,
+  logo: "",
+  photo_1: "",
+  photo_2: "",
+  photo_3: ""
 )
 # "02 40 47 36 99"
 # asamla = Organization.create!(
@@ -452,7 +483,7 @@ medecins_du_monde = Organization.create!(
 #   linkedin:
 #   twitter:
 #   address: "49-51 Chaussée de la Madeleine 44000 Nantes",
-#   creation_date:
+#   creation_year:
 #   logo:
 #   photo_1:
 #   photo_2:
@@ -472,7 +503,7 @@ medecins_du_monde = Organization.create!(
 #   linkedin:
 #   twitter:
 #   address: "1 Rue Lorette de la Refoulais 44000 Nantes",
-#   creation_date:
+#   creation_year:
 #   logo:
 #   photo_1:
 #   photo_2:
@@ -492,7 +523,7 @@ medecins_du_monde = Organization.create!(
 #   linkedin:
 #   twitter:
 #   address: "163, rue Paul Bellamy 44000 Nantes",
-#   creation_date:
+#   creation_year:
 #   logo:
 #   photo_1:
 #   photo_2:
@@ -512,7 +543,7 @@ medecins_du_monde = Organization.create!(
 #   linkedin:
 #   twitter:
 #   address: "3 Rue Amiral Du Chaffault 44100 Nantes",
-#   creation_date:
+#   creation_year:
 #   logo:
 #   photo_1:
 #   photo_2:
@@ -532,7 +563,7 @@ medecins_du_monde = Organization.create!(
 #   linkedin:
 #   twitter:
 #   address: "6 place de la Manufacture 44000 Nantes",
-#   creation_date:
+#   creation_year:
 #   logo:
 #   photo_1:
 #   photo_2:
