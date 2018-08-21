@@ -13,53 +13,138 @@ Organization.destroy_all
 
 puts "Creating default users..."
 
-salma = User.create!(
-  email: "pagehey.tissehaut@aol.com",
-  first_name: "Pierre",
-  last_name: "Tissot",
-  phone_number: "pagehey",
-  description: "azerty",
-  skills: "Can't you find Pierre coding at Google's Head Office? Oh! Then it means he is probably
-  busy in Aix-en-Provence, organising snail racing.",
-  skills:
-  photo: File.open(Rails.root.join("db/fixtures/users/pierre.jpeg"))
-)
-
 fatou = User.create!(
-  email: "tib.design@aol.com",
-  first_name: "Thibaut",
-  last_name: "Frontman",
-  username: "La gachette",
+  email: "fatou.d@gmail.com",
   password: "azerty",
-  biography: "Thibaut used to work for 10 yrs in the blood chemistry but he is now the owner of the 'Vampire State Building'.",
-  photo: File.open(Rails.root.join("db/fixtures/users/thibault.jpeg"))
+  first_name: "Fatou",
+  last_name: "Diallo",
+  phone_number: "0654567876",
+  description: "J'ai 37 ans, trois enfants et je suis psychiatre au CHU de Nantes.
+  Je suis passionnée par la Grèce antique et
+  je souhaite donner quelques heures de mon temps pour donner des cours d'histoire-géo.",
+  skills: "Diplomée du CHU de Nantes / Maîtrise de l'anglais, de l'espanol et de l'arabe.
+  Je suis patiente et empathique.",
+  experiences: "Membre d'une association pour faire avancer la science depuis 2011.",
+  picture: File.open(Rails.root.join("db/fixtures/users/pierre.jpeg"))
 )
 
-fred = User.create!(
-  email: "heydarkv@yahoo.fr",
-  first_name: "Fred",
-  last_name: "Kv",
-  username: "heykv",
+binta = User.create!(
+  email: "binta.diallo@gmail.com",
   password: "azerty",
-  biography:"Fred wears several hats. He is a singer during the day and at night he likes going outside for drinks, dressed like a robot.",
-  photo: File.open(Rails.root.join("db/fixtures/users/fred.jpeg"))
+  first_name: "Binta",
+  last_name: "Diallo",
+  phone_number: "0677779865",
+  description: "Je suis très méticuleuse et organisée.
+  Je viens de finir un master en Art Appliqué est
+  c'est ma soeur Fatou qui m'a parlé de cette plateforme et c'est la 1ère fois
+  que je participe à une action humanitaire. Jai envie d'animer un atelier dessin une fois par semaine.",
+  skills: "Dessin, Peinture, Street Art, Logiciels de PAO.",
+  experiences: "Baby-Sitter pendant 5 ans / prof d'anglais pour des collégiens.",
+  picture: File.open(Rails.root.join("db/fixtures/users/pierre.jpeg"))
 )
 
-julie = User.create!(
-  email: "juliespoonie@gmail.com",
-  first_name: "Julie",
-  last_name: "Yende",
-  username: "JulieSpoonie",
+elena = User.create!(
+  email: "elena.chavos@aol.com",
   password: "azerty",
-  biography: "Julie Spoonie is married to George Clooney.
-  She likes building sand castles and she shares her bedroom with a 85 kgs s Rottweiller.",
-  photo: File.open(Rails.root.join("db/fixtures/users/julie.jpeg"))
+  first_name: "Elena",
+  last_name: "Chavos",
+  phone_number: "0655323411",
+  description: "J'ai 26 ans et je suis étudiante à la faculté de Droit de Nantes.
+  Je viens de Colombie et je vis avec mon fiancé Thomas à Saint-Sébastien. Véhiculée, les déplacements
+  à Nantes Centre ne sont pas un problème.
+  Pour toutes questions relatives au juridique/droit, vous pouvez compter sur moi !",
+  skills: "Spécialisée en Droit des Familles. Je parle anglais et espagnol.",
+  experiences: "Stage de 6 mois au Barreau de Nantes.",
+  picture: File.open(Rails.root.join("db/fixtures/users/pierre.jpeg"))
 )
 
-puts "Creating default spaceships..."
+yulia = User.create!(
+  email: "yulia_osipova@aol.com",
+  password: "azerty",
+  first_name: "Yulia",
+  last_name: "Osipova",
+  phone_number: "0627658398",
+  description: "J'ai 31 ans, je suis russe et j'habite à Nantes depuis 2 ans
+  Je suis Chef Cuisto à la Cigale et j'adore mon métier ! Je souhaite donner mon temps pour cuisiner pour les exilés.
+  Mon patron est d'ailleurs d'accord pour faire des dons ponctuels.",
+  skills: "Cuisine moléculaire/Cuisine Bistronomique",
+  experiences: "Je me suis occupée d'enfants dans un orphelinat de ma ville natale
+  et je gérais les repas pour 65 enfants.",
+  picture: File.open(Rails.root.join("db/fixtures/users/pierre.jpeg"))
+)
 
-spaceship_millenium = Spaceship.create!(
-  name: "Millennium-Falcon",
+romain = User.create!(
+  email: "romain.pazo@gmail.com",
+  password: "azerty",
+  first_name: "Romain",
+  last_name: "Pazo",
+  phone_number: "0675410100",
+  description: "J'ai 50 ans et je suis professeur de mathématique au Lycée Saint Stanislas.
+  Je souhaite donner des cours de mathématique.",
+  skills: "Agrégé en mathématique",
+  experiences: "Professeur de mathématique (hypokhâgne)",
+  picture: File.open(Rails.root.join("db/fixtures/users/pierre.jpeg"))
+)
+
+enzo = User.create!(
+  email: "enzo.mathe@gmail.com",
+  password: "azerty",
+  first_name: "Enzo",
+  last_name: "Mathé",
+  phone_number: "0628880008",
+  description: "Je suis spécialisé en architecture réseau et je travaille au Ministère
+  des Affaires étrangères. Je suis passionné de moto.
+  et je pars tous les week-ends faire des ballades
+  au bord de la mer. Je n'ai pas beaucoup de temps, mais une à deux fois
+  par mois, je voudrais animer des ateliers Initiation à l'informatique.",
+  skills: "Architecture Réseau / Machine Learning",
+  experiences: "Web Ninja depuis l'âge de 8 ans.",
+  picture: File.open(Rails.root.join("db/fixtures/users/pierre.jpeg"))
+)
+
+puts "Creating default organizations..."
+
+kollectif_93 = Organization.create!(
+  name: "Kollectif_93",
+  description: "Le Kollectif_93 est une association à but non lucratif
+  pour promouvoir le street-art à Nantes. Une de nos missions principale est de donner une chance
+  à des élèves déscolarisés du quartier Malakoff en finançant 5 années d'études à l'école du Design de Nantes."
+  Speed: faster than light
+  Armaments: Superlaser
+  Power: Able to destroy a ship, city or planet.",
+  address: "79 rue Port Boyer, 44000, Nantes",
+  price_per_day: "50000",
+  number_of_seats: "1160305",
+  photo: File.open(Rails.root.join("db/fixtures/spaceships/star-wars-etoile-noir.png")),
+  user: julie
+
+  t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "description"
+    t.string "kind"
+    t.integer "total_volunteers"
+    t.integer "siren"
+    t.string "category"
+    t.string "website"
+    t.string "facebook"
+    t.string "linkedin"
+    t.string "twitter"
+    t.string "address"
+    t.date "creation_date"
+    t.string "logo"
+    t.string "photo_1"
+    t.string "photo_2"
+    t.string "photo_3"
+)
+
+le_cercle_wagnérien = Spaceship.create!(
+  name: "Le Cercle Wagnérien",
   description: "Length: 34.75 meters - Height:7.8 meters - Maximum speed: 1,200 km/h.
   Its aged appearance belied numerous advanced modifications to boost the ship's speed, weapons, and shield, including a hyperdrive engine among
   the fastest in the entire galaxy, enabling it to outrun Imperial Star Destroyers.",
@@ -70,8 +155,8 @@ spaceship_millenium = Spaceship.create!(
   user: pierre
 )
 
-spaceship_ussenterprise = Spaceship.create!(
-  name: "Ussenterprise",
+pmgo = Spaceship.create!(
+  name: "Association des professeurs de mathématique du Grand Ouest (PMGO)",
   description: "Length: 642 meters, Height: 195 meters
   Speed: 1800 km/h.
   12 Phaser arrays, 2 Torpedo launchers, 250 Photon, Gravimetric, or Tricobalt torpedoes,
@@ -83,72 +168,6 @@ spaceship_ussenterprise = Spaceship.create!(
   user: fred
 )
 
-spaceship_deathstar = Spaceship.create!(
-  name: "Deathstar",
-  description: "Width: 160 km, Height: 120 km in radius
-  Speed: faster than light
-  Armaments: Superlaser
-  Power: Able to destroy a ship, city or planet.",
-  address: "79 rue Port Boyer, 44000, Nantes",
-  price_per_day: "50000",
-  number_of_seats: "1160305",
-  photo: File.open(Rails.root.join("db/fixtures/spaceships/star-wars-etoile-noir.png")),
-  user: julie
-)
-
-spaceship_xwing = Spaceship.create!(
-  name: "Xwing",
-  description: "Length: 12.5 meters, Height: 5 meters
-  Speed: 1,100 km/h
-  Engineers strove to build a well-rounded hyper-drive equipped snubfighter with no exploitable weakness.",
-  address: "24 boulevard Stalingrad, 44000, Nantes",
-  price_per_day: "6000",
-  number_of_seats: "1",
-  photo: File.open(Rails.root.join("db/fixtures/spaceships/xwing.jpg")),
-  user: pierre
-)
-
-spaceship_planetexpress = Spaceship.create!(
-  name: "Planet-express",
-  description: "Length: 960 meters, Height: 240 meters
-  Armaments: Laser cannons Torpedoes
-  Power : Dark matter reactor and whale Oil",
-  address: "34 quai Magellan, 44000, Nantes",
-  price_per_day: "600",
-  number_of_seats: "8",
-  photo: File.open(Rails.root.join("db/fixtures/spaceships/planet-express.jpg")),
-  user: thibault
-)
-
-spaceship_narada = Spaceship.create!(
-  name: "Narada",
-  description: "Length: 8000 meters, Height: 8,9 meters
-  Speed: 1800 km/h
-  Despite being only a mining vessel in its own time, the Narada
-  possessed weaponry far more advanced than that of any ships
-  it encountered in the 23rd century.
-  The primary weapons seemed to be highly
-  destructive missiles, each of which could break into several component projectiles.",
-  address: "5 Rue Rollin Chantenay, 44100, Nantes",
-  price_per_day: "300",
-  number_of_seats: "5",
-  photo: File.open(Rails.root.join("db/fixtures/spaceships/narada.jpg")),
-  user: julie
-)
-
-spaceship_tardis = Spaceship.create!(
-  name: "Tardis",
-  description: "Best time machine and spacecraft you can find in the galaxy.
-  Faster-than-light travel.
-  The TARDIS is dimensionally transcendental, meaning it’s bigger on the inside than the outside.
-  The TARDIS interior has an unknown number of rooms and corridors,
-  and the dimensions of the interior have not been specified.",
-  address: "Rue du Maréchal de Lattre de Tassigny, 44000, Nantes ",
-  price_per_day: "4000",
-  number_of_seats: "100 000 000",
-  photo: File.open(Rails.root.join("db/fixtures/spaceships/tardis.jpg")),
-  user: julie
-)
 
 puts "Creating reservations..."
 
