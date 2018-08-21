@@ -46,7 +46,7 @@ association_aurore = Organization.create!(
   twitter: "@AssoAurore",
   address: "29, allée de l'Indre, 44000 Nantes",
   creation_year: 1871,
-  logo: "",
+  logo: File.open(Rails.root.join("db/fixtures/organizations/association_aurore.jpeg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -96,7 +96,7 @@ cfda = Organization.create!(
   twitter: "www.twitter.com",
   address: "36 quai de la fosse 44100 Nantes",
   creation_year: 2000,
-  logo: "",
+  logo: File.open(Rails.root.join("db/fixtures/organizations/cfda.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -125,7 +125,7 @@ croix_rouge = Organization.create!(
   twitter: "https://twitter.com/croixrouge",
   address: "10, rue d'Athènes, 44300 Nantes",
   creation_year: "1859",
-  logo: "",
+  logo: File.open(Rails.root.join("db/fixtures/organizations/croix_rouge.png")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -175,7 +175,7 @@ emmaus = Organization.create!(
   twitter: "https://twitter.com/croixrouge",
   address: "La Guilloterie Rue d'Emmaüs 44340 Bouguenais",
   creation_year: 1950,
-  logo: "",
+  logo: File.open(Rails.root.join("db/fixtures/organizations/emmaus.png")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -202,7 +202,7 @@ fbna = Organization.create!(
   twitter: "https://twitter.com/francebenevolat",
   address: "9 Place Mangin 44200 Nantes",
   creation_year: 1965,
-  logo: "",
+  logo: File.open(Rails.root.join("db/fixtures/organizations/fbna.jpeg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -267,7 +267,7 @@ gref = Organization.create!(
   twitter: "www.twitter.com",
   address: "Rue meuris, Nantes",
   creation_year: 1980,
-  logo: "",
+  logo: File.open(Rails.root.join("db/fixtures/organizations/gref.png")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -437,7 +437,7 @@ mrap = Organization.create!(
   twitter: "www.twitter.com",
   address: "11 rue de Prinquiau 44100 Nantes",
   creation_year: 1949,
-  logo: "",
+  logo: File.open(Rails.root.join("db/fixtures/organizations/mrap.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -464,7 +464,7 @@ medecins_du_monde = Organization.create!(
   twitter: "www.twitter.com",
   address: "33 Rue Fouré 44000 Nantes",
   creation_year: 1954,
-  logo: "",
+  logo: File.open(Rails.root.join("db/fixtures/organizations/medecins_du_monde.png")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
