@@ -1164,7 +1164,7 @@ collecte_para = Mission.create!({
   volunteers_needed: 1000,
   description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
-  starting_at: "2018/10/12 15:00:00",
+  starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
    recurrent: true,
   recurrency_in_days: 2,
