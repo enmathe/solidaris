@@ -2,7 +2,7 @@
 </div>
 <div class="dashboard-container">
   <div class="asso-namelogo">
-    <div class="logo"></div>
+    <div class="dashboard-logo", style="background-image: url('<%= cl_image_path(@organization.logo) %>'); background-size: cover;"></div>
     <h3><%= @organization.name %></h3>
   </div>
   <div class="dashboard-btn">
