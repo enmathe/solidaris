@@ -1,5 +1,6 @@
 class Organizations::MissionsController < ApplicationController
   before_action :authenticate_organization!
+  before_action :set_organization
 
   def index
     @all_missions = Mission.all
@@ -27,5 +28,9 @@ class Organizations::MissionsController < ApplicationController
         @past << mission
       end
     end
+  end
+
+  def set_organization
+    @organization = current_organization
   end
 end
