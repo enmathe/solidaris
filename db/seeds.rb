@@ -101,7 +101,7 @@ enzo = User.create!(
   skills: "Architecture Réseau / Machine Learning",
   experiences: "Web Ninja depuis l'âge de 8 ans.",
   picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
-  
+
 cnrw = Organization.create!(
   name: "CNRW - Cercle National Richard Wagner",
   description: "Le Cercle Richard Wagner
@@ -305,7 +305,7 @@ association_aurore = Organization.create!(
   twitter: "@AssoAurore",
   address: "29, allée de l'Indre, 44000 Nantes",
   creation_year: 1871,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/association_aurore.jpeg")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/association_aurore.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -353,7 +353,7 @@ cfda = Organization.create!(
   twitter: "www.twitter.com",
   address: "36 quai de la fosse 44100 Nantes",
   creation_year: 2000,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/cfda.jpg")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/cfda.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -382,7 +382,7 @@ croix_rouge = Organization.create!(
   twitter: "https://twitter.com/croixrouge",
   address: "10, rue d'Athènes, 44300 Nantes",
   creation_year: "1859",
-  logo: File.open(Rails.root.join("db/fixtures/organizations/croix_rouge.png")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/croix_rouge.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -432,7 +432,7 @@ emmaus = Organization.create!(
   twitter: "https://twitter.com/croixrouge",
   address: "La Guilloterie Rue d'Emmaüs 44340 Bouguenais",
   creation_year: 1950,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/emmaus.png")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/emmaus.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -459,7 +459,7 @@ fbna = Organization.create!(
   twitter: "https://twitter.com/francebenevolat",
   address: "9 Place Mangin 44200 Nantes",
   creation_year: 1965,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/fbna.jpeg")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/fbna.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -524,7 +524,7 @@ gref = Organization.create!(
   twitter: "www.twitter.com",
   address: "Rue meuris, Nantes",
   creation_year: 1980,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/gref.png")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/gref.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -694,7 +694,7 @@ mrap = Organization.create!(
   twitter: "www.twitter.com",
   address: "11 rue de Prinquiau 44100 Nantes",
   creation_year: 1949,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/mrap.jpg")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/mrap.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -721,10 +721,10 @@ medecins_du_monde = Organization.create!(
   twitter: "www.twitter.com",
   address: "33 Rue Fouré 44000 Nantes",
   creation_year: 1954,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/medecins_du_monde.png")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  logo: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/logo.jpg")),
+  photo_1: "db/fixtures/organization/medecin_du_monde/pic_1.jpg",
+  photo_2: "db/fixtures/organization/medecin_du_monde/pic_2.jpg",
+  photo_3: "db/fixtures/organization/medecin_du_monde/pic_3.jpg"
 )
 # "02 40 47 36 99"
 # asamla = Organization.create!(
