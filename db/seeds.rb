@@ -901,7 +901,7 @@ insertion_professionnelle = Mission.create!({
 
 maraude = Mission.create!({
   title: "Maraude",
-  category: "MAraude",
+  category: "Maraude",
   address: "16 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 2,
   description: "Acina mène un projet d'insertion professionnelle des nouveaux arrivants en situation d'exclusion, dont les personnes vivant en bidonville ou squat. dans ce cadre l'association recherche des personnes souhaitant s'impliquer dans le développement et la consolidation de partenariats avec des entreprises/centres de formation/structures d'insertion. plus largement, les bénévoles sont invités à réfléchir à des stratégies d'insertion innovantes.",

@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <% @missions.each do |mission| %>
+      <div class="col-md-4">
+      <%= mission.title %> - <%= mission.category %>
+      </div>
+    <% end  %>
+    </div>
+</div>
