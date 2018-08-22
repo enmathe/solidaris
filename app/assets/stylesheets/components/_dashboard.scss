@@ -1,0 +1,71 @@
+.dashboard-container {
+  z-index: 10;
+  height: calc(100vh - 70px);
+  display: grid;
+  grid-template-columns: 400px 1fr 1fr 1fr;
+  grid-template-rows: 40% 10% 50%;
+  position: relative;
+  p {
+    color: white
+  }
+  h10 {
+    color: grey;
+    margin-top: 60px;
+    margin-left: 25px;
+  }
+}
+
+.mission-information {
+  grid-row: 1 / span 2;
+  grid-column: 2/ span 3;
+  height: calc(100vh - 70px);
+  p {
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+}
+
+.asso-namelogo {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  text-align: center;
+  h3 {
+    color: white;
+  }
+}
+
+.dashboard-btn {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  text-align: center;
+}
+.dashboard-stat {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  text-align: center;
+}
+
+.stat {
+  p {
+    color: grey;
+  }
+}
+
+.green-background {
+  z-index: 5;
+  position: absolute;
+  background-color: green;
+  height: 30vh;
+  width: 100%;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 21px;
+  background: black;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 60px;
+}
