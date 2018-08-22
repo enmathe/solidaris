@@ -1,4 +1,4 @@
-.organizations-cards {
+.missions-cards {
   width: 260px;
   height: 280px;
   background-color : white;
@@ -12,13 +12,13 @@
   font-size: 14px;
 }
 
-.organization-looking-for {
+.mission-looking-for {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-.organization-date {
+.mission-date {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -32,7 +32,7 @@
   // cf > transition : webgradients.com
 }
 
-.organizations-cards h2 {
+.missions-cards h2 {
   font-size: 1.2em;
   position: absolute;
   left: 6%;
@@ -40,7 +40,7 @@
   padding: 1px;
 }
 
-.organizations-cards h4 {
+.missions-cards h4 {
   font-size: .8125em;
   position: absolute;
   left: 6%;
@@ -49,7 +49,7 @@
   color: #BDBDBD;
 }
 
-.organization-picto {
+.mission-picto {
   position: absolute;
   left: 0;
   right: 0;

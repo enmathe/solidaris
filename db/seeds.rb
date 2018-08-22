@@ -14,20 +14,20 @@ User.destroy_all
 
 puts "Creating default users..."
 
-# fatou = User.create!(
-#   email: "fatou.d@gmail.com",
-#   password: "azerty",
-#   first_name: "Fatou",
-#   last_name: "Diallo",
-#   phone_number: "0654567876",
-#   description: "J'ai 37 ans, trois enfants et je suis psychiatre au CHU de Nantes.
-#   Je suis passionnée par la Grèce antique et
-#   je souhaite donner quelques heures de mon temps pour donner des cours d'histoire-géo.",
-#   skills: "Diplomée du CHU de Nantes / Maîtrise de l'anglais, de l'espagnol et de l'arabe.
-#   Je suis patiente et empathique.",
-#   experiences: "Membre d'une association pour faire avancer la science depuis 2011.",
-#   picture: File.open(Rails.root.join("db/fixtures/users/fatou.jpg"))
-# )
+fatou = User.create!(
+  email: "fatou.d@gmail.com",
+  password: "azerty",
+  first_name: "Fatou",
+  last_name: "Diallo",
+  phone_number: "0654567876",
+  description: "J'ai 37 ans, trois enfants et je suis psychiatre au CHU de Nantes.
+  Je suis passionnée par la Grèce antique et
+  je souhaite donner quelques heures de mon temps pour donner des cours d'histoire-géo.",
+  skills: "Diplomée du CHU de Nantes / Maîtrise de l'anglais, de l'espagnol et de l'arabe.
+  Je suis patiente et empathique.",
+  experiences: "Membre d'une association pour faire avancer la science depuis 2011.",
+  picture: File.open(Rails.root.join("db/fixtures/users/fatou.jpg"))
+)
 
 # binta = User.create!(
 #   email: "binta.diallo@gmail.com",

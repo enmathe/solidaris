@@ -1,9 +1,19 @@
 <div class="container">
   <div class="row">
     <% @missions.each do |mission| %>
-      <div class="col-md-4">
-      <%= mission.title %> - <%= mission.category %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="missions-cards">
+          <div class="mission-looking-for">loupe</div>
+          <div class="mission-date">date</div>
+          <div class="mission-titre">
+            <h2><%= mission.description %></h2>
+            <h4><%= mission.title %></h4>
+            <div>
+            <a href="#" class="mission-picto"></a>
+            </div>
+          </div>
+        </div>
       </div>
-    <% end  %>
-    </div>
+    <% end %>
+  </div>
 </div>
