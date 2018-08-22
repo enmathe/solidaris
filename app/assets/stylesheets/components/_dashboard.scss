@@ -3,10 +3,15 @@
   height: calc(100vh - 70px);
   display: grid;
   grid-template-columns: 400px 1fr 1fr 1fr;
-  grid-template-rows: 50% 25% 25%;
+  grid-template-rows: 40% 10% 50%;
   position: relative;
   p {
     color: white
+  }
+  h10 {
+    color: grey;
+    margin-top: 60px;
+    margin-left: 25px;
   }
 }
 
@@ -29,20 +34,28 @@
   }
 }
 
+.dashboard-btn {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  text-align: center;
+}
 .dashboard-stat {
-  grid-row: 2 / span 2;
+  grid-row: 3 / span 1;
   grid-column: 1 / span 1;
   text-align: center;
 }
 
 .stat {
+  p {
+    color: grey;
+  }
 }
 
 .green-background {
   z-index: 5;
   position: absolute;
   background-color: green;
-  height: 50vh;
+  height: 30vh;
   width: 100%;
 }
 
