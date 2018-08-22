@@ -101,6 +101,7 @@ enzo = User.create!(
   skills: "Architecture Réseau / Machine Learning",
   experiences: "Web Ninja depuis l'âge de 8 ans.",
   picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
+)
 
 puts "Creating organizations..."
 
@@ -666,6 +667,8 @@ medecins_du_monde = Organization.create!(
 # )
 # "06 85 02 01 70 - 02 40 06 72 55"
 
+puts "Creating missions..."
+
 vetements = Mission.create!({
   title: "Collecte de vêtements",
   category: "Collecte",
@@ -679,8 +682,7 @@ vetements = Mission.create!({
   organization: anade
 })
 
-p "DONE !!!!"
-nourriture = Mission.new!({
+nourriture = Mission.create!({
   title: "Collecte de nouriture",
   category: "Collecte",
   address: "94 rue des hauts pavés, 44000 Nantes",
@@ -691,15 +693,15 @@ nourriture = Mission.new!({
   duration_in_hours: 10,
   recurrent: false,
   end_candidature_date: "2018/10/17 13:00:00",
-  organization: association-aurore
+  organization: association_aurore
 })
 
-cours_de_français = Mission.new!({
+cours_de_français = Mission.create!({
   title: "Cours de français",
   category: "Enseignement",
   address: "15 rue Guépin, 44000 Nantes",
   volunteers_needed: 14,
-  description: "Rejoignez notre association du 6eme arrondissement de Paris en tant que formateur PSC 1 (Prévention et secours civiques de niveau 1) Pourquoi former les français aux gestes qui sauvent ? En France, plusieurs milliers de personnes décèdent chaque année des suites d’une méconnaissance des gestes de premiers secours par leur entourage.Par ailleurs, les différents drames auxquels les français ont dû faire face ces deux dernières années rendent cette"
+  description: "Rejoignez notre association du 6eme arrondissement de Paris en tant que formateur PSC 1 (Prévention et secours civiques de niveau 1) Pourquoi former les français aux gestes qui sauvent ? En France, plusieurs milliers de personnes décèdent chaque année des suites d’une méconnaissance des gestes de premiers secours par leur entourage.Par ailleurs, les différents drames auxquels les français ont dû faire face ces deux dernières années rendent cette",
   skills_needed: 0,
   starting_at: "2018/10/17 14:00:00",
   duration_in_hours: 4.5,
@@ -711,46 +713,44 @@ cours_de_français = Mission.new!({
 })
 
 
-hébergement = Mission.new!({
+hébergement = Mission.create!({
   title: "Herbergement d'urgence pour une famille de 5 personnes",
   category: "Hebergement",
   address: "15 rue Guépin, 44000 Nantes",
   volunteers_needed: 2,
-  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine."
-  skills_needed: 0,
+  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
   starting_at: "2018/10/17 14:00:00",
   duration_in_hours: "",
   recurrent: true,
-  recurrency_in_days: 5
+  recurrency_in_days: 5,
   recurrency_ending_on: "2018/12/22 14:00:00",
   end_candidature_date: "2018/10/17 14:00:00",
   organization: ligue_droits_de_lhomme
 })
 
 
-hébergement_2 = Mission.new!({
+hébergement_2 = Mission.create!({
   title: "Herbergement d'urgence pour une mère et sa fille",
   category: "Hebergement",
   address: "26 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 2,
-  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine."
-  skills_needed: 0
+  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
   starting_at: "2018/11/17 14:00:00",
-  duration_in_hours:
-  recurrent: true
-  recurrency_in_days: 5
+  duration_in_hours: 10,
+  recurrent: true,
+  recurrency_in_days: 5,
   recurrency_ending_on: "2018/11/22 14:00:00",
   end_candidature_date: "2018/10/17 14:00:00",
   organization: gasprom
 })
 
 
-hébergement_3 = Mission.new!({
+hébergement_3 = Mission.create!({
   title: "Herbergement d'urgence pour une fille de 15 ans",
   category: "Herbergement",
   address: "26 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 1,
-  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine."
+  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
   skills_needed: 0,
   starting_at: "2018/09/17 14:00:00",
   recurrent: true,
@@ -760,7 +760,7 @@ hébergement_3 = Mission.new!({
   organization: emmaus
 })
 
-cours_de_dessin = Mission.new!({
+cours_de_dessin = Mission.create!({
   title: "Accompagnateurs pour un cours de dessin",
   category: "Activité",
   address: "16 boulevard de stalingrad, 44000 Nantes",
@@ -781,7 +781,7 @@ cours_de_dessin = Mission.new!({
   organization: diaconat
 })
 
-cours_de_dessin = Mission.new!({
+cours_de_dessin_1 = Mission.create!({
   title: "Accompagnateurs pour un cours de dessin",
   category: "Activité",
   address: "16 boulevard de stalingrad, 44000 Nantes",
@@ -800,7 +800,7 @@ cours_de_dessin = Mission.new!({
   organization: cfda
 })
 
-activité_sportive = Mission.new!({
+activité_sportive = Mission.create!({
   title: "Activité sportive avec les réfugiés",
   category: "Activité",
   address: "6 rue de l'Indre 44000 Nantes",
@@ -822,7 +822,7 @@ activité_sportive = Mission.new!({
   organization: gref
 })
 
-accompagnateur_refugie = Mission.new!({
+accompagnateur_refugie = Mission.create!({
   title: "Accompagnateur binôme avec un réfugié",
   category: "Accompagnemement",
   address: "94 rue des hauts pavés, 44000 Nantes",
@@ -836,10 +836,10 @@ accompagnateur_refugie = Mission.new!({
   duration_in_hours: 4,
   recurrent: false,
   end_candidature_date: "2018/09/10 07:00:00",
-  organization: accueil
+  organization: gref
 })
 
-parrain = Mission.new!({
+parrain = Mission.create!({
   title: "Parrain d'une personne réfugié",
   category: "Accompagnemement",
   address: "16 boulevard de stalingrad, 44000 Nantes",
@@ -848,7 +848,7 @@ parrain = Mission.new!({
   skills_needed: "
   - goût de l'engagement pour les causes de la solidarité
   - patience, pédagogie et habitude du travail d'équipe",
-  starting_at: "2018/09/12 15:00:00"
+  starting_at: "2018/09/12 15:00:00",
   duration_in_hours: 2,
   recurrent: true,
   recurrency_in_days: 3,
@@ -857,7 +857,7 @@ parrain = Mission.new!({
   organization: mrap
 })
 
-formateur_web = Mission.new!({
+formateur_web = Mission.create!({
   title: "Formateur web",
   category: "Enseignement",
   address: "16 boulevard de stalingrad, 44000 Nantes",
@@ -880,7 +880,7 @@ formateur_web = Mission.new!({
   organization: saint_jean
 })
 
-insertion_professionnelle = Mission.new!({
+insertion_professionnelle = Mission.create!({
   title: "Insertion professionnelle des migrants",
   category: "Accompagnemement",
   address: "1 boulevard de stalingrad, 44000 Nantes",
@@ -899,7 +899,7 @@ insertion_professionnelle = Mission.new!({
   organization: mrap
 })
 
-maraude = Mission.new!({
+maraude = Mission.create!({
   title: "Maraude",
   category: "MAraude",
   address: "16 boulevard de stalingrad, 44000 Nantes",
@@ -915,7 +915,7 @@ maraude = Mission.new!({
   organization: croix_rouge
 })
 
-benevoles = Mission.new!({
+benevoles = Mission.create!({
   title: "Benevoles pour le festival des réfugiés",
   category: "Evenement",
   address: "1 place royal, 44000 Nantes",
@@ -935,7 +935,7 @@ benevoles = Mission.new!({
 })
 
 
-benevoles_entraide = Mission.new!({
+benevoles_entraide = Mission.create!({
   title: "Benevoles pour le festival de l'entraide",
   category: "Evenement",
   address: "5 quai des Antilles, 44000 Nantes",
@@ -955,7 +955,7 @@ benevoles_entraide = Mission.new!({
 })
 
 
-collecte_para = Mission.new!({
+collecte_para = Mission.create!({
   title: "Collecte parapharmacie",
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
@@ -969,7 +969,7 @@ collecte_para = Mission.new!({
   organization: medecins_du_monde
 })
 
-aide_aux_devoirs = Mission.new!({
+aide_aux_devoirs = Mission.create!({
   title: "Aide aux devoirs",
   category: "Enseignement",
   address: "6 boulevard de stalingrad, 44000 Nantes",
@@ -986,4 +986,6 @@ aide_aux_devoirs = Mission.new!({
   end_candidature_date:"2018/09/12 14:00:00",
   organization: anade
 })
+
+puts "DONE"
 
