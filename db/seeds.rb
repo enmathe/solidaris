@@ -101,6 +101,7 @@ enzo = User.create!(
   skills: "Architecture Réseau / Machine Learning",
   experiences: "Web Ninja depuis l'âge de 8 ans.",
   picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
+  )
 
 cnrw = Organization.create!(
   name: "CNRW - Cercle National Richard Wagner",
@@ -126,7 +127,7 @@ cnrw = Organization.create!(
   photo_2: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_2.jpg")),
   photo_3: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_3.jpg")),
 )
-"02 40 40 45 27"
+
 
 kollectif_93 = Organization.create!(
   name: "Kollectif_93",
