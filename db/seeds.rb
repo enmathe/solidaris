@@ -14,93 +14,257 @@ User.destroy_all
 
 puts "Creating default users..."
 
-fatou = User.create!(
-  email: "fatou.d@gmail.com",
-  password: "azerty",
-  first_name: "Fatou",
-  last_name: "Diallo",
-  phone_number: "0654567876",
-  description: "J'ai 37 ans, trois enfants et je suis psychiatre au CHU de Nantes.
-  Je suis passionnée par la Grèce antique et
-  je souhaite donner quelques heures de mon temps pour donner des cours d'histoire-géo.",
-  skills: "Diplomée du CHU de Nantes / Maîtrise de l'anglais, de l'espagnol et de l'arabe.
-  Je suis patiente et empathique.",
-  experiences: "Membre d'une association pour faire avancer la science depuis 2011.",
-  picture: File.open(Rails.root.join("db/fixtures/users/fatou.jpg"))
-)
+# fatou = User.create!(
+#   email: "fatou.d@gmail.com",
+#   password: "azerty",
+#   first_name: "Fatou",
+#   last_name: "Diallo",
+#   phone_number: "0654567876",
+#   description: "J'ai 37 ans, trois enfants et je suis psychiatre au CHU de Nantes.
+#   Je suis passionnée par la Grèce antique et
+#   je souhaite donner quelques heures de mon temps pour donner des cours d'histoire-géo.",
+#   skills: "Diplomée du CHU de Nantes / Maîtrise de l'anglais, de l'espagnol et de l'arabe.
+#   Je suis patiente et empathique.",
+#   experiences: "Membre d'une association pour faire avancer la science depuis 2011.",
+#   picture: File.open(Rails.root.join("db/fixtures/users/fatou.jpg"))
+# )
 
-binta = User.create!(
-  email: "binta.diallo@gmail.com",
-  password: "azerty",
-  first_name: "Binta",
-  last_name: "Diallo",
-  phone_number: "0677779865",
-  description: "Je suis très méticuleuse et organisée.
-  Je viens de finir un master en Art Appliqué est
-  c'est ma soeur Fatou qui m'a parlé de cette plateforme et c'est la 1ère fois
-  que je participe à une action humanitaire. Jai envie d'animer un atelier dessin une fois par semaine.",
-  skills: "Dessin, Peinture, Street Art, Logiciels de PAO.",
-  experiences: "Baby-Sitter pendant 5 ans / prof d'anglais pour des collégiens.",
-  picture: File.open(Rails.root.join("db/fixtures/users/binta.jpg"))
-)
+# binta = User.create!(
+#   email: "binta.diallo@gmail.com",
+#   password: "azerty",
+#   first_name: "Binta",
+#   last_name: "Diallo",
+#   phone_number: "0677779865",
+#   description: "Je suis très méticuleuse et organisée.
+#   Je viens de finir un master en Art Appliqué est
+#   c'est ma soeur Fatou qui m'a parlé de cette plateforme et c'est la 1ère fois
+#   que je participe à une action humanitaire. Jai envie d'animer un atelier dessin une fois par semaine.",
+#   skills: "Dessin, Peinture, Street Art, Logiciels de PAO.",
+#   experiences: "Baby-Sitter pendant 5 ans / prof d'anglais pour des collégiens.",
+#   picture: File.open(Rails.root.join("db/fixtures/users/binta.jpg"))
+# )
 
-elena = User.create!(
-  email: "elena.chavos@aol.com",
-  password: "azerty",
-  first_name: "Elena",
-  last_name: "Chavos",
-  phone_number: "0655323411",
-  description: "J'ai 26 ans et je suis étudiante à la faculté de Droit de Nantes.
-  Je viens de Colombie et je vis avec mon fiancé Thomas à Saint-Sébastien. Véhiculée, les déplacements
-  à Nantes Centre ne sont pas un problème.
-  Pour toutes questions relatives au juridique/droit, vous pouvez compter sur moi !",
-  skills: "Spécialisée en Droit des Familles. Je parle anglais et espagnol.",
-  experiences: "Stage de 6 mois au Barreau de Nantes.",
-  picture: File.open(Rails.root.join("db/fixtures/users/elena.jpg"))
-)
+# elena = User.create!(
+#   email: "elena.chavos@aol.com",
+#   password: "azerty",
+#   first_name: "Elena",
+#   last_name: "Chavos",
+#   phone_number: "0655323411",
+#   description: "J'ai 26 ans et je suis étudiante à la faculté de Droit de Nantes.
+#   Je viens de Colombie et je vis avec mon fiancé Thomas à Saint-Sébastien. Véhiculée, les déplacements
+#   à Nantes Centre ne sont pas un problème.
+#   Pour toutes questions relatives au juridique/droit, vous pouvez compter sur moi !",
+#   skills: "Spécialisée en Droit des Familles. Je parle anglais et espagnol.",
+#   experiences: "Stage de 6 mois au Barreau de Nantes.",
+#   picture: File.open(Rails.root.join("db/fixtures/users/elena.jpg"))
+# )
 
-yulia = User.create!(
-  email: "yulia_osipova@aol.com",
-  password: "azerty",
-  first_name: "Yulia",
-  last_name: "Osipova",
-  phone_number: "0627658398",
-  description: "J'ai 31 ans, je suis russe et j'habite à Nantes depuis 2 ans
-  Je suis Chef Cuisto à la Cigale et j'adore mon métier ! Je souhaite donner mon temps pour cuisiner pour les exilés.
-  Mon patron est d'ailleurs d'accord pour faire des dons ponctuels.",
-  skills: "Cuisine moléculaire/Cuisine Bistronomique",
-  experiences: "Je me suis occupée d'enfants dans un orphelinat de ma ville natale
-  et je gérais les repas pour 65 enfants.",
-  picture: File.open(Rails.root.join("db/fixtures/users/yulia.jpg"))
-)
+# yulia = User.create!(
+#   email: "yulia_osipova@aol.com",
+#   password: "azerty",
+#   first_name: "Yulia",
+#   last_name: "Osipova",
+#   phone_number: "0627658398",
+#   description: "J'ai 31 ans, je suis russe et j'habite à Nantes depuis 2 ans
+#   Je suis Chef Cuisto à la Cigale et j'adore mon métier ! Je souhaite donner mon temps pour cuisiner pour les exilés.
+#   Mon patron est d'ailleurs d'accord pour faire des dons ponctuels.",
+#   skills: "Cuisine moléculaire/Cuisine Bistronomique",
+#   experiences: "Je me suis occupée d'enfants dans un orphelinat de ma ville natale
+#   et je gérais les repas pour 65 enfants.",
+#   picture: File.open(Rails.root.join("db/fixtures/users/yulia.jpg"))
+# )
 
-romain = User.create!(
-  email: "romain.pazo@gmail.com",
-  password: "azerty",
-  first_name: "Romain",
-  last_name: "Pazo",
-  phone_number: "0675410100",
-  description: "J'ai 50 ans et je suis professeur de mathématique au Lycée Saint Stanislas.
-  Je souhaite donner des cours de mathématique.",
-  skills: "Agrégé en mathématique",
-  experiences: "Professeur de mathématique (hypokhâgne)",
-  picture: File.open(Rails.root.join("db/fixtures/users/romain.jpg"))
-)
+# romain = User.create!(
+#   email: "romain.pazo@gmail.com",
+#   password: "azerty",
+#   first_name: "Romain",
+#   last_name: "Pazo",
+#   phone_number: "0675410100",
+#   description: "J'ai 50 ans et je suis professeur de mathématique au Lycée Saint Stanislas.
+#   Je souhaite donner des cours de mathématique.",
+#   skills: "Agrégé en mathématique",
+#   experiences: "Professeur de mathématique (hypokhâgne)",
+#   picture: File.open(Rails.root.join("db/fixtures/users/romain.jpg"))
+# )
 
-enzo = User.create!(
-  email: "enzo.mathe@gmail.com",
+# enzo = User.create!(
+#   email: "enzo.mathe@gmail.com",
+#   password: "azerty",
+#   first_name: "Enzo",
+#   last_name: "Mathé",
+#   phone_number: "0628880008",
+#   description: "Je suis spécialisé en architecture réseau et je travaille au Ministère
+#   des Affaires étrangères. Je suis passionné de moto.
+#   et je pars tous les week-ends faire des ballades
+#   au bord de la mer. Je n'ai pas beaucoup de temps, mais une à deux fois
+#   par mois, je voudrais animer des ateliers 'Initiation à l'informatique'.",
+#   skills: "Architecture Réseau / Machine Learning",
+#   experiences: "Web Ninja depuis l'âge de 8 ans.",
+#   picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
+
+cnrw = Organization.create!(
+  name: "CNRW - Cercle National Richard Wagner",
+  description: "Le Cercle Richard Wagner
+  rassemble aussi bien des passionnés convaincus
+  que des curieux en quête de découverte
+  de l’œuvre de Richard Wagner. Nous nous proposons
+  de former les exilés au chant lyrique. Nous vous laisserons le soin de fixer
+  les horaires car nous sommes relativement flexibles.",
+  email: "cnrw@fr",
   password: "azerty",
-  first_name: "Enzo",
-  last_name: "Mathé",
-  phone_number: "0628880008",
-  description: "Je suis spécialisé en architecture réseau et je travaille au Ministère
-  des Affaires étrangères. Je suis passionné de moto.
-  et je pars tous les week-ends faire des ballades
-  au bord de la mer. Je n'ai pas beaucoup de temps, mais une à deux fois
-  par mois, je voudrais animer des ateliers Initiation à l'informatique.",
-  skills: "Architecture Réseau / Machine Learning",
-  experiences: "Web Ninja depuis l'âge de 8 ans.",
-  picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
+  kind: "Association",
+  total_volunteers: 2,
+  siren: "117 432 186",
+  category: "Arts et Culture",
+  website: "www.cnrw.fr",
+  facebook: "https://www.facebook.com/julie.yende",
+  linkedin: "https://www.linkedin.com/in/julieyendebusinessdeveloper/",
+  twitter: "https://twitter.com/YendeJulie",
+  address: "2 bd de la Marine Marchande, 44300 Nantes",
+  creation_year: "1978",
+  logo: File.open(Rails.root.join("db/fixtures/organization/cnrw/logo.jpg")),
+  photo_1: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_1.jpg")),
+  photo_2: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_2.jpg")),
+  photo_3: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_3.jpg")),
+)
+"02 40 40 45 27"
+
+kollectif_93 = Organization.create!(
+  name: "Kollectif_93",
+  description: "Le Kollectif_93 est une équipe de passionnés d’art urbain.
+  Nous prenons le parti d’accompagner de jeunes artistes français et internationaux du milieu graffiti
+  et street art. Nous souhaitons animer des ateliers 'street-art' pour les exilés de Nantes.",
+  email: "kollectif_93@fr",
+  password: "azerty",
+  kind: "Collectif",
+  total_volunteers: 30,
+  siren: "117 535 186",
+  category: "Arts et Culture",
+  website: "www.kollectif-93.com",
+  facebook: "https://www.facebook.com/julie.yende",
+  linkedin: "https://www.linkedin.com/in/julieyendebusinessdeveloper/",
+  twitter: "https://twitter.com/YendeJulie",
+  address: "5 rue du tour du monde, 44300 Nantes",
+  creation_year: 2007,
+  logo: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/logo.jpg")),
+  photo_1: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_1.jpg")),
+  photo_2: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_2.jpg")),
+  photo_3: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_3.jpg")),
+)
+"06 75 29 00 77"
+
+bns = Organization.create!(
+  name: "Boxe Nantaise Savate",
+  description: "C'est Jules Germany, 2 fois champion de France de boxe française, qui a fondé cette structure originale.
+  Les valeurs qu'il souhaite inculquer à ses champions en herbe sont le respect, l'humilité, le courage
+  et la détermination.
+  Ce n'est pas un club de boxe comme les autres : On y apprend bien sûr le combat
+  mais on peut aussi profiter de soutien scolaire et
+  d'accompagnement professionnel avant l'entrainement ! Nous souhaitons donner 2 entraînements
+  de 2h par semaine et nous fournissons les tickets de tram pour se rendre à la salle de sport. Une paire de basket
+  est demandée mais nous mettons à disposition gants, protège-dent et protège-tibia.",
+  email: "bns@gmail.fr",
+  password: "azerty",
+  kind: "Collectif",
+  total_volunteers: 4,
+  siren: "117 552 432",
+  category: "Sport & Loisirs",
+  website: "www.bns.fr",
+  facebook: "https://www.facebook.com/julie.yende",
+  linkedin: "https://www.linkedin.com/in/julieyendebusinessdeveloper/",
+  twitter: "https://twitter.com/YendeJulie",
+  address: "2 rue de la Poste, 44000 Nantes",
+  creation_year: 1998,
+  logo: File.open(Rails.root.join("db/fixtures/organization/bns/logo.jpg")),
+  photo_1: File.open(Rails.root.join("db/fixtures/organization/bns/pic_1.jpg")),
+  photo_2: File.open(Rails.root.join("db/fixtures/organization/bns/pic_2.jpg")),
+  photo_3: File.open(Rails.root.join("db/fixtures/organization/bns/pic_3.jpg")),
+)
+"06 55 88 23 00"
+
+réseau_entreprendre = Organization.create!(
+  name: "Réseau Entreprendre",
+  description: "L’histoire de Réseau Entreprendre débute en 1986 lorsqu’André Mulliez, industriel du Nord
+  de la France confronté à des licenciements massifs dans son entreprise Phildar,
+  lance cette maxime visionnaire et pleine de bon sens : « Pour créer des emplois, créons des employeurs ».
+  Son idée : faire réussir des entrepreneurs à potentiel de création d’emplois en leur transmettant le savoir-être et l’expérience de chefs d’entreprise en activité,
+  au travers d’échanges de pairs à pairs. Réseau Entreprendre ce sont des milliers de success stories
+  (Michel & Augustin, Sushi Daily, My Little Paris…).
+  Nous nous proposons d'aller à la rencontre des exilés pour les accompagner sur leur propre projet et les faire
+  pitcher. 3 sessions de 1h sont prévues.",
+  email: "reseau_entreprendre@gmail.fr",
+  password: "azerty",
+  kind: "Association",
+  total_volunteers: 10,
+  siren: "117 534 210",
+  category: "Economie, Emploi, Formation, Insertion",
+  website: "www.reseau-entreprendre.org/fr/accueil/",
+  facebook: "https://www.facebook.com/julie.yende",
+  linkedin: "https://www.linkedin.com/in/julieyendebusinessdeveloper/",
+  twitter: "https://twitter.com/YendeJulie",
+  address: "54 rue du Costa Rica, 44000 Nantes",
+  creation_year: 1986,
+  logo: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/logo.jpg")),
+  photo_1: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_1.jpg")),
+  photo_2: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_2.jpg")),
+  photo_3: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_3.jpg")),
+)
+"06 26 33 34 72"
+
+lire_et_faire_lire_ = Organization.create!(
+  name: "Lire et Faire Lire",
+  description: "
+  Lire et faire lire est un programme national d’ouverture à la lecture et de solidarité intergénérationnelle.
+  Des bénévoles de plus de 50 ans offrent une partie de leur temps libre aux mineurs pour
+  stimuler le goût de la lecture et de la littérature.
+  Des séances de lecture sont organisées en petit groupe, une ou plusieurs fois par semaine, durant toute
+  l’année, dans une démarche axée sur le plaisir de lire et la rencontre entre les générations.",
+  email: "lireetfairelire@gmail.fr",
+  password: "azerty",
+  kind: "Association",
+  total_volunteers: 6,
+  siren: "117 398 540",
+  category: "Arts et Culture",
+  website: "www.lireetfairelire.org/",
+  facebook: "https://www.facebook.com/julie.yende",
+  linkedin: "https://www.linkedin.com/in/julieyendebusinessdeveloper/",
+  twitter: "https://twitter.com/YendeJulie",
+  address: "28 Boulevard Allende, 44000 Nantes",
+  creation_year: 1991,
+  logo: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/logo.jpg")),
+  photo_1: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_1.jpg")),
+  photo_2: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_2.jpg")),
+  photo_3: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_3.jpg")),
+)
+"02 40 67 11 11"
+
+dessins_sans_papiers = Organization.create!(
+  name: "Dessins Sans Papiers",
+  description: "DESSINS SANS PAPIERS est un collectif qui organise des ateliers dans des camps de réfugiés
+  et des centres d’hébergement depuis 2016. DSP publie aussi des livres de dessins
+  pour passer les frontières et partager des histoires que tout le monde peut comprendre.
+  Ceux que nous avons rencontrés viennent du Soudan, du Tchad, du Mali, de Guinée Conakry,
+  d’Érythrée, d’Éthiopie,
+  du Tibet, d’Égypte, d’Iran, d’Irak, de Syrie, du Pakistan …
+  ou d’Afghanistan. Leurs dessins montrent des milices qui tirent sur des hommes, des oiseaux fatigués,
+  des messages d’amitié accrochés
+  à la Tour Eiffel. Ils nous disent ce qu’ils ont fui et pourquoi ils ont besoin de notre hospitalité.",
+  email: "dessinssanspapiers@gmail.fr",
+  password: "azerty",
+  kind: "Collectif",
+  total_volunteers: 6,
+  siren: "756 867 453",
+  category: "Arts et Culture",
+  website: "www.dessinssanspapiers.com",
+  facebook: "https://www.facebook.com/julie.yende",
+  linkedin: "https://www.linkedin.com/in/julieyendebusinessdeveloper/",
+  twitter: "https://twitter.com/YendeJulie",
+  address: "2 Cours des Paludiers, 44100 Nantes",
+  creation_year: 2005,
+  logo: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/logo_dsp.jpg")),
+  photo_1: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_1.jpg")),
+  photo_2: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_2.jpg")),
+  photo_3: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_3.jpg")),
 )
 
 puts "Creating organizations..."
@@ -144,7 +308,7 @@ association_aurore = Organization.create!(
   twitter: "@AssoAurore",
   address: "29, allée de l'Indre, 44000 Nantes",
   creation_year: 1871,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/association_aurore.jpeg")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/association_aurore.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -192,7 +356,7 @@ cfda = Organization.create!(
   twitter: "www.twitter.com",
   address: "36 quai de la fosse 44100 Nantes",
   creation_year: 2000,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/cfda.jpg")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/cfda.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -221,7 +385,7 @@ croix_rouge = Organization.create!(
   twitter: "https://twitter.com/croixrouge",
   address: "10, rue d'Athènes, 44300 Nantes",
   creation_year: "1859",
-  logo: File.open(Rails.root.join("db/fixtures/organizations/croix_rouge.png")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/croix_rouge/logo.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -271,7 +435,7 @@ emmaus = Organization.create!(
   twitter: "https://twitter.com/croixrouge",
   address: "La Guilloterie Rue d'Emmaüs 44340 Bouguenais",
   creation_year: 1950,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/emmaus.png")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/emmaus.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -298,7 +462,7 @@ fbna = Organization.create!(
   twitter: "https://twitter.com/francebenevolat",
   address: "9 Place Mangin 44200 Nantes",
   creation_year: 1965,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/fbna.jpeg")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/fbna.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -363,7 +527,7 @@ gref = Organization.create!(
   twitter: "www.twitter.com",
   address: "Rue meuris, Nantes",
   creation_year: 1980,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/gref.png")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/gref.png")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -533,7 +697,7 @@ mrap = Organization.create!(
   twitter: "www.twitter.com",
   address: "11 rue de Prinquiau 44100 Nantes",
   creation_year: 1949,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/mrap.jpg")),
+  logo: File.open(Rails.root.join("db/fixtures/organization/mrap.jpg")),
   photo_1: "",
   photo_2: "",
   photo_3: ""
@@ -560,10 +724,10 @@ medecins_du_monde = Organization.create!(
   twitter: "www.twitter.com",
   address: "33 Rue Fouré 44000 Nantes",
   creation_year: 1954,
-  logo: File.open(Rails.root.join("db/fixtures/organizations/medecins_du_monde.png")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  logo: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/logo.jpg")),
+  photo_1: "db/fixtures/organization/medecin_du_monde/pic_1.jpg",
+  photo_2: "db/fixtures/organization/medecin_du_monde/pic_2.jpg",
+  photo_3: "db/fixtures/organization/medecin_du_monde/pic_3.jpg"
 )
 # "02 40 47 36 99"
 # asamla = Organization.create!(
@@ -666,3 +830,461 @@ medecins_du_monde = Organization.create!(
 #   photo_3:
 # )
 # "06 85 02 01 70 - 02 40 06 72 55"
+
+puts "Creating missions..."
+
+vetements = Mission.create!({
+  title: "Collecte de vêtements",
+  category: "Collecte",
+  address: "94 rue des hauts pavés, 44000 Nantes",
+  volunteers_needed: 0,
+  description: "En partenariat avec des écoles (Algérie, Egypte...) Orient Events recherche une personne en charge d'organiser une collecte de vêtements pour les enfants, livres, fournitures scolaires. Le bénévole sera en charge de - Rédaction du projet, - Recherche de partenaires (écoles, compagnies aériennes...) - Organiser la collecte - Trouver des partenaires afin d'acheminer les objets ",
+  starting_at: "2018/10/17 14:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/17 13:00:00",
+  organization: anade
+})
+
+nourriture = Mission.create!({
+  title: "Collecte de nouriture",
+  category: "Collecte",
+  address: "94 rue des hauts pavés, 44000 Nantes",
+  volunteers_needed: 0,
+  description: "En partenariat avec des écoles (Algérie, Egypte...) Orient Events recherche une personne en charge d'organiser une collecte de vêtements pour les enfants, livres, fournitures scolaires. Le bénévole sera en charge de - Rédaction du projet, - Recherche de partenaires (écoles, compagnies aériennes...) - Organiser la collecte - Trouver des partenaires afin d'acheminer les objets ",
+  skills_needed: "",
+  starting_at: "2018/10/17 14:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/17 13:00:00",
+  organization: association_aurore
+})
+
+cours_de_français = Mission.create!({
+  title: "Cours de français",
+  category: "Enseignement",
+  address: "15 rue Guépin, 44000 Nantes",
+  volunteers_needed: 14,
+  description: "Rejoignez notre association du 6eme arrondissement de Paris en tant que formateur PSC 1 (Prévention et secours civiques de niveau 1) Pourquoi former les français aux gestes qui sauvent ? En France, plusieurs milliers de personnes décèdent chaque année des suites d’une méconnaissance des gestes de premiers secours par leur entourage.Par ailleurs, les différents drames auxquels les français ont dû faire face ces deux dernières années rendent cette",
+  skills_needed: 0,
+  starting_at: "2018/10/17 14:00:00",
+  duration_in_hours: 4.5,
+  recurrent: true,
+  recurrency_in_days: 4,
+  recurrency_ending_on: "2018/12/17 14:00:00",
+  end_candidature_date: "2018/10/17 14:00:00",
+  organization: fbna
+})
+
+
+hébergement = Mission.create!({
+  title: "Herbergement d'urgence pour une famille de 5 personnes",
+  category: "Hebergement",
+  address: "15 rue Guépin, 44000 Nantes",
+  volunteers_needed: 2,
+  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
+  starting_at: "2018/10/17 14:00:00",
+  duration_in_hours: "",
+  recurrent: true,
+  recurrency_in_days: 5,
+  recurrency_ending_on: "2018/12/22 14:00:00",
+  end_candidature_date: "2018/10/17 14:00:00",
+  organization: ligue_droits_de_lhomme
+})
+
+
+hébergement_2 = Mission.create!({
+  title: "Herbergement d'urgence pour une mère et sa fille",
+  category: "Hebergement",
+  address: "26 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 2,
+  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
+  starting_at: "2018/11/17 14:00:00",
+  duration_in_hours: 10,
+  recurrent: true,
+  recurrency_in_days: 5,
+  recurrency_ending_on: "2018/11/22 14:00:00",
+  end_candidature_date: "2018/10/17 14:00:00",
+  organization: gasprom
+})
+
+
+hébergement_3 = Mission.create!({
+  title: "Herbergement d'urgence pour une fille de 15 ans",
+  category: "Herbergement",
+  address: "26 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 1,
+  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
+  skills_needed: 0,
+  starting_at: "2018/09/17 14:00:00",
+  recurrent: true,
+  recurrency_in_days: 5,
+  recurrency_ending_on: "2018/09/22 14:00:00",
+  end_candidature_date: "2018/10/17 14:00:00",
+  organization: emmaus
+})
+
+cours_de_dessin = Mission.create!({
+  title: "Accompagnateurs pour un cours de dessin",
+  category: "Activité",
+  address: "16 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Votre mission en tant que bénévole :
+  - Encadrer avec 2 autres bénévoles un groupe d'une vingtaine de personnes
+  - Apprendre les bases du dessin
+  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association
+  ",
+  skills_needed: "
+  Passionnée par le dessin,
+  Bases en pédagogie,
+  ",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 4,
+  recurrent: false,
+  end_candidature_date: "2018/09/12 15:00:00",
+  organization: diaconat
+})
+
+cours_de_dessin_1 = Mission.create!({
+  title: "Accompagnateurs pour un cours de dessin",
+  category: "Activité",
+  address: "16 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "Votre mission en tant que bénévole :
+  - Encadrer avec 2 autres bénévoles un groupe d'une vingtaine de personnes
+  - Apprendre les bases du dessin
+  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association",
+  skills_needed: "
+  Passionnée par le dessin,
+  Bases en pédagogie,",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 3,
+  recurrent: false,
+  end_candidature_date: "2018/09/07 15:00:00",
+  organization: cfda
+})
+
+activité_sportive = Mission.create!({
+  title: "Activité sportive avec les réfugiés",
+  category: "Activité",
+  address: "6 rue de l'Indre 44000 Nantes",
+  volunteers_needed: 5,
+  description: "Votre mission en tant que bénévole :
+  - Encadrer avec 10 autres bénévoles un groupe d'une cinquantaine de personnes agées de 12 à 15 ans
+  - Organiser un tournoi multisport (rugby, foot, hand, ... )
+  - Aider les autres bénévoles à la préparation de la nourriture pour la journée
+  - Aider à la mise en place et à la desinstallation des activités",
+  skills_needed: "
+  Passionnée par le sport,
+  Bases en pédagogie,
+  Avoir le BAFA serait un plus
+  ",
+  starting_at: "2018/09/03 08:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/08/31 08:00:00",
+  organization: gref
+})
+
+accompagnateur_refugie = Mission.create!({
+  title: "Accompagnateur binôme avec un réfugié",
+  category: "Accompagnemement",
+  address: "94 rue des hauts pavés, 44000 Nantes",
+  volunteers_needed: 10,
+  description: "Votre mission en tant que bénévole :
+  - Encadrer avec 2 autres bénévoles un groupe d'une vingtaine de personnes
+  - Apprendre les bases du dessin
+  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association",
+  skills_needed:"",
+  starting_at: "2018/09/11 07:00:00",
+  duration_in_hours: 4,
+  recurrent: false,
+  end_candidature_date: "2018/09/10 07:00:00",
+  organization: gref
+})
+
+parrain = Mission.create!({
+  title: "Parrain d'une personne réfugié",
+  category: "Accompagnemement",
+  address: "16 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Nous recherchons des personnes habitant en france de longue date pour parrainer des réfugiés (1 rencontre par mois minimum pendant 6 mois) avec pour buts: l'amélioration du niveau de français à travers des conversations, sorties, ou toute initiative favorisant les échanges; la découverte de l'environnement et des loisirs (visites de la ville, de musées, séances de cinéma, spectacles, etc.); une meilleure connaissance de la culture française.",
+  skills_needed: "
+  - goût de l'engagement pour les causes de la solidarité
+  - patience, pédagogie et habitude du travail d'équipe",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 2,
+  recurrent: true,
+  recurrency_in_days: 3,
+  recurrency_ending_on: "2018/03/12 15:00:00",
+  end_candidature_date: "2018/09/09 15:00:00",
+  organization: mrap
+})
+
+formateur_web = Mission.create!({
+  title: "Formateur web",
+  category: "Enseignement",
+  address: "16 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 1,
+  description: "La crise migratoire ayant un impact sans précédent sur l'europe et le monde, notre mission est de promouvoir l’inclusion des personnes réfugiées dans ces communautés en s’appuyant sur l'innovation et la technologie. notre organisation s’attaque à la question de l’intégration des personnes réfugiées en leur proposant l’accès et la formation à des connaissances numériques.",
+  skills_needed: "
+  - connaissances bureautiques (pour les formateurs du niveau débutant)
+  - connaissances essentielles de word, excel et du web (pour les formateurs du niveau intermédiaire)
+  - utilisation fréquente d'excel (pour les formateurs du niveau pcie)
+  - compétences linguistiques : anglais est un plus !
+  - être disponible 3-6 heures par semaine
+  - goût de l'engagement pour les causes de la solidarité
+  - patience, pédagogie et habitude du travail d'équipe",
+  starting_at: "2018/08/28 15:00:00",
+  duration_in_hours: 3,
+  recurrent: true,
+  recurrency_in_days: 4,
+  recurrency_ending_on: "2018/12/28 15:00:00",
+  end_candidature_date: "2018/08/28 15:00:00",
+  organization: saint_jean
+})
+
+insertion_professionnelle = Mission.create!({
+  title: "Insertion professionnelle des migrants",
+  category: "Accompagnemement",
+  address: "1 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Acina mène un projet d'insertion professionnelle des nouveaux arrivants en situation d'exclusion, dont les personnes vivant en bidonville ou squat. dans ce cadre l'association recherche des personnes souhaitant s'impliquer dans le développement et la consolidation de partenariats avec des entreprises/centres de formation/structures d'insertion. plus largement, les bénévoles sont invités à réfléchir à des stratégies d'insertion innovantes.",
+  skills_needed: "
+  - compétences linguistiques : anglais est un plus !
+  - goût de l'engagement pour les causes de la solidarité
+  - patience, pédagogie et habitude du travail d'équipe",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 2,
+  recurrent: true,
+  recurrency_in_days: 7,
+  recurrency_ending_on: "2018/01/12 15:00:00",
+  end_candidature_date: "2018/09/12 14:00:00",
+  organization: mrap
+})
+
+maraude = Mission.create!({
+  title: "Maraude",
+  category: "Maraude",
+  address: "16 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 2,
+  description: "Acina mène un projet d'insertion professionnelle des nouveaux arrivants en situation d'exclusion, dont les personnes vivant en bidonville ou squat. dans ce cadre l'association recherche des personnes souhaitant s'impliquer dans le développement et la consolidation de partenariats avec des entreprises/centres de formation/structures d'insertion. plus largement, les bénévoles sont invités à réfléchir à des stratégies d'insertion innovantes.",
+  skills_needed: "
+  Passionnée par le dessin,
+  Bases en pédagogie ",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 3,
+  recurrent: true,
+  end_candidature_date:"2018/09/12 14:00:00",
+  recurrency_ending_on: "2018/01/12 15:00:00",
+  organization: croix_rouge
+})
+
+benevoles = Mission.create!({
+  title: "Benevoles pour le festival des réfugiés",
+  category: "Evenement",
+  address: "1 place royal, 44000 Nantes",
+  volunteers_needed: 15,
+  description: "Votre mission en tant que bénévole sera une des suivantes en fonction du besoin:
+  - Servir au bar
+  - Accueil
+  - Vente de place",
+  skills_needed: "",
+  starting_at: "2018/12/11 15:00:00",
+  duration_in_hours: 2,
+  recurrent: false,
+  recurrency_in_days: 2,
+  recurrency_ending_on: "2018/12/11 15:00:00",
+  end_candidature_date: "2018/12/01 15:00:00",
+  organization: diaconat
+})
+
+
+benevoles_entraide = Mission.create!({
+  title: "Benevoles pour le festival de l'entraide",
+  category: "Evenement",
+  address: "5 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 2,
+  description: "Votre mission en tant que bénévole sera une des suivantes en fonction du besoin:
+  - Servir au bar
+  - Accueil
+  - Vente de place",
+  skills_needed: "",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 4,
+  recurrent: false,
+  recurrency_in_days: 1,
+  recurrency_ending_on: "2018/09/15 15:00:00",
+  end_candidature_date: "2018/09/12 14:00:00",
+  organization: fbna
+})
+
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
+aide_aux_devoirs = Mission.create!({
+  title: "Aide aux devoirs",
+  category: "Enseignement",
+  address: "6 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 3,
+  description: "Acina mène un projet d'insertion professionnelle des nouveaux arrivants en situation d'exclusion, dont les personnes vivant en bidonville ou squat. dans ce cadre l'association recherche des personnes souhaitant s'impliquer dans le développement et la consolidation de partenariats avec des entreprises/centres de formation/structures d'insertion. plus largement, les bénévoles sont invités à réfléchir à des stratégies d'insertion innovantes.",
+  skills_needed:" - compétences linguistiques : anglais est un plus !
+  - goût de l'engagement pour les causes de la solidarité
+  - patience, pédagogie et habitude du travail d'équipe",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 3,
+  recurrent: true,
+  recurrency_in_days: 2,
+  recurrency_ending_on: "2018/12/12 15:00:00",
+  end_candidature_date:"2018/09/12 14:00:00",
+  organization: anade
+})
+
+puts "DONE"
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2016/09/12 15:00:00",
+  duration_in_hours: 3,
+  recurrent: true,
+  end_candidature_date:"2016/09/12 14:00:00",
+  recurrency_ending_on: "2019/01/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2016/09/12 15:00:00",
+  duration_in_hours: 3,
+  recurrent: true,
+  end_candidature_date:"2016/09/12 14:00:00",
+  recurrency_ending_on: "2019/01/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2016/09/12 15:00:00",
+  duration_in_hours: 3,
+  recurrent: true,
+  end_candidature_date:"2016/09/12 14:00:00",
+  recurrency_ending_on: "2019/01/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2022/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
