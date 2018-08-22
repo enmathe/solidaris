@@ -548,7 +548,7 @@ medecins_du_monde = Organization.create!(
   exclues et leurs communautés en capacité d’accéder à la santé tout en se battant
   pour un accès universel aux soins.​",
   email: "pays-de-la-loire@medecinsdumonde.net",
-  password: "azerty",
+  password: "m",
   phone_number: "",
   kind: "Association",
   total_volunteers: 14000,

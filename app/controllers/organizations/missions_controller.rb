@@ -1,4 +1,4 @@
-class MissionsController < ApplicationController
+class Organizations::MissionsController < ApplicationController
   def index
     @missions = Mission.all
     @past = []
