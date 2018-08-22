@@ -1,5 +1,22 @@
 <h1>Organizations</h1>
-<% @organizations.each do |organization| %>
-  <% organization.name %>
-  <% organization.description %>
-<% end %>
+
+<div class="container">
+  <div class="row">
+    <% @organizations.each do |organization| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="organizations-cards">
+          <div class="organization-looking-for">loupe</div>
+          <div class="organization-date">date</div>
+          <div class="organization-titre">
+            <h2><% organization.description %></h2>
+            <h4><% organization.name %></h4>
+            <div>
+            <a href="#" class="organization-picto"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

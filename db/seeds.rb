@@ -101,9 +101,10 @@ enzo = User.create!(
   skills: "Architecture Réseau / Machine Learning",
   experiences: "Web Ninja depuis l'âge de 8 ans.",
   picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
-  
+)
+
 puts "Creating organizations..."
-  
+
 anade = Organization.create!(
   name: "ANADE - Association Nantaise d'Alphabétisation Des Etrangers",
   description: "Les cours du soir dispensés s'adressent aux adultes de toute âge et de toutes nationalités désireux d'apprendre ou de se perfectionner dans la pratique du français",
