@@ -89,8 +89,17 @@
 }
 
 .gradient-mobilisation {
-  background-color: #80CAC4;
+  background-color: #0000F7;
 }
 
+.svg-white {
+  fill: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  svg {
+    width: 100px;
+  }
 
+}
 
