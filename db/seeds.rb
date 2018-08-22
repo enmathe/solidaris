@@ -210,8 +210,8 @@ réseau_entreprendre = Organization.create!(
   creation_year: 1986,
   logo: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/logo.jpg")),
   photo_1: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_2.jpg")),
-  photo_3: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_3.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_2.jpg")),
+  # photo_3: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_3.jpg")),
 )
 
 lire_et_faire_lire_ = Organization.create!(
@@ -236,8 +236,8 @@ lire_et_faire_lire_ = Organization.create!(
   address: "28 Boulevard Allende, 44000 Nantes",
   creation_year: 1991,
   logo: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/logo.jpg")),
-  photo_1: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_2.jpg")),
+  # photo_1: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_1.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_2.jpg")),
   photo_3: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_3.jpg")),
 )
 
@@ -726,9 +726,9 @@ medecins_du_monde = Organization.create!(
   address: "33 Rue Fouré 44000 Nantes",
   creation_year: 1954,
   logo: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/logo.jpg")),
-  photo_1: "db/fixtures/organization/medecin_du_monde/pic_1.jpg",
-  photo_2: "db/fixtures/organization/medecin_du_monde/pic_2.jpg",
-  photo_3: "db/fixtures/organization/medecin_du_monde/pic_3.jpg"
+  photo_1: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_1.jpg")),
+  photo_2: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_2.jpg")),
+  photo_3: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_3.jpg"))
 )
 
 puts "Creating missions..."
