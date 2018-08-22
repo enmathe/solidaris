@@ -1,0 +1,19 @@
+.dashboard-container {
+  height: calc(100vh - 70px);
+  display: flex
+}
+
+.asso-information {
+  flex: 450px 0;
+  background-color: white;
+  height: calc(100vh - 70px);
+}
+
+.missions-information {
+  flex: auto;
+  background-color: grey;
+}
+
+.green-background {
+  background-color: green;
+}

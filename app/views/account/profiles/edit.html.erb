@@ -1,0 +1,14 @@
+<h1>Editer votre profil</h1>
+
+
+
+<%= simple_form_for @profile, url: account_profile_path, method: :patch do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :phone_number %>
+  <%= f.input :description %>
+  <%= f.input :skills %>
+  <%= f.input :experiences %>
+  <%= f.input :picture %>
+  <%= f.submit "Enregistrer mes modifications", class: "btn btn-primary" %>
+<% end %>

@@ -18,7 +18,7 @@ class Organizations::MissionsController < ApplicationController
 
     @missions.each do |mission|
       if mission.starting_at < Date.current
-        @comming << mission
+        @coming << mission
       elsif mission.recurrent == true && mission.starting_at > Date.current && mission.recurrency_ending_on < Date.current
         @recurrent_current << mission
       elsif mission.recurrent == true && mission.recurrency_ending_on > Date.current
