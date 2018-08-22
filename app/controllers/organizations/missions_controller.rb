@@ -30,7 +30,50 @@ class Organizations::MissionsController < ApplicationController
     end
   end
 
+  def show
+    # organizations_mission GET    /organizations/missions/:id(.:format)
+    @mission = Mission.find(params[:id])
+  end
+
+  # def new
+  #   @mission = Mission.new()
+  # end
+
+  # def create
+  #   raise
+  #   @mission = Mission.new(mission_params)
+  #   @mission.organization = Organization.find(current_organization.id)
+  #   if @mission.save
+  #     redirect_to organizations_mission_path(@mission)
+  #   else
+  #     render :new
+  #   end
+  # end
+
+  def edit
+    @mission = Mission.find(params[:id])
+  end
+
+  def update
+    @mission = Mission.find(params[:id])
+    @organization = current_organization.id
+    @mission.update(mission_params)
+    redirect_to organizations_mission_path(@mission), :notice => "Your changes have been saved!"
+  end
+
+  private
+
   def set_organization
     @organization = current_organization
+  end
+
+  def mission_params
+    params.require(:mission).permit(
+      :title,
+      :address,
+      :description,
+      :skills_needed,
+      :volunteers_needed
+    )
   end
 end

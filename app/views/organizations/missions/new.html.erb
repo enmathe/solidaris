@@ -1,0 +1,15 @@
+<h1>Créer une mission</h1>
+
+
+<div class="container"></div>
+  <%= simple_form_for [@organization, @mission], url:organizations_mission_path(@mission)  do |f| %>
+    <%= f.input :title %>
+    <%= f.input :category %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :skills_needed %>
+    <%= f.input :volunteers_needed %>
+    <%= f.submit "Enregistrer mes modifications", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
