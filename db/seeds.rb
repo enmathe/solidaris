@@ -987,5 +987,188 @@ aide_aux_devoirs = Mission.create!({
   organization: anade
 })
 
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
 puts "DONE"
 
+######################################################TEST####################################################
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2017/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2017/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/10/12 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2017/10/12 15:00:00",
+  duration_in_hours: 10,
+  recurrent: true,
+  recurrency_in_days: 2,
+  recurrency_ending_on: "2019/12/11 15:00:00",
+  end_candidature_date: "2016/12/01 15:00:00",
+  organization: medecins_du_monde
+})
+collecte_para = Mission.create!({
+  title: "Collecte parapharmacie",
+  category: "Collecte",
+  address: "15 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  skills_needed: "",
+  starting_at: "2018/10/12 15:00:00",
+  duration_in_hours: 10,
+   recurrent: true,
+  recurrency_in_days: 2,
+  recurrency_ending_on: "2019/12/11 15:00:00",
+  end_candidature_date: "2016/12/01 15:00:00",
+  organization: medecins_du_monde
+})
