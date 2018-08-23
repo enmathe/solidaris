@@ -1,0 +1,31 @@
+<div class="banner-mission">
+  <div class="container">
+    <div class="banner-mission-content">
+      <img src="../db/fixtures/organizations/dessins_sans_papiers/pic_1.jpg"/>
+      # >> + picto // image tag !
+      <h1><%= @mission.title %></h1>
+      <p><%= @mission.category %></p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="banner-mission-content">
+    <h2>2 demi-journées par semaine pendant 6 mois</h2>
+    # ruby ds html pr faire calcul
+    <h3><%= @mission.category %></h3>
+    <p>Description de la mission :<%= @mission.description %></p>
+    <h4>Nb de volontaires demandés :<%= @mission.volunteers_needed %></h4>
+    <h4>Profil recherché :<%= @mission.skills_needed %></h4>
+  </div>
+</div>
+
+<div class="container">
+  <div class="banner-mission-content">
+    <h2><%= @mission.starting_at%></h2>
+    <h3><%= @mission.category %></h3>
+    <p>Description de la mission :<%= @mission.description %></p>
+    <h4>Profil recherché :<%= @mission.skills_needed %></h4>
+    <%= link_to "Je participe !", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %>
+  </div>
+</div>

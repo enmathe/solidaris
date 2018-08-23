@@ -1,4 +1,4 @@
-.organizations-cards {
+.missions-cards {
   width: 260px;
   height: 280px;
   background-color : white;
@@ -12,13 +12,13 @@
   font-size: 14px;
 }
 
-.organization-looking-for {
+.mission-looking-for {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-.organization-date {
+.mission-date {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -32,15 +32,16 @@
   // cf > transition : webgradients.com
 }
 
-.organizations-cards h2 {
-  font-size: 1.2em;
+.missions-cards h2 {
+  width: auto;
+  font-size: 1em;
   position: absolute;
   left: 6%;
   bottom: 10%;
   padding: 1px;
 }
 
-.organizations-cards h4 {
+.missions-cards h4 {
   font-size: .8125em;
   position: absolute;
   left: 6%;
@@ -49,7 +50,7 @@
   color: #BDBDBD;
 }
 
-.organization-picto {
+.gradient-general {
   position: absolute;
   left: 0;
   right: 0;
@@ -57,15 +58,52 @@
   top: 0;
   margin: auto;
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: red;
 }
 
+.gradient-collecte {
+  background: linear-gradient(#A3BDED, #6991C7);
+}
 
+.gradient-hebergement {
+  background: linear-gradient(#3C3F43, #6C6E9B);
+}
 
+.gradient-sante {
+  background: linear-gradient(#FF9A9E, #FAD0C4);
+}
 
+.gradient-accompagnement {
+  background: #D76666;
+}
+
+.gradient-enseignement {
+  background: linear-gradient(#8ddad5, #00cdac);
+}
+
+.gradient-activite {
+  background: linear-gradient(#FFC062, #F5E27F);
+}
+
+.gradient-mobilisation {
+  background: #0000F7;
+}
+
+.gradient-evenement {
+  background: linear-gradient(#BCC5CE, #929EAD);
+}
+
+.svg-white {
+  fill: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  svg {
+    width: 70px;
+  }
+}
 

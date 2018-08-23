@@ -1,0 +1,27 @@
+.mini-card-container {
+  width: 300px;
+  height: 140px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 21px;
+  margin: 10px;
+  position: relative;
+  h2 {
+    color: $comet;
+    font-size: 14px;
+  }
+  p {
+    color: $comet;
+    font-size: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+.mini-card-description {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  padding: 10px;
+  padding-bottom: 5px;
+}

@@ -1,0 +1,80 @@
+<div class="green-background">
+</div>
+<div class="dashboard-container">
+  <div class="asso-namelogo">
+    <div class="dashboard-logo", style="background-image: url('<%= cl_image_path(@user.picture) %>'); background-size: cover;"></div>
+    <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+    <p> <%= @user.email %></p>
+  </div>
+  <div class="dashboard-btn">
+    <div class="btn btn-success"> Voir toutes les missions </div>
+  </div>
+  <div class="dashboard-stat">
+    <h10></h10>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="stat">
+          <div class="stat-card">
+            <h2> <%= @recurrent_current.count %></h2>
+            <p> missions </p>
+            <p> en cours </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stat">
+          <div class="stat-card">
+            <h2><%= @past.count %> </h2>
+            <p>missions </p>
+            <p> effectuées</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stat">
+          <div class="stat-card">
+            <h2> <%= @coming.count %></h2>
+            <p>missions </p>
+            <p> à venir</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stat">
+          <div class="stat-card">
+            <h2><%= @missions.count %></h2>
+            <p> missions </p>
+            <p>disponibles</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-mission-current">
+  <p> Mes missions en cours </p>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div class="missions-cards">
+          <div class="gradient-general gradient-hebergement svg-white">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-mission-past">
+    <h10>Mes missions passés</h10>
+    <div class="row">
+      <% @user_missions.first(6).each do |mission| %>
+      <div class="col-md-4">
+        <div class="mini-card-container">
+          <div class="mini-card-description">
+            <h2><%= mission.title %></h2>
+            <p><%= mission.organization.name %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
