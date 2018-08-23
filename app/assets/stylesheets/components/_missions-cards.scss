@@ -95,6 +95,7 @@
   background: linear-gradient(#BCC5CE, #929EAD);
 }
 
+
 .svg-white {
   fill: white;
   display: flex;
@@ -104,6 +105,45 @@
     width: 70px;
   }
   margin-top: 45px;
+}
+
+.mini-svg-white {
+  margin-top: 5px;
+  svg {
+    width: 30px;
+  }
+}
+
+.fill-gradient-collecte {
+  fill: #6991C7;
+}
+
+.fill-gradient-hebergement {
+  fill: #6C6E9B;
+}
+
+.fill-gradient-sante {
+  fill: #FAD0C4;
+}
+
+.fill-gradient-accompagnement {
+  fill: #D76666;
+}
+
+.fill-gradient-enseignement {
+  fill: #8ddad5;
+}
+
+.fill-gradient-activite {
+  fill: #FFC062;
+}
+
+.fill-gradient-mobilisation {
+  fill: #0000F7;
+}
+
+.fill-gradient-evenement {
+  fill: #929EAD;
 }
 
 .looking-for {

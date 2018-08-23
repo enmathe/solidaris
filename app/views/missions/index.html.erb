@@ -8,12 +8,14 @@
     <div class="row">
       <% @missions.each do |mission| %>
         <div class="col-xs-12 col-sm-4">
+          <%= link_to mission_path(mission) do %>
           <div class="missions-cards">
             <%= svg_div(mission.category) %>
             <h2><%= mission.title.first(26) %></h2>
             <p><%= mission.description.first(65) %>...</p>
             <img class="looking-for" src="/assets/looking-for.png"/>
           </div>
+          <% end %>
         </div>
       <% end %>
     </div>
