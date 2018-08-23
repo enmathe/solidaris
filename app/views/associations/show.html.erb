@@ -1,4 +1,36 @@
-<h1><%= @association.name %></h1>
 
-<p><%= @association.description %></p>
+<div class="container">
+  <div class="text-center">
+    <p><%= cl_image_tag @association.logo, width: "100px" %></p>
+    <h1 class="text-center"><%= @association.name %></h1>
+  </div>
+</div>
 
+
+<div class="container">
+  <h3>Description de l'association</h3>
+  <p><%= @association.description %></p>
+</div>
+
+<div>
+  <div class="container">
+    <h3>Missions en cours</h3>
+    <div class="row">
+      <% @missions.first(6).each do |mission| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="organizations-cards">
+          <div class="organization-looking-for">loupe</div>
+          <div class="organization-date">date</div>
+          <div class="organization-titre">
+            <h2><%= mission.title %></h2>
+            <h4></h4>
+            <div>
+            <a href="#" class="organization-picto"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
