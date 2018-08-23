@@ -1,5 +1,5 @@
 .missions-cards {
-  width: 260px;
+  width: 210px;
   height: 280px;
   background-color : white;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -12,16 +12,23 @@
   font-size: 14px;
 }
 
-.mission-looking-for {
+.looking-for {
   position: absolute;
+  width: 20px;
   top: 10px;
   left: 10px;
 }
 
-.mission-date {
+
+// .looking-for:hover {
+//   border: 1px solid red;
+// }
+
+.date {
   position: absolute;
   top: 10px;
   right: 10px;
+  width: 20px;
   // z-index: 1;
   // padding-right: 30px;
   // text-indent: -5px;
@@ -37,14 +44,15 @@
   font-size: 1em;
   position: absolute;
   left: 6%;
-  bottom: 13%;
+  bottom: 20%;
 }
 
 .missions-cards p {
+  width: 180px;
   font-size: 0.8em;
   position: absolute;
   left: 6%;
-  bottom: 1%;
+  bottom: 6%;
   color: #BDBDBD;
 }
 
@@ -100,17 +108,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-top: 40px;
   svg {
     width: 70px;
   }
-}
-
-.looking-for {
-  color: grey;
-  width: 20px;
-}
-
-.time {
-
 }
 
