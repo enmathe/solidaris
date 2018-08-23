@@ -9,3 +9,11 @@
 <p><%= @profile.skills %></p>
 <p><%= @profile.experiences %></p>
 <%= cl_image_tag @profile.picture %> -->
+
+<div class="container">
+  <div class="row">
+    <% @profile.missions.each do |mission| %>
+      <%= mission.title %>
+    <% end %>
+  </div>
+</div>
