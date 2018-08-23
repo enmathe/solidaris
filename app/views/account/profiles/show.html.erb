@@ -31,10 +31,13 @@
   <h4><strong>Mes missions en cours</strong></h4>
   <div class="row">
     <% @profile.missions.each do |mission| %>
-      <div class="col-md-4">
-        <div class="mini-card-container">
-          <p><%= mission.title %></p>
-        </div>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to mission_path(mission) do %>
+          <div class="missions-cards">
+          <h2><%= mission.title %></h2>
+          <%= svg_div(mission.category) %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
