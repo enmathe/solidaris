@@ -16,38 +16,36 @@ class Organizations::MissionsController < ApplicationController
     @past = []
     @recurrent_current = []
 
-
     @missions.each do |mission|
-      if mission.starting_at < Date.current
+      if mission.starting_at > Date.current
         @coming << mission
-      elsif mission.recurrent == true && mission.starting_at > Date.current && mission.recurrency_ending_on < Date.current
+      elsif mission.recurrent == true && mission.starting_at < Date.current && mission.recurrency_ending_on > Date.current
         @recurrent_current << mission
-      elsif mission.recurrent == true && mission.recurrency_ending_on > Date.current
+      elsif mission.recurrent == true && mission.recurrency_ending_on < Date.current
         @past << mission
-      else mission.recurrent == false && mission.starting_at > Date.current
+      else mission.recurrent == false && mission.starting_at < Date.current
         @past << mission
       end
     end
-  end
 
   def show
     @mission = Mission.find(params[:id])
   end
 
-  # def new
-  #   @mission = Mission.new()
-  # end
+  def new
+    @mission = Mission.new()
+  end
 
-  # def create
-  #   raise
-  #   @mission = Mission.new(mission_params)
-  #   @mission.organization = Organization.find(current_organization.id)
-  #   if @mission.save
-  #     redirect_to organizations_mission_path(@mission)
-  #   else
-  #     render :new
-  #   end
-  # end
+  def create
+    raise
+    @mission = Mission.new(mission_params)
+    @mission.organization = Organization.find(current_organization.id)
+    if @mission.save
+      redirect_to organizations_mission_path(@mission)
+    else
+      render :new
+    end
+  end
 
   def edit
     @mission = Mission.find(params[:id])

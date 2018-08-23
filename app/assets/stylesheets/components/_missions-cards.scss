@@ -10,6 +10,7 @@
   margin: 10px;
   position: relative;
   font-size: 14px;
+  color: black;
 }
 
 .mission-looking-for {
@@ -33,19 +34,18 @@
 }
 
 .missions-cards h2 {
-  font-size: 1.2em;
+  width: auto;
+  font-size: 1em;
   position: absolute;
   left: 6%;
-  bottom: 10%;
-  padding: 1px;
+  bottom: 13%;
 }
 
-.missions-cards h4 {
-  font-size: .8125em;
+.missions-cards p {
+  font-size: 0.8em;
   position: absolute;
   left: 6%;
-  bottom: 4%;
-  padding: 1px;
+  bottom: 1%;
   color: #BDBDBD;
 }
 
@@ -57,8 +57,8 @@
   top: 0;
   margin: auto;
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -81,7 +81,7 @@
 }
 
 .gradient-enseignement {
-  background: #AEFFBA;
+  background: linear-gradient(#8ddad5, #00cdac);
 }
 
 .gradient-activite {
@@ -89,7 +89,11 @@
 }
 
 .gradient-mobilisation {
-  background-color: #0000F7;
+  background: #0000F7;
+}
+
+.gradient-evenement {
+  background: linear-gradient(#BCC5CE, #929EAD);
 }
 
 .svg-white {
@@ -98,8 +102,16 @@
   align-items: center;
   justify-content: space-around;
   svg {
-    width: 100px;
+    width: 70px;
   }
+}
+
+.looking-for {
+  color: grey;
+  width: 20px;
+}
+
+.time {
 
 }
 

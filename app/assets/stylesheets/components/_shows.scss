@@ -1,0 +1,42 @@
+.show-profile-wrap {
+  background-color: white;
+  margin: -150px -50px 0px -50px;
+  border-radius: 15px;
+  display: flex;
+  padding: 40px 80px  20px 80px;
+  div {
+    margin: 25px;
+  }
+  p {
+    padding: 8px 0px;
+  }
+}
+
+.show-association-wrap {
+  margin: -150px -50px 0px -50px;
+  border-radius: 15px;
+  display: flex;
+  padding: 40px 80px  20px 80px;
+  justify-content: center;
+  div {
+    margin: 25px;
+  }
+  p {
+    padding: 8px 0px;
+  }
+}
+
+.description-asso {
+  padding: 60px;
+}
+
+.links {
+  text-align: center;
+  justify-content: space-between;
+}
+
+.social-link {
+  color: grey;
+  font-size: 30px;
+  padding: 0px 15px;
+}

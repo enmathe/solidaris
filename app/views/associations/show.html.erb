@@ -1,4 +1,80 @@
-<h1><%= @association.name %></h1>
+<div class="banner">
+  <div class="banner-show-green-background">
+    <h1 class="text-center"><%= @association.name %></h1>
+  </div>
+</div>
 
-<p><%= @association.description %></p>
+<div class="container">
+  <div class="row">
+    <div class="show-association-wrap">
+      <div>
+        <%= cl_image_tag @association.logo, class: "show-association-logo" %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="description-asso">
+      <p class="text-justify"><%= @association.description %></p>
+    </div>
+      <p><strong>Nb de volontaires: </strong><%= @association.total_volunteers %></p>
+      <p><strong>Contact: </strong></p>
+        <div class="links">
+          <ul class="list-inline">
+            <li><%= link_to @association.email, class: "social-link" do %>
+              <i class="fas fa-envelope"></i>
+            <% end %>
+            </li>
+            <li><%= link_to @association.phone_number, class: "social-link" do %>
+              <i class="fas fa-phone"></i>
+            <% end %>
+            </li>
+            <li><%= link_to @association.address, class: "social-link" do %>
+              <i class="fas fa-map-marker-alt"></i>
+            <% end %>
+            </li>
+          </ul>
+        </div>
+      <p><strong>Liens utiles: </strong></p>
+        <div class="links">
+          <ul class="list-inline">
+            <li><%= link_to @association.website, class: "social-link" do %>
+              <i class="fas fa-globe"></i>
+            <% end %>
+            </li>
+            <li><%= link_to @association.facebook, class: "social-link" do %>
+              <i class="fab fa-facebook icon"></i>
+            <% end %>
+            </li>
+            <li><%= link_to @association.twitter, class: "social-link" do %>
+              <i class="fab fa-twitter-square icon"></i>
+            <% end %>
+            </li>
+            <li><%= link_to @association.linkedin, class: "social-link" do %>
+              <i class="fab fa-linkedin icon"></i>
+            <% end %>
+            </li>
+          </ul>
+        </div>
+      <%#= link_to "Editer votre profil", edit_account_profile_path(@profile), class: "btn btn-success" %>
+  </div>
+</div>
 
+<div class="container">
+  <% if @association.missions != nil %>
+    <h4><strong>Nos missions à pourvoir</strong></h4>
+    <div class="row">
+      <% @association.missions.each do |mission| %>
+        <div class="col-xs-12 col-sm-4">
+          <%= link_to mission_path(mission) do %>
+            <div class="missions-cards">
+            <h2><%= mission.title %></h2>
+            <%= svg_div(mission.category) %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+  <% end %>
+  </div>
+</div>
