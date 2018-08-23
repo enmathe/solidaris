@@ -1,14 +1,14 @@
 class MissionsController < ApplicationController
+
   def index
     @missions = Mission.all
-    @past = []
-    @current = []
+    @coming = []
 
-    missions.each do |mission|
-      if mission.ending_on < Date.current
-        @past << mission
+    @missions.each do |mission|
+      if mission.starting_at > Date.current
+        @coming << mission
       else
-        @current << mission
+        p " test"
       end
     end
   end

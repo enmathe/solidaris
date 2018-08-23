@@ -28,9 +28,9 @@ class Organizations::MissionsController < ApplicationController
         @past << mission
       end
     end
-  end
 
-  def set_organization
-    @organization = current_organization
+    def set_organization
+      @organization = current_organization
+    end
   end
 end
