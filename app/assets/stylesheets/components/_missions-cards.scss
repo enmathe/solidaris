@@ -37,16 +37,14 @@
   font-size: 1em;
   position: absolute;
   left: 6%;
-  bottom: 10%;
-  padding: 1px;
+  bottom: 13%;
 }
 
-.missions-cards h4 {
-  font-size: .8125em;
+.missions-cards p {
+  font-size: 0.8em;
   position: absolute;
   left: 6%;
-  bottom: 4%;
-  padding: 1px;
+  bottom: 1%;
   color: #BDBDBD;
 }
 
@@ -105,5 +103,14 @@
   svg {
     width: 70px;
   }
+}
+
+.looking-for {
+  color: grey;
+  width: 20px;
+}
+
+.time {
+
 }
 
