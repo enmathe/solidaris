@@ -53,12 +53,16 @@
   <div class="dashboard-mission-current">
   <p> Mes missions en cours </p>
     <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <div class="missions-cards">
-          <div class="gradient-general gradient-hebergement svg-white">
+      <% @coming.last(3).each do |mission| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="missions-cards">
+            <%= svg_div(mission.category) %>
+            <h2><%= mission.title.first(26) %></h2>
+            <p><%= mission.description.first(65) %>...</p>
+            <img class="looking-for" src="/assets/looking-for.png"/>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
   <div class="dashboard-mission-past">
