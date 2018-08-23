@@ -31,7 +31,6 @@ class Organizations::MissionsController < ApplicationController
   end
 
   def show
-    # organizations_mission GET    /organizations/missions/:id(.:format)
     @mission = Mission.find(params[:id])
   end
 
