@@ -102,6 +102,9 @@ enzo = User.create!(
   experiences: "Web Ninja depuis l'âge de 8 ans.",
   picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
 )
+
+puts "Creating organizations..."
+
 cnrw = Organization.create!(
   name: "CNRW - Cercle National Richard Wagner",
   description: "Le Cercle Richard Wagner
@@ -113,6 +116,7 @@ cnrw = Organization.create!(
   email: "cnrw@fr",
   password: "azerty",
   kind: "Association",
+  phone_number: "02 40 40 45 27",
   total_volunteers: 2,
   siren: "117 432 186",
   category: "Arts et Culture",
@@ -127,7 +131,6 @@ cnrw = Organization.create!(
   photo_2: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_2.jpg")),
   photo_3: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_3.jpg")),
 )
-"02 40 40 45 27"
 
 kollectif_93 = Organization.create!(
   name: "Kollectif_93",
@@ -136,6 +139,7 @@ kollectif_93 = Organization.create!(
   et street art. Nous souhaitons animer des ateliers 'street-art' pour les exilés de Nantes.",
   email: "kollectif_93@fr",
   password: "azerty",
+  phone_number: "06 75 29 00 77",
   kind: "Collectif",
   total_volunteers: 30,
   siren: "117 535 186",
@@ -151,7 +155,6 @@ kollectif_93 = Organization.create!(
   photo_2: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_2.jpg")),
   photo_3: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_3.jpg")),
 )
-"06 75 29 00 77"
 
 bns = Organization.create!(
   name: "Boxe Nantaise Savate",
@@ -165,6 +168,7 @@ bns = Organization.create!(
   est demandée mais nous mettons à disposition gants, protège-dent et protège-tibia.",
   email: "bns@gmail.fr",
   password: "azerty",
+  phone_number: "06 55 88 23 00",
   kind: "Collectif",
   total_volunteers: 4,
   siren: "117 552 432",
@@ -180,7 +184,6 @@ bns = Organization.create!(
   photo_2: File.open(Rails.root.join("db/fixtures/organization/bns/pic_2.jpg")),
   photo_3: File.open(Rails.root.join("db/fixtures/organization/bns/pic_3.jpg")),
 )
-"06 55 88 23 00"
 
 réseau_entreprendre = Organization.create!(
   name: "Réseau Entreprendre",
@@ -194,6 +197,7 @@ réseau_entreprendre = Organization.create!(
   pitcher. 3 sessions de 1h sont prévues.",
   email: "reseau_entreprendre@gmail.fr",
   password: "azerty",
+  phone_number: "06 26 33 34 72",
   kind: "Association",
   total_volunteers: 10,
   siren: "117 534 210",
@@ -206,10 +210,9 @@ réseau_entreprendre = Organization.create!(
   creation_year: 1986,
   logo: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/logo.jpg")),
   photo_1: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_2.jpg")),
-  photo_3: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_3.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_2.jpg")),
+  # photo_3: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_3.jpg")),
 )
-"06 26 33 34 72"
 
 lire_et_faire_lire_ = Organization.create!(
   name: "Lire et Faire Lire",
@@ -221,6 +224,7 @@ lire_et_faire_lire_ = Organization.create!(
   l’année, dans une démarche axée sur le plaisir de lire et la rencontre entre les générations.",
   email: "lireetfairelire@gmail.fr",
   password: "azerty",
+  phone_number: "02 40 67 11 11",
   kind: "Association",
   total_volunteers: 6,
   siren: "117 398 540",
@@ -232,11 +236,10 @@ lire_et_faire_lire_ = Organization.create!(
   address: "28 Boulevard Allende, 44000 Nantes",
   creation_year: 1991,
   logo: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/logo.jpg")),
-  photo_1: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_2.jpg")),
+  # photo_1: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_1.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_2.jpg")),
   photo_3: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_3.jpg")),
 )
-"02 40 67 11 11"
 
 dessins_sans_papiers = Organization.create!(
   name: "Dessins Sans Papiers",
@@ -266,8 +269,6 @@ dessins_sans_papiers = Organization.create!(
   photo_2: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_2.jpg")),
   photo_3: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_3.jpg")),
 )
-
-puts "Creating organizations..."
 
 anade = Organization.create!(
   name: "ANADE - Association Nantaise d'Alphabétisation Des Etrangers",
@@ -725,111 +726,10 @@ medecins_du_monde = Organization.create!(
   address: "33 Rue Fouré 44000 Nantes",
   creation_year: 1954,
   logo: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/logo.jpg")),
-  photo_1: "db/fixtures/organization/medecin_du_monde/pic_1.jpg",
-  photo_2: "db/fixtures/organization/medecin_du_monde/pic_2.jpg",
-  photo_3: "db/fixtures/organization/medecin_du_monde/pic_3.jpg"
+  photo_1: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_1.jpg")),
+  photo_2: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_2.jpg")),
+  photo_3: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_3.jpg"))
 )
-# "02 40 47 36 99"
-# asamla = Organization.create!(
-#   name: "ASAMLA - Santé Migrants de Loire-Atlantique"
-#   description:
-#   email: "hdivet@cg44.fr",
-#   kind:
-#   total_volunteers:
-#   siren:
-#   category:
-#   website:
-#   facebook:
-#   linkedin:
-#   twitter:
-#   address: "49-51 Chaussée de la Madeleine 44000 Nantes",
-#   creation_year:
-#   logo:
-#   photo_1:
-#   photo_2:
-#   photo_3:
-# )
-# "02 40 48 51 99"
-# secours_catholique = Organization.create!(
-#   name: "Secours Catholique",
-#   description:
-#   email: "loireatlantique@secours-catholique.org",
-#   kind:
-#   total_volunteers:
-#   siren:
-#   category:
-#   website:
-#   facebook:
-#   linkedin:
-#   twitter:
-#   address: "1 Rue Lorette de la Refoulais 44000 Nantes",
-#   creation_year:
-#   logo:
-#   photo_1:
-#   photo_2:
-#   photo_3:
-# )
-# "02 40 29 04 26"
-# secours_pop = Organization.create!(
-#   name:
-#   description: "> Des chauffeurs-livreurs pour les denrées alimentaires",
-#   email: "contact@spf44.org",
-#   kind:
-#   total_volunteers:
-#   siren:
-#   category:
-#   website:
-#   facebook:
-#   linkedin:
-#   twitter:
-#   address: "163, rue Paul Bellamy 44000 Nantes",
-#   creation_year:
-#   logo:
-#   photo_1:
-#   photo_2:
-#   photo_3:
-# )
-# "02 40 74 14 14 - 02 40 74 48 41"
-# fraternité = Organization.create!(
-#   name: "La Fraternité",
-#   description:
-#   email: "la-fraternite@wanadoo.fr",
-#   kind:
-#   total_volunteers:
-#   siren:
-#   category:
-#   website:
-#   facebook:
-#   linkedin:
-#   twitter:
-#   address: "3 Rue Amiral Du Chaffault 44100 Nantes",
-#   creation_year:
-#   logo:
-#   photo_1:
-#   photo_2:
-#   photo_3:
-# )
-# "02 40 69 37 63"
-# resf = Organization.create!(
-#   name: "RESF - Collectif Enfants Etrangers",
-#   description:
-#   email: "ceecs44@gmail.com",
-#   kind:
-#   total_volunteers:
-#   siren:
-#   category:
-#   website:
-#   facebook:
-#   linkedin:
-#   twitter:
-#   address: "6 place de la Manufacture 44000 Nantes",
-#   creation_year:
-#   logo:
-#   photo_1:
-#   photo_2:
-#   photo_3:
-# )
-# "06 85 02 01 70 - 02 40 06 72 55"
 
 puts "Creating missions..."
 
@@ -1152,8 +1052,6 @@ aide_aux_devoirs = Mission.create!({
   organization: anade
 })
 
-puts "DONE"
-
 collecte_para = Mission.create!({
   title: "Collecte parapharmacie",
   category: "Collecte",
@@ -1288,3 +1186,57 @@ collecte_para = Mission.create!({
   organization: medecins_du_monde
 })
 
+puts "Creating applications..."
+
+candidature_1 = Application.create!({
+  user: fatou,
+  mission: hébergement
+})
+
+candidature_2 = Application.create!({
+  user: fatou,
+  mission: aide_aux_devoirs
+})
+candidature_3 = Application.create!({
+  user: enzo,
+  mission: hébergement
+})
+candidature_4 = Application.create!({
+  user: enzo,
+  mission: accompagnateur_refugie
+})
+candidature_5 = Application.create!({
+  user: enzo,
+  mission: collecte_para
+})
+candidature_6 = Application.create!({
+  user: elena,
+  mission: hébergement
+})
+candidature_7 = Application.create!({
+  user: elena,
+  mission: maraude
+})
+candidature_8 = Application.create!({
+  user: yulia,
+  mission: benevoles
+})
+candidature_9 = Application.create!({
+  user: yulia,
+  mission: collecte_para
+})
+candidature_10 = Application.create!({
+  user: romain,
+  mission: benevoles_entraide
+})
+candidature_11 = Application.create!({
+  user: romain,
+  mission: insertion_professionnelle
+})
+candidature_12 = Application.create!({
+  user: romain,
+  mission: parrain
+})
+
+
+puts "DONE"
