@@ -3,6 +3,7 @@
     <% @missions.each do |mission| %>
       <div class="col-xs-12 col-sm-4">
         <div class="missions-cards">
+          <h2><%= mission.title %></h2>
           <%= svg_div(mission.category) %>
         </div>
       </div>
