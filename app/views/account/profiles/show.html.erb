@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="banner-show-green-background">
-    <h1 class="text-center">Votre profil</h1>
+    <h1 class="text-center"><%= "#{@profile.first_name} #{@profile.last_name}" %></h1>
   </div>
 </div>
 
@@ -9,15 +9,13 @@
   <div class="row">
     <div class="show-profile-wrap">
       <div>
-        <h3><strong><%= "#{@profile.first_name} #{@profile.last_name}" %></strong></h3>
         <%= cl_image_tag @profile.picture, class: "profile-picture" %>
       </div>
       <div>
-        <h4><strong>Biographie</strong></h4>
-        <p><%= @profile.description %></p>
-        <p>Contact: <%= @profile.phone_number %></p>
-        <p>Compétences: <%= @profile.skills %></p>
-        <p>Expériences: <%= @profile.experiences %></p>
+        <p class="text-align"><%= @profile.description %></p>
+        <p><strong>Contact: </strong><%= @profile.email %></p>
+        <p><strong>Compétences: </strong><%= @profile.skills %></p>
+        <p><strong>Expériences: </strong><%= @profile.experiences %></p>
         <%= link_to "Editer votre profil", edit_account_profile_path(@profile), class: "btn btn-success" %>
       </div>
     </div>
