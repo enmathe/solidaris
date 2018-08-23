@@ -7,15 +7,16 @@
     <p> <%= @user.email %></p>
   </div>
   <div class="dashboard-btn">
-    <div class="btn btn-success"> Poster un besoin </div>
+    <div class="btn btn-success"> Voir toutes les missions </div>
   </div>
   <div class="dashboard-stat">
-    <h10>Mes missions</h10>
+    <h10></h10>
     <div class="row">
       <div class="col-md-6">
         <div class="stat">
           <div class="stat-card">
             <h2> <%= @recurrent_current.count %></h2>
+            <p> missions </p>
             <p> en cours </p>
           </div>
         </div>
@@ -24,7 +25,8 @@
         <div class="stat">
           <div class="stat-card">
             <h2><%= @past.count %> </h2>
-            <p>effectuées</p>
+            <p>missions </p>
+            <p> effectuées</p>
           </div>
         </div>
       </div>
@@ -32,14 +34,17 @@
         <div class="stat">
           <div class="stat-card">
             <h2> <%= @coming.count %></h2>
-            <p>à venir</p>
+            <p>missions </p>
+            <p> à venir</p>
           </div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="stat">
           <div class="stat-card">
-            <h2><%= @missions.count %></h2> <p>disponibles</p>
+            <h2><%= @missions.count %></h2>
+            <p> missions </p>
+            <p>disponibles</p>
           </div>
         </div>
       </div>
