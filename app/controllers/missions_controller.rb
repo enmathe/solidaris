@@ -4,8 +4,8 @@ class MissionsController < ApplicationController
     @past = []
     @current = []
 
-    missions.each do |mission|
-      if mission.ending_on < Date.current
+    @missions.each do |mission|
+      if mission.end_candidature_date < Date.current
         @past << mission
       else
         @current << mission
