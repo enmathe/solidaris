@@ -26,6 +26,6 @@
     <h3><%= @mission.category %></h3>
     <p>Description de la mission :<%= @mission.description %></p>
     <h4>Profil recherché :<%= @mission.skills_needed %></h4>
-    <%= link_to "Je participe !", '#', class: "btn btn-primary" %>
+    <%= link_to "Je participe !", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %>
   </div>
 </div>
