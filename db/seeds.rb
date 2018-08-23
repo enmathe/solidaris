@@ -1052,7 +1052,7 @@ aide_aux_devoirs = Mission.create!({
   organization: anade
 })
 
-collecte_para = Mission.create!({
+collecte_para_4 = Mission.create!({
   title: "Collecte parapharmacie",
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
@@ -1092,7 +1092,7 @@ collecte_para = Mission.create!({
   end_candidature_date: "2018/10/12 15:00:00",
   organization: medecins_du_monde
 })
-collecte_para = Mission.create!({
+collecte_para_3 = Mission.create!({
   title: "Collecte parapharmacie",
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
@@ -1207,23 +1207,23 @@ candidature_4 = Application.create!({
 })
 candidature_5 = Application.create!({
   user: enzo,
-  mission: collecte_para
+  mission: collecte_para_4
 })
 candidature_6 = Application.create!({
-  user: elena,
+  user: enzo,
   mission: hébergement
 })
 candidature_7 = Application.create!({
-  user: elena,
+  user: enzo,
   mission: maraude
 })
 candidature_8 = Application.create!({
-  user: yulia,
+  user: enzo,
   mission: benevoles
 })
 candidature_9 = Application.create!({
-  user: yulia,
-  mission: collecte_para
+  user: enzo,
+  mission: collecte_para_3
 })
 candidature_10 = Application.create!({
   user: romain,
