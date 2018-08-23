@@ -4,54 +4,71 @@
   <div class="asso-namelogo">
     <div class="dashboard-logo", style="background-image: url('<%= cl_image_path(@user.picture) %>'); background-size: cover;"></div>
     <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+    <p> <%= @user.email %></p>
   </div>
   <div class="dashboard-btn">
     <div class="btn btn-success"> Poster un besoin </div>
   </div>
   <div class="dashboard-stat">
-    <div class="stat">
-      <h2><%= @past.count %> </h2> <p>missions passés</p>
-    </div>
-    <div class="stat">
-      <h2><%= @current.count %></h2> <p>en cours</p>
-    </div>
-    <div class="stat">
-      <h2> <%= @coming.count %></h2><p>à venir</p>
+    <h10>Mes missions</h10>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="stat">
+          <div class="stat-card">
+            <h2> <%= @recurrent_current.count %></h2>
+            <p> en cours </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stat">
+          <div class="stat-card">
+            <h2><%= @past.count %> </h2>
+            <p>effectuées</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stat">
+          <div class="stat-card">
+            <h2> <%= @coming.count %></h2>
+            <p>à venir</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stat">
+          <div class="stat-card">
+            <h2><%= @missions.count %></h2> <p>disponibles</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="mission-information">
-    <p>Mes missions en cours</p>
-    <% @missions.first(3).each do |mission| %>
+  <div class="dashboard-mission-current">
+  <p> Mes missions en cours </p>
     <div class="row">
-      <div class="container">
-        <div class="row">
-          <h4><% mission.title %></h4>
-            <div class="col-xs-12 col-sm-4">
-              <div class="organizations-cards">
-                <div class="organization-looking-for"></div>
-                <div class="organization-date">date</div>
-                <div class="organization-titre">
-                  <h4><%= mission.title %></h4>
-                  <div>
-                  <a href="#" class="organization-picto"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
+      <div class="col-xs-12 col-md-6">
+        <div class="missions-cards">
+          <div class="gradient-general gradient-hebergement svg-white">
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="dashboard-mission-past">
     <h10>Mes missions passés</h10>
-
     <div class="row">
-      <% @missions.first(6).each do |mission| %>
+      <% @user_missions.first(6).each do |mission| %>
       <div class="col-md-4">
         <div class="mini-card-container">
-          <p><%= mission.title %></p>
+          <div class="mini-card-description">
+            <h2><%= mission.title %></h2>
+            <p><%= mission.organization.name %></p>
+          </div>
         </div>
       </div>
-      <% end %>
+    <% end %>
     </div>
   </div>
 </div>

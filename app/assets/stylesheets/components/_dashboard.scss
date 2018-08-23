@@ -1,29 +1,27 @@
+.green-background {
+  z-index: 5;
+  position: absolute;
+  background-color: $green;
+  height: 30vh;
+  width: 100%;
+}
+
 .dashboard-container {
   z-index: 10;
   height: calc(100vh - 70px);
   display: grid;
   grid-template-columns: 400px 1fr 1fr 1fr;
-  grid-template-rows: 40% 10% 50%;
+  grid-template-rows: 35% 15% 55%;
   position: relative;
   p {
     color: white
   }
   h10 {
     color: grey;
-    margin-top: 60px;
     margin-left: 25px;
   }
 }
 
-.mission-information {
-  grid-row: 1 / span 2;
-  grid-column: 2/ span 3;
-  height: calc(100vh - 70px);
-  p {
-    margin-top: 60px;
-    margin-left: 10px;
-  }
-}
 
 .asso-namelogo {
   grid-row: 1 / span 1;
@@ -33,32 +31,6 @@
     color: white;
   }
 }
-
-.dashboard-btn {
-  grid-row: 2 / span 1;
-  grid-column: 1 / span 1;
-  text-align: center;
-}
-.dashboard-stat {
-  grid-row: 3 / span 1;
-  grid-column: 1 / span 1;
-  text-align: center;
-}
-
-.stat {
-  p {
-    color: grey;
-  }
-}
-
-.green-background {
-  z-index: 5;
-  position: absolute;
-  background-color: $green;
-  height: 30vh;
-  width: 100%;
-}
-
 .dashboard-logo {
   height: 100px;
   width: 100px;
@@ -66,6 +38,64 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom: 35px;
+}
+
+
+.dashboard-btn {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-stat {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  padding: 20px;
+  h10 {
+    color: white;
+    margin-left: 25px;
+  }
+}
+
+.stat {
+  text-align: center;
+  height: 140px;
+  margin-bottom: 15px;
+  h2 {
+    margin-top: 0px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14px;
+    color: white;
+  }
+}
+
+.stat-card {
+  background-color: #15BEC4;
+  color: white;
+  height: 140px;
+  width: 140px;
+  border-radius: 12px;
+  margin: 10px;
+  padding-top: 30px;
+
+}
+
+.dashboard-mission-current {
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 3;
+  padding: 20px;
+  margin-left: 35px;
+}
+
+.dashboard-mission-past {
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 3;
+  padding: 20px;
+  margin-left: 35px;
 }
