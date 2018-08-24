@@ -27,6 +27,7 @@ class Organizations::MissionsController < ApplicationController
         @past << mission
       end
     end
+  end
 
   def show
     @mission = Mission.find(params[:id])
