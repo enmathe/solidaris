@@ -82,6 +82,7 @@ GEM
     ffi (1.9.25)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
+    geocoder (1.5.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -159,8 +160,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    record_tag_helper (1.0.0)
-      actionview (~> 5.x)
     redis (4.0.2)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -235,6 +234,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass (~> 5.0.9)
+  geocoder
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
@@ -242,7 +242,6 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.2.1)
-  record_tag_helper
   redis
   sass-rails
   simple_form
