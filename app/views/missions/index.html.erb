@@ -1,37 +1,25 @@
 <div class="main-container">
-  <div class="search-bar text-center">
-      <%= form_tag spaceships_path, method: :get, class: 'search-form' do %>
-        <%= text_field_tag :city,
-        params[:city],
-        class: 'form-search',
-        placeholder: "Enter a city"
-        %>
-        <div class="slidecontainer" style="width: 200px;">
-          <label for="price" class="search-label"><i class="fas fa-cookie-bite"></i>Max price per day <p id="price"></p></label>
-          <input type="range" min="0" max="100000" value="<%= params[:price] %>" class="slider" id="price-range" name="price" step="500">
-        </div>
-        <%= button_tag type: 'submit', class: "btn-naked" do %>
-          <i class="fas fa-check-circle"></i>
-        <% end %>
-      <% end %>
-  </div>
-
-
-  <div id="map" data-markers="<%= @markers.to_json %>"></div>
   <div class="container">
+    <div class="form-tag-container">
+      <%= form_tag missions_path, method: :get do %>
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a mission" %>
+      <% end %>
+    </div>
     <div class="row">
       <% @missions.each do |mission| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="missions-cards">
-            <%= svg_div(mission.category) %>
-            <h2><%= mission.title.first(22) %></h2>
-            <p><%= mission.description.first(50) %>...</p>
-            <img class="looking-for" src="/assets/looking-for.png"/>
-              <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
-              <p><%#= mission.starting_at %></p> -->
-            <img class="date" src="/assets/time.png"/>
+        <div class="col-xs-12 col-sm-4">
+          <div class="missions-cards">
+              <%= svg_div(mission.category) %>
+              <h2><%= mission.title.first(22) %></h2>
+              <p><%= mission.description.first(50) %>...</p>
+              <img class="looking-for" src="/assets/looking-for.png"/>
+                <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
+                <p><%#= mission.starting_at %></p> -->
+              <img class="date" src="/assets/time.png"/>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
+  <div id="map" data-markers="<%= @markers.to_json %>"></div>
 </div>
