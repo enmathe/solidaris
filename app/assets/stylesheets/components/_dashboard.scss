@@ -1,7 +1,7 @@
 .green-background {
   z-index: 5;
   position: absolute;
-  background-color: $green;
+  background-color: white;
   height: 27vh;
   width: 100%;
 }
@@ -14,8 +14,7 @@
   grid-template-rows: 35% 15% 55%;
   position: relative;
   p {
-    color: white;
-    font-weight: 600;
+      font-weight: 600;
   }
   h10 {
     font-weight: 600;
@@ -30,7 +29,7 @@
   grid-column: 1 / span 1;
   text-align: center;
   h3 {
-    color: white;
+    color: $comet;
   }
 }
 .dashboard-logo {
