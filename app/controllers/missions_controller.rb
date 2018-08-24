@@ -13,9 +13,8 @@ class MissionsController < ApplicationController
       end
     end
 
-    @missions = Mission.where.not(latitude: nil, longitude: nil)
+    @missions = Mission.all.where.not(latitude: nil, longitude: nil)
     @markers = marker(@missions)
-
   end
 
 # en tant que user je peux voir les details d une mission

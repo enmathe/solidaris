@@ -2,11 +2,11 @@
 </div>
 <div class="dashboard-container">
   <div class="asso-namelogo">
-    <div class="dashboard-logo", style="background-image: url('<%= cl_image_path(@organization.logo) %>'); background-size: cover;"></div>
+    <div class="dashboard-logo", style="background-image: url('<%#= cl_image_path(@organization.logo) %>'); background-size: cover;"></div>
     <h3><%= @organization.name %></h3>
   </div>
   <div class="dashboard-btn">
-    <div class="btn btn-success"> Poster un besoin </div>
+    <div class="btn btn-success"><%= link_to "Poster un besoin", new_organizations_mission_path %>  </div>
   </div>
   <div class="dashboard-stat">
     <div class="stat">
