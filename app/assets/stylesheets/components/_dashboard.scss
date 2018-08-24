@@ -1,8 +1,16 @@
 .green-background {
   z-index: 5;
   position: absolute;
-  background-color: $green;
-  height: 27vh;
+  background-color: white;
+  height: 29vh;
+  width: 100%;
+}
+
+.grey-background {
+  z-index: 4;
+  position: absolute;
+  background-color: #F6F6F6;
+  height: 93vh;
   width: 100%;
 }
 
@@ -13,13 +21,12 @@
   grid-template-columns: 400px 1fr 1fr 1fr;
   grid-template-rows: 35% 15% 55%;
   position: relative;
-  p {
-    color: white;
+  p10 {
     font-weight: 600;
   }
   h10 {
     font-weight: 600;
-    color: $green;
+    color: $comet;
     margin-left: 25px;
   }
 }
@@ -30,7 +37,8 @@
   grid-column: 1 / span 1;
   text-align: center;
   h3 {
-    color: white;
+    color: $comet;
+    font-weight: 600;
   }
 }
 .dashboard-logo {
@@ -58,7 +66,7 @@
   grid-column: 1 / span 1;
   padding: 20px;
   h10 {
-    color: $green;
+    color: $comet;
     margin-left: 25px;
     margin-bottom: 0px;
   }
@@ -68,7 +76,7 @@
   text-align: center;
   height: 140px;
   margin-bottom: 15px;
-  color: $green;
+  color: $comet;
   h2 {
     margin-top: 0px;
     font-weight: bold;
@@ -76,7 +84,7 @@
   p {
     font-size: 14px;
     margin-bottom: 0px;
-    color: $green;
+    color: $comet;
     font-weight: 500;
   }
 }
@@ -107,7 +115,7 @@
 }
 
 .banner-show-green-background {
-  background-color: $green;
+  background-color: $comet;
   height: 30vh;
   width: 100%;
   h1 {

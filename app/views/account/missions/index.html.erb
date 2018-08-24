@@ -1,5 +1,7 @@
 <div class="green-background">
 </div>
+<div class="grey-background">
+</div>
 <div class="dashboard-container">
   <div class="asso-namelogo">
     <div class="dashboard-logo", style="background-image: url('<%= cl_image_path(@user.picture) %>'); background-size: cover;"></div>
@@ -51,25 +53,29 @@
     </div>
   </div>
   <div class="dashboard-mission-current">
-  <p> Mes missions en cours </p>
+  <h10> Mes missions en cours</h10>
     <div class="row">
-      <% @coming.last(3).each do |mission| %>
-        <div class="col-xs-12 col-sm-4">
+      <% @recurrent_current.each do |mission| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="missions-cards">
           <%= link_to mission_path(mission) do %>
-          <div class="missions-cards">
             <%= svg_div(mission.category) %>
-            <h2><%= mission.title.first(26) %></h2>
-            <p><%= mission.description.first(65) %>...</p>
-          </div>
-          <% end %>
+            <h2><%= mission.title.first(22) %></h2>
+            <p><%= mission.organization.name%></p>
+            <img class="looking-for" src="/assets/looking-for.png"/>
+              <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
+              <p><%#= mission.starting_at %></p> -->
+            <img class="date" src="/assets/time.png"/>
+          <%end  %>
         </div>
+      </div>
       <% end %>
     </div>
   </div>
   <div class="dashboard-mission-past">
-    <h10>Mes missions passées</h10>
+    <h10>Mes prochaines missions</h10>
     <div class="row">
-      <% @user_missions.first(6).each do |mission| %>
+      <% @coming.first(6).each do |mission| %>
       <div class="col-sm-4">
         <%= link_to mission_path(mission) do %>
         <div class="mini-card-container">
