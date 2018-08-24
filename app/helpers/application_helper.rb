@@ -8,6 +8,10 @@ module ApplicationHelper
     return content_tag(:div, svg_tag(category), class: ["gradient-general", "gradient-#{category.downcase}", "svg-white"])
   end
 
+  def show_svg_div(category)
+    return content_tag(:div, svg_tag(category), class: ["show-gradient-general", "gradient-#{category.downcase}", "svg-white"])
+  end
+
   def normalize_name(name)
     return name.downcase
                .gsub(/[àáâãäå]/,'a')
