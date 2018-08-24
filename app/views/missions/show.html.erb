@@ -13,7 +13,6 @@
       </div>
     </div>
     </div>
-
   </div>
 
   <div class="container">
@@ -39,7 +38,11 @@
           <!-- <p><%= cl_image_tag @mission.organization.logo %></p> -->
           <h4 class= "text-center"><%=@mission.organization.category%></h4>
           <p class= "text-center"><%=@mission.organization.description%></p>
+<<<<<<< HEAD
           <p class= "text-center"><%= link_to "En savoir plus", association_path(@mission) %>
+=======
+          <p class= "text-center"><%= link_to "En savoir plus", association_path(@mission.organization.id) %>
+>>>>>>> 81dd0e9a88c5dd8e1f8a08262a1b6ac4be20bf3b
         </div>
       </div>
     </div>

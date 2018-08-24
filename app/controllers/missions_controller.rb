@@ -1,20 +1,26 @@
 class MissionsController < ApplicationController
 
   def index
-    @missions = Mission.all
-    @coming = []
-    @past=[]
+    # @missions = Mission.all
+    # @coming = []
+    # @past=[]
 
-    @missions.each do |mission|
-      if mission.starting_at > Date.current
-        @coming << mission
-      else mission.starting_at < Date.current
-        @past << mission
-      end
+    # @missions.each do |mission|
+    #   if mission.starting_at > Date.current
+    #     @coming << mission
+    #   else mission.end_candidature_date < Date.current
+    #     @past << mission
+    #   end
+    # end
+
+    if params[:query].present?
+      @missions = Mission.where("title ILIKE ?", "%#{params[:query]}%").where.not(latitude: nil, longitude: nil)
+      @markers = marker(@missions)
+    else
+      @missions = Mission.all.where.not(latitude: nil, longitude: nil)
+      @markers = marker(@missions)
     end
 
-    @missions_map = Mission.all.where.not(latitude: nil, longitude: nil)
-    @markers = marker(@missions_map)
   end
 
 # en tant que user je peux voir les details d une mission

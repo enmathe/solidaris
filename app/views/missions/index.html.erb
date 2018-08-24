@@ -1,11 +1,19 @@
 <div class="filter-container">
-    <div class="filters">
-    </div>
+  <div class="filters">
+    <%= form_tag missions_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Find a mission" %>
+  <!--     <%#= button_tag type: 'submit', class: "btn-naked" do %>
+        <i class="fas fa-check-circle"></i>
+    <%# end %> -->
+    <% end %>
+  </div>
 </div>
 <div class="main-container">
+  <div id="map" data-markers="<%= @markers.to_json %>"></div>
   <div class="container">
     <div class="row">
       <% @missions.each do |mission| %>
+<<<<<<< HEAD
       <div class="col-xs-12 col-sm-4">
         <div class="missions-cards">
           <%= link_to mission_path(mission) do %>
@@ -20,8 +28,21 @@
               <%= mission.starting_at.strftime('%d %B') %>
             </div>
           <%end  %>
+=======
+        <div class="col-xs-12 col-sm-4">
+          <div class="missions-cards">
+            <%= link_to mission_path(mission) do %>
+              <%= svg_div(mission.category) %>
+              <h2><%= mission.title.first(22) %></h2>
+              <p><%= mission.organization.name%></p>
+              <%= image_tag "looking-for.png", class: 'looking-for'%>
+              <h3 class="volunteer"><%= mission.volunteers_needed %></h3>
+              <p><%= mission.starting_at %></p>
+              <%= image_tag "time.png", class: "date" %>
+            <% end %>
+          </div>
+>>>>>>> 81dd0e9a88c5dd8e1f8a08262a1b6ac4be20bf3b
         </div>
-      </div>
       <% end %>
     </div>
   </div>
