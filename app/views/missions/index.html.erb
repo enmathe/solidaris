@@ -1,4 +1,22 @@
 <div class="main-container">
+  <div class="search-bar text-center">
+      <%= form_tag spaceships_path, method: :get, class: 'search-form' do %>
+        <%= text_field_tag :city,
+        params[:city],
+        class: 'form-search',
+        placeholder: "Enter a city"
+        %>
+        <div class="slidecontainer" style="width: 200px;">
+          <label for="price" class="search-label"><i class="fas fa-cookie-bite"></i>Max price per day <p id="price"></p></label>
+          <input type="range" min="0" max="100000" value="<%= params[:price] %>" class="slider" id="price-range" name="price" step="500">
+        </div>
+        <%= button_tag type: 'submit', class: "btn-naked" do %>
+          <i class="fas fa-check-circle"></i>
+        <% end %>
+      <% end %>
+  </div>
+
+
   <div id="map" data-markers="<%= @markers.to_json %>"></div>
   <div class="container">
     <div class="row">
