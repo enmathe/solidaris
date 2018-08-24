@@ -1,31 +1,32 @@
 <div class="banner-mission">
   <div class="container">
     <div class="banner-mission-content">
-      <img src="../db/fixtures/organizations/dessins_sans_papiers/pic_1.jpg"/>
-      # >> + picto // image tag !
-      <h1><%= @mission.title %></h1>
-      <p><%= @mission.category %></p>
+      <%= svg_div(@mission.category) %>
+      <h1 class="text-center"><%= @mission.title %></h1>
+      <h3 class="text-center"><%= @mission.category %></h3>
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="banner-mission-content">
-    <h2>2 demi-journées par semaine pendant 6 mois</h2>
-    # ruby ds html pr faire calcul
-    <h3><%= @mission.category %></h3>
-    <p>Description de la mission :<%= @mission.description %></p>
+    <h2 class= "text-center">2 demi-journées par semaine pendant 6 mois</h2>
+    <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), class: "btn btn-primary" %></p>
+    <h4>Description de la mission :<%= @mission.description %></h4>
     <h4>Nb de volontaires demandés :<%= @mission.volunteers_needed %></h4>
     <h4>Profil recherché :<%= @mission.skills_needed %></h4>
+    <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), class: "btn btn-primary" %>
   </div>
 </div>
 
 <div class="container">
-  <div class="banner-mission-content">
-    <h2><%= @mission.starting_at%></h2>
-    <h3><%= @mission.category %></h3>
-    <p>Description de la mission :<%= @mission.description %></p>
-    <h4>Profil recherché :<%= @mission.skills_needed %></h4>
-    <%= link_to "Je participe !", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %>
+  <div class="banner-mission-organization">
+    <h2 class= "text-center"><%= @mission.organization.name %></h2>
+    <p><%= cl_image_tag @mission.organization.logo %></p>
+    <h3 class= "text-center"><%=@mission.organization.category%></h3>
+    <p class= "text-center"><%=@mission.organization.description%></p>
+    <p class= "text-center"><%= link_to "En savoir plus", associations_path(@mission) %>
   </div>
 </div>
+
+
