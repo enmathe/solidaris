@@ -38,7 +38,7 @@
           <!-- <p><%= cl_image_tag @mission.organization.logo %></p> -->
           <h4 class= "text-center"><%=@mission.organization.category%></h4>
           <p class= "text-center"><%=@mission.organization.description%></p>
-          <p class= "text-center"><%= link_to "En savoir plus", associations_path(@mission) %>
+          <p class= "text-center"><%= link_to "En savoir plus", association_path(@mission.organization.id) %>
         </div>
       </div>
     </div>
