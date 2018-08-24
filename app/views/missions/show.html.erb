@@ -21,11 +21,11 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="banner-mission-content">
           <h4 class= "text-center">2 demi-journées par semaine pendant 6 mois</h4>
-          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), class: "btn btn-primary" %></p>
+          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %></p>
           <p>Description de la mission :<%= @mission.description %></p>
           <p>Nb de volontaires demandés :<%= @mission.volunteers_needed %></p>
           <p>Profil recherché :<%= @mission.skills_needed %></p>
-          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), class: "btn btn-primary" %>
+          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %>
         </div>
       </div>
     </div>
