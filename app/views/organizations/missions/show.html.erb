@@ -1,0 +1,28 @@
+<%= cl_image_tag @mission.organization.logo %>
+<div class="container">
+  <div class="row">
+    <% @mission.users.each do |user| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="organizations-cards">
+          <%= cl_image_tag user.picture, width: "100px" %>
+          <div class="organization-titre">
+            <%= "#{user.first_name} #{user.last_name}" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="dashboard-btn">
+    <div class="btn btn-success"> <%= link_to "Modifier cette mission", edit_organizations_mission_path(@mission) %></div>
+</div>
+
+<div class="container">
+  <h1><%= @mission.title %></h1>
+  <p><%= @mission.description %></p>
+  <p><%= @mission.skills_needed %></p>
+  <h3>Description de l'association</h3>
+  <p><%= @mission.organization.description %></p>
+  <%= cl_image_tag @mission.organization.photo_1 %>
+</div>
