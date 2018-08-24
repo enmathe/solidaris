@@ -3,6 +3,7 @@
     </div>
 </div>
 <div class="main-container">
+  <div id="map" data-markers="<%= @markers.to_json %>"></div>
   <div class="container">
     <div class="row">
       <% @missions.each do |mission| %>
@@ -12,10 +13,10 @@
             <%= svg_div(mission.category) %>
             <h2><%= mission.title.first(22) %></h2>
             <p><%= mission.organization.name%></p>
-            <img class="looking-for" src="/assets/looking-for.png"/>
+            <img class="looking-for" src="/assets/looking-for.svg"/>
               <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
               <p><%#= mission.starting_at %></p> -->
-            <img class="date" src="/assets/time.png"/>
+            <img class="date" src="/assets/time.svg"/>
           <%end  %>
         </div>
       </div>
