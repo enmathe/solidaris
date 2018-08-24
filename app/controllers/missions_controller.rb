@@ -13,8 +13,8 @@ class MissionsController < ApplicationController
       end
     end
 
-    @missions = Mission.all.where.not(latitude: nil, longitude: nil)
-    @markers = marker(@missions)
+    @missions_map = Mission.all.where.not(latitude: nil, longitude: nil)
+    @markers = marker(@missions_map)
   end
 
 # en tant que user je peux voir les details d une mission
@@ -25,7 +25,7 @@ class MissionsController < ApplicationController
   private
 
   def marker(missions)
-    @markers = @missions.map do |mission|
+    @markers = missions.map do |mission|
       {
         lat: mission.latitude,
         lng: mission.longitude,
