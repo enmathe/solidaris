@@ -13,8 +13,8 @@ class MissionsController < ApplicationController
       end
     end
 
-    # @missions = Mission.all.where.not(latitude: nil, longitude: nil)
-    # @markers = marker(@mission)
+    @missions = Mission.all.where.not(latitude: nil, longitude: nil)
+    @markers = marker(@missions)
   end
 
 # en tant que user je peux voir les details d une mission
@@ -22,17 +22,17 @@ class MissionsController < ApplicationController
     @mission = Mission.find(params[:id])
   end
 
-  # private
+  private
 
-  # def marker(missions)
-  #   @markers = missions.map do |mission|
-  #     {
-  #       lat: mission.latitude,
-  #       lng: mission.longitude,
-  #       infoWindow: { content: render_to_string(partial: "/mission/map_box", locals: { mission: mission }) },
-  #     }
-  #   end
-  # end
+  def marker(missions)
+    @markers = @missions.map do |mission|
+      {
+        lat: mission.latitude,
+        lng: mission.longitude,
+        infoWindow: { content: render_to_string(partial: "/missions/map_box", locals: { mission: mission }) }
+      }
+    end
+  end
 end
 
 
