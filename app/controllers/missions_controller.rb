@@ -12,7 +12,7 @@ class MissionsController < ApplicationController
     #     @past << mission
     #   end
     # end
-
+    @categories = Mission.find_by_sql("SELECT category FROM missions GROUP BY category").map &:category
     if params[:query].present?
       @missions = Mission.where("title ILIKE ?", "%#{params[:query]}%").where.not(latitude: nil, longitude: nil)
       @markers = marker(@missions)

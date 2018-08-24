@@ -19,9 +19,11 @@
               <h2><%= mission.title.first(22) %></h2>
               <p><%= mission.organization.name%></p>
               <%= image_tag "looking-for.png", class: 'looking-for'%>
+
               <h3 class="volunteer"><%= mission.volunteers_needed %></h3>
               <p><%= mission.starting_at %></p>
               <%= image_tag "time.png", class: "date" %>
+              <!-- <img class="date" src="/assets/time.png"/> -->
             <% end %>
           </div>
         </div>
