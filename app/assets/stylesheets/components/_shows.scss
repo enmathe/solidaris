@@ -1,3 +1,55 @@
+.show-container {
+  h1 {
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 400;
+    color: #31333B;
+    text-transform: none;
+    margin-bottom: 20px;
+    margin-top: 70px;
+  }
+
+  h2 {
+    position: relative;
+    font-size: 24px;
+    color: #373942;
+    padding-bottom: 20px;
+    font-weight: 400;
+  }
+
+  h2:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #EEEEEE;
+    content: ' ';
+  }
+
+  p {
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 300;
+    margin: 20px 0;
+    margin-bottom: 40px;
+  }
+
+  .meta-item {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 23px;
+    color: #87888D;
+    white-space: nowrap;
+    text-align: justify
+  }
+
+  .page-metas {
+    display: flex;
+    margin-bottom: 50px;
+  }
+}
+
 .show-profile-wrap {
   background-color: white;
   margin: -150px -50px 0px -50px;
@@ -6,9 +58,6 @@
   padding: 40px 80px  20px 80px;
   div {
     margin: 25px;
-  }
-  p {
-    padding: 8px 0px;
   }
 }
 
@@ -20,9 +69,6 @@
   justify-content: center;
   div {
     margin: 25px;
-  }
-  p {
-    padding: 8px 0px;
   }
 }
 
@@ -41,11 +87,6 @@
   padding: 0px 15px;
 }
 
-.show-container {
-  margin-left: 70px;
-  margin-right: 70px;
-
-}
 
 .mission-organization-logo {
   width: 160px;
