@@ -53,15 +53,15 @@
     </div>
   </div>
   <div class="dashboard-mission-current">
-  <h10> Mes missions en cours </h10>
+  <h10> Mes prochaines missions</h10>
     <div class="row">
-      <% @missions.first(3).each do |mission| %>
+      <% @recurrent_current.last(3).each do |mission| %>
       <div class="col-xs-12 col-sm-4">
         <div class="missions-cards">
           <%= link_to mission_path(mission) do %>
             <%= svg_div(mission.category) %>
             <h2><%= mission.title.first(22) %></h2>
-            <p><%= mission.organization.name%></p>
+            <p><%= mission.starting_at%> <%= mission.recurrent%></p>
             <img class="looking-for" src="/assets/looking-for.png"/>
               <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
               <p><%#= mission.starting_at %></p> -->
@@ -75,14 +75,14 @@
   <div class="dashboard-mission-past">
     <h10>Mes missions passées</h10>
     <div class="row">
-      <% @user_missions.first(6).each do |mission| %>
+      <% @past.first(6).each do |mission| %>
       <div class="col-sm-4">
         <%= link_to mission_path(mission) do %>
         <div class="mini-card-container">
           <div class="mini-card-description">
             <%= mini_svg_div(mission.category) %>
             <h2><%= mission.title %></h2>
-            <p><%= mission.organization.name %></p>
+            <p><%= mission.starting_at %></p>
           </div>
         </div>
         <% end %>
