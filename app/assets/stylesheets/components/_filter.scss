@@ -1,13 +1,15 @@
 .filter-container {
   height: 15vh;
   width: auto;
-  padding-top: 15px;
+  border-bottom: 20px;
+  padding-top: 20px;
 }
 
 .filters {
-  height: 8vh;
+  height: 70px;
   width: auto;
   border-width: 1px;
   border-top: 20px;
-  background-color: $green;
+  background-color: white;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 }

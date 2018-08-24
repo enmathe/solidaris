@@ -1,5 +1,4 @@
 .missions-cards {
-  width: 210px;
   height: 280px;
   background-color : white;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -13,6 +12,57 @@
   color: black;
 }
 
+.missions-cards h2 {
+  width: auto;
+  font-size: 1em;
+  position: absolute;
+  left: 6%;
+  bottom: 20%;
+}
+
+.missions-cards p {
+  width: 180px;
+  font-size: 0.8em;
+  position: absolute;
+  left: 6%;
+  bottom: 6%;
+  color: #BDBDBD;
+}
+
+
+.dashboard-missions-cards {
+  height: 280px;
+  background-color : white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  box-shadow: 2px 4px 4px rgba(147, 147, 147, 0.28);
+  border-radius: 21px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  font-size: 14px;
+  color: black;
+}
+
+.dashboard-missions-cards h2 {
+  height: 240px;
+  width: auto;
+  font-size: 1em;
+  position: absolute;
+  left: 6%;
+  bottom: 20%;
+}
+
+.dashboard-missions-cards p {
+  width: 180px;
+  font-size: 0.8em;
+  position: absolute;
+  left: 6%;
+  bottom: 6%;
+  color: #BDBDBD;
+  margin-top: 10px;
+  text-align: justify;
+}
 
 .looking-for {
   position: absolute;
@@ -73,6 +123,17 @@
   background-position: center;
 }
 
+.show-gradient-general {
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .gradient-collecte {
   background: linear-gradient(#A3BDED, #6991C7);
 }
