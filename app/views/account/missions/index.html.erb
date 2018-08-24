@@ -55,12 +55,12 @@
   <div class="dashboard-mission-current">
   <h10> Mes missions en cours</h10>
     <div class="row">
-      <% @recurrent_current.each do |mission| %>
+      <% @recurrent_current.first(3).each do |mission| %>
       <div class="col-xs-12 col-sm-4">
         <div class="missions-cards">
           <%= link_to mission_path(mission) do %>
             <%= svg_div(mission.category) %>
-            <h2><%= mission.title.first(22) %></h2>
+            <h2><%= mission.title %></h2>
             <p><%= mission.organization.name%></p>
             <img class="looking-for" src="/assets/looking-for.png"/>
               <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
