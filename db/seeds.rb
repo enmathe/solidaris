@@ -271,7 +271,7 @@ dessins_sans_papiers = Organization.create!(
 )
 
 anade = Organization.create!(
-  name: "Association Nantaise d'Alphabétisation Des Etrangers",
+  name: "Association d'Alphabétisation Des Etrangers",
   description: "Les cours du soir dispensés s'adressent aux adultes de toute âge et de toutes nationalités désireux d'apprendre ou de se perfectionner dans la pratique du français",
   email: "anade@sfr.fr",
   password: "azerty",

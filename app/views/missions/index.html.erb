@@ -1,5 +1,8 @@
+<div class="filter-container">
+    <div class="filters">
+    </div>
+</div>
 <div class="main-container">
-  <div id="map" data-markers="<%= @markers.to_json %>"></div>
   <div class="container">
     <div class="row">
       <% @missions.each do |mission| %>
@@ -8,7 +11,7 @@
           <%= link_to mission_path(mission) do %>
             <%= svg_div(mission.category) %>
             <h2><%= mission.title.first(22) %></h2>
-            <p><%= mission.organization.name%>...</p>
+            <p><%= mission.organization.name%></p>
             <img class="looking-for" src="/assets/looking-for.png"/>
               <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
               <p><%#= mission.starting_at %></p> -->
@@ -16,6 +19,8 @@
           <%end  %>
         </div>
       </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
+  <div id="map" data-markers="<%= @markers.to_json %>"></div>
 </div>
