@@ -271,7 +271,7 @@ dessins_sans_papiers = Organization.create!(
 )
 
 anade = Organization.create!(
-  name: "ANADE - Association Nantaise d'Alphabétisation Des Etrangers",
+  name: "Association Nantaise d'Alphabétisation Des Etrangers",
   description: "Les cours du soir dispensés s'adressent aux adultes de toute âge et de toutes nationalités désireux d'apprendre ou de se perfectionner dans la pratique du français",
   email: "anade@sfr.fr",
   password: "azerty",
@@ -680,7 +680,7 @@ saint_jean = Organization.create!(
 )
 
 mrap = Organization.create!(
-  name: "MRAP - Mouvement contre le racisme et pour l'amitié entre les peuples",
+  name: "Mouvement contre le racisme et pour l'amitié entre les peuples",
   description: "Association française non gouvernementale, créée en 1949 par
   d'anciens résistants et déportés de la Seconde Guerre mondiale, qui se définit c
   omme un moyen de revendication pour « l'égalité des droits entre tous les

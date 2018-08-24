@@ -7,7 +7,7 @@
           <%= link_to mission_path(mission) do %>
             <%= svg_div(mission.category) %>
             <h2><%= mission.title.first(22) %></h2>
-            <p><%= mission.description.first(50) %>...</p>
+            <p><%= mission.organization.name%>...</p>
             <img class="looking-for" src="/assets/looking-for.png"/>
               <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
               <p><%#= mission.starting_at %></p> -->
