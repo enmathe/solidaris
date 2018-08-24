@@ -2,9 +2,6 @@
   <div class="filters">
     <%= form_tag missions_path, method: :get do %>
       <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Find a mission" %>
-  <!--     <%#= button_tag type: 'submit', class: "btn-naked" do %>
-        <i class="fas fa-check-circle"></i>
-    <%# end %> -->
     <% end %>
   </div>
 </div>
