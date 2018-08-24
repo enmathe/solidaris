@@ -778,7 +778,7 @@ cours_de_français = Mission.create!({
 
 
 hébergement = Mission.create!({
-  title: "Herbergement d'urgence pour une famille de 5 personnes",
+  title: "Hebergement d'urgence pour une famille de 5 personnes",
   category: "Hebergement",
   address: "15 rue Guépin, 44000 Nantes",
   volunteers_needed: 2,
@@ -794,7 +794,7 @@ hébergement = Mission.create!({
 
 
 hébergement_2 = Mission.create!({
-  title: "Herbergement d'urgence pour une mère et sa fille",
+  title: "Hebergement d'urgence pour une mère et sa fille",
   category: "Hebergement",
   address: "26 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 2,
@@ -810,7 +810,7 @@ hébergement_2 = Mission.create!({
 
 
 hébergement_3 = Mission.create!({
-  title: "Herbergement d'urgence pour une fille de 15 ans",
+  title: "Hebergement d'urgence pour une fille de 15 ans",
   category: "Hebergement",
   address: "26 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 1,
