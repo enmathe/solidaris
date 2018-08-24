@@ -680,7 +680,7 @@ saint_jean = Organization.create!(
 )
 
 mrap = Organization.create!(
-  name: "Mouvement contre le racisme et pour l'amitié entre les peuples",
+  name: "Mouvement contre le racisme",
   description: "Association française non gouvernementale, créée en 1949 par
   d'anciens résistants et déportés de la Seconde Guerre mondiale, qui se définit c
   omme un moyen de revendication pour « l'égalité des droits entre tous les
@@ -778,7 +778,7 @@ cours_de_français = Mission.create!({
 
 
 hébergement = Mission.create!({
-  title: "Herbergement d'urgence pour une famille de 5 personnes",
+  title: "Hebergement d'urgence pour une famille de 5 personnes",
   category: "Hebergement",
   address: "15 rue Guépin, 44000 Nantes",
   volunteers_needed: 2,
@@ -794,7 +794,7 @@ hébergement = Mission.create!({
 
 
 hébergement_2 = Mission.create!({
-  title: "Herbergement d'urgence pour une mère et sa fille",
+  title: "Hebergement d'urgence pour une mère et sa fille",
   category: "Hebergement",
   address: "26 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 2,
@@ -810,7 +810,7 @@ hébergement_2 = Mission.create!({
 
 
 hébergement_3 = Mission.create!({
-  title: "Herbergement d'urgence pour une fille de 15 ans",
+  title: "Hebergement d'urgence pour une fille de 15 ans",
   category: "Hebergement",
   address: "26 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 1,
@@ -865,7 +865,7 @@ cours_de_dessin_1 = Mission.create!({
 })
 
 activité_sportive = Mission.create!({
-  title: "Activité sportive avec les réfugiés",
+  title: "Activité sportive (tournoi multisport)",
   category: "Activite",
   address: "6 rue de l'Indre 44000 Nantes",
   volunteers_needed: 5,

@@ -7,7 +7,7 @@ class ApplicationsController < ApplicationController
     @application.user_id = current_user.id
     @application.mission_id = @mission.id
     if @application.save
-      redirect_to account_profile_path
+      redirect_to account_missions_path
     else
       render 'missions/show'
     end

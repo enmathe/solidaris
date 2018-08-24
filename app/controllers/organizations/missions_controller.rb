@@ -27,6 +27,7 @@ class Organizations::MissionsController < ApplicationController
         @past << mission
       end
     end
+  end
 
   def show
     @mission = Mission.find(params[:id])
@@ -37,7 +38,6 @@ class Organizations::MissionsController < ApplicationController
   end
 
   def create
-    raise
     @mission = Mission.new(mission_params)
     @mission.organization = Organization.find(current_organization.id)
     if @mission.save
