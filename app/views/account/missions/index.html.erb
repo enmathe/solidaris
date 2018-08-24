@@ -58,6 +58,7 @@
       <% @missions.last(3).each do |mission| %>
       <div class="col-xs-12 col-sm-4">
         <div class="dashboard-missions-cards">
+          <%= link_to mission_path(mission) do %>
             <%= svg_div(mission.category) %>
             <h2><%= mission.title.first(22) %></h2>
             <p><%= mission.organization.name%></p>
@@ -65,6 +66,7 @@
               <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
               <p><%#= mission.starting_at %></p> -->
             <img class="date" src="/assets/time.png"/>
+          <% end %>
         </div>
       </div>
       <% end %>
