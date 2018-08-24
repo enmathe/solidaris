@@ -13,7 +13,6 @@
       </div>
     </div>
     </div>
-
   </div>
 
   <div class="container">
@@ -21,11 +20,11 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="banner-mission-content">
           <h4 class= "text-center">2 demi-journées par semaine pendant 6 mois</h4>
-          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), class: "btn btn-primary" %></p>
+          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %></p>
           <p>Description de la mission :<%= @mission.description %></p>
           <p>Nb de volontaires demandés :<%= @mission.volunteers_needed %></p>
           <p>Profil recherché :<%= @mission.skills_needed %></p>
-          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), class: "btn btn-primary" %>
+          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %>
         </div>
       </div>
     </div>
@@ -35,8 +34,7 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="banner-mission-organization">
-          <h3 class= "text-center"><%= @mission.organization.name %></h3>
-
+          <h3 class= "text-center"><%= @mission.organization.name %></h3
           <div class="container">
             <div class="row">
               <div class="col-md-8 col-md-offset-3">
@@ -44,11 +42,9 @@
           </div>
         </div>
       </div>
-
           <h4 class= "text-center"><%=@mission.organization.category%></h4>
           <p class= "text-center"><%=@mission.organization.description%></p>
           <p class= "text-center"><%= link_to "En savoir plus", associations_path(@mission) %>
-
         </div>
       </div>
     </div>
