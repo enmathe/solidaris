@@ -15,30 +15,38 @@
     </div>
   </div>
 
-  <div class="container">
+
+
+  <div class="first-background-container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6 col-md-offset-3">
         <div class="banner-mission-content">
           <h2>Description</h2>
           <p><%= @mission.description %></p>
           <h2>Peine encourue</h2>
           <p> 2 demi-journées par semaine pendant 6 mois </p>
           <h2>Profil recherché <h2>
-          <% if @mission.skills_needed.nil? || @mission.skills_needed == "0" %>
-            <p> Aucun profil particulier recherché</p>
-          <% else %>
-            <p><%= @mission.skills_needed %></p>
-          <% end %>
+            <% if @mission.skills_needed.nil? || @mission.skills_needed == "0" %>
+              <p> Aucun profil particulier recherché</p>
+            <% else %>
+              <p><%= @mission.skills_needed %></p>
+            <% end %>
           <br><br>
           <div class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %>
+          </div>
+          <button class="button">
+            <span class="submit">Participer</span>
+            <span class="loading"><i class="fa fa-refresh"></i></span>
+            <span class="check"><i class="fa fa-check"></i></span>
+          </button>
         </div>
       </div>
     </div>
   </div>
 <br><br>
-  <div class="container">
+  <div class="background-container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6 col-md-offset-3">
         <div class="banner-mission-organization">
           <h3 class= "text-center"><%= @mission.organization.name %></h3
           <div class="container">

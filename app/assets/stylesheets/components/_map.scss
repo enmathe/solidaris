@@ -1,11 +1,14 @@
 #map {
   flex: 0 0 33%;
   height: 100vh;
+  border-radius: 5px;
   position: sticky !important;
   top: 0 !important;
-  border-radius: 5px;
 }
 
 .main-container {
   display: flex;
+}
+
+.sticky-container {
 }
