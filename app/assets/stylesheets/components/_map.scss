@@ -1,9 +1,10 @@
 #map {
   flex: 0 0 33%;
-  height: 100vh;
-  border-radius: 5px;
+  height: calc(100vh - 175px);
+  border-radius: 10px;
   position: sticky !important;
-  top: 0 !important;
+  top: 205px !important;
+  margin-top: 10px;
 }
 
 .main-container {

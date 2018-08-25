@@ -169,6 +169,17 @@
   margin-top: 25px;
 }
 
+.show-svg-white {
+  fill: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  svg {
+    width: 70px;
+  }
+  margin-top: 45px;
+}
+
 .mini-svg-white {
   margin-top: 5px;
   svg {
