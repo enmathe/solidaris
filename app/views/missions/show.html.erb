@@ -48,32 +48,31 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="image-grid">
-          <div class="big-image"
-          style=" background-image: url('<%= cl_image_path("mpnrcwlglxzxld1eigod.jpg") %>')"></div>
+          <div class="big-image" style=" background-image: url('<%= cl_image_path("mpnrcwlglxzxld1eigod.jpg") %>')"></div>
 
-          <div class="top-small-image"
-          style=" background-image: url('<%= cl_image_path("dkcrbkcfdynqryf199kj.jpg") %>')></div>
+          <div class="top-small-image" style=" background-image: url('<%= cl_image_path("dkcrbkcfdynqryf199kj.jpg") %>')"></div>
 
           <div class="bottom-small-image"
-          style=" background-image: url('<%= cl_image_path("mpnrcwlglxzxld1eigod.jpg") %>')"></div>
+          style=" background-image: url('<%= cl_image_path("ccgdavcyhlpzmvdrdhkd.jpg") %>')"></div>
         </div>
       </div>
     </div>
   </div>
+<br><br>
   <div class="background-container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="banner-mission-organization">
-          <h3 class= "text-center"><%= @mission.organization.name %></h3
+          <h3 class= "text-justify"><%= @mission.organization.name %></h3>
           <div class="container">
             <div class="row">
               <div class="col-md-8 col-md-offset-3">
-                <p><%= cl_image_tag @mission.organization.logo, class: "mission-organization-logo" %></p>
+                <!-- <p><%= cl_image_tag @mission.organization.logo, class: "mission-organization-logo" %></p> -->
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
           <h2> Description </h2>
-          <p class= "text-center"><%=@mission.organization.description%></p>
+          <p class= "text-center"><%=@mission.organization.description.first(800)%></p>
           <div class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %></p>
           <p class= "text-center"><%= link_to "En savoir plus", associations_path(@mission) %>
         </div>
