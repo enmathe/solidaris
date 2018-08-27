@@ -32,6 +32,7 @@ $lg: new-breakpoint(min-width 1024px);
   margin: 0;
   padding: 20px 20px;
   background-color: $color-2;
+  color: $back-purple;
   border: none;
   border-radius: 0.3125rem;
   box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
@@ -52,7 +53,8 @@ $lg: new-breakpoint(min-width 1024px);
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: lighten($color-3,10%);
+    background-color: lighten($back-purple,10%);
+    color: white;
   }
 
   span {
@@ -82,7 +84,8 @@ $lg: new-breakpoint(min-width 1024px);
 }
 
 .active {
-  background-color: $color-3;
+  background-color: $back-purple;
+  color: white;
 
   &:before {
     width: 100%;
@@ -112,7 +115,8 @@ $lg: new-breakpoint(min-width 1024px);
 }
 
 .finished {
-  background-color: lighten($color-3,10%);
+  background-color: lighten($back-purple,10%);
+  color: white;
 
   .submit {
     display: none;
@@ -145,3 +149,15 @@ $lg: new-breakpoint(min-width 1024px);
 //   90%  { transform: scale(0.7); }
 //   100% { transform: scale(1); }
 // }
+
+.button-more {
+  background-color: $back-purple;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 100px;
+  }
+}

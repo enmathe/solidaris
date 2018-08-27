@@ -1,29 +1,32 @@
 .show-container {
+  background-color: $back-purple;
+  color: white;
+  height: calc(100vh - 70px);
   h1 {
-    font-size: 45px;
+    font-size: 40px;
     line-height: 45px;
     font-weight: 400;
-    color: #31333B;
+    color: white;
     text-transform: none;
     margin-bottom: 20px;
     margin-top: 70px;
-    font-weight: light;
+    font-weight: 700;
   }
   h3 {
-    font-size: 45px;
+    font-size: 25px;
     line-height: 45px;
     font-weight: 400;
-    color: #31333B;
+    color: $comet;
     text-transform: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 20px;
-    font-weight: light;
+    font-weight: 400;
   }
 
   h2 {
     position: relative;
-    font-size: 24px;
-    color: #373942;
+    font-size: 20px;
+    color: white;
     padding-bottom: 20px;
     font-weight: 400;
   }
@@ -39,9 +42,9 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: 14px;
     text-align: justify;
-    font-weight: 300;
+    font-weight: lighter;
     margin: 20px 0;
     margin-bottom: 40px;
   }
@@ -50,9 +53,10 @@
     display: inline-block;
     font-size: 16px;
     line-height: 23px;
-    color: #87888D;
+    color: white;
     white-space: nowrap;
-    text-align: justify
+    text-align: justify;
+    font-weight: lighter;
   }
 
   .page-metas {
@@ -101,7 +105,6 @@
 }
 
 .first-background-container {
-  // background-color: #F6F6F6;
 }
 
 .image-grid {
@@ -135,4 +138,36 @@
   margin: 5px 0 5px 5px;
   background-size: cover !important;
   background-position: center;
+}
+
+.banner-mission-organization {
+  background-color: white;
+  color: $comet;
+  padding-right: 55px;
+  padding-left: 55px;
+  padding-top: 10px;
+  border-radius: 5px;
+  height: calc(100vh - 275px);
+  h2 {
+    position: relative;
+    font-size: 20px;
+    color: $comet;
+    padding-bottom: 20px;
+    font-weight: 400;
+  }
+
+  h2:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #EEEEEE;
+    content: ' ';
+    color: $comet;
+  }
+}
+
+.asso-desc {
+  height: 35vh;
 }
