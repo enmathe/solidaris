@@ -55,7 +55,13 @@ class Organizations::MissionsController < ApplicationController
     @mission = Mission.find(params[:id])
     @organization = current_organization.id
     @mission.update(mission_params)
-    redirect_to organizations_mission_path(@mission), :notice => "Your changes have been saved!"
+    redirect_to organizations_mission_path(@mission), :notice => "Vos changements ont été enregistrés!"
+  end
+
+  def destroy
+    @mission = Mission.find(params[:id])
+    @mission.destroy
+    redirect_to organizations_mission_path(@mission), :notice => "Votre mission a été supprimée"
   end
 
   private
