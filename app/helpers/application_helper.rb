@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def show_svg_div(category)
-    return content_tag(:div, svg_tag(category), class: ["show-gradient-general", "gradient-#{category.downcase}", "svg-white"])
+    return content_tag(:div, svg_tag(category), class: ["show-gradient-general", "gradient-#{category.downcase}", "show-svg-white"])
   end
 
   def normalize_name(name)
