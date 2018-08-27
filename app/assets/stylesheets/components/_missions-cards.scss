@@ -172,13 +172,11 @@
 
 .show-svg-white {
   fill: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  margin-left: 10px;
   svg {
     width: 70px;
   }
-  margin-top: 45px;
+  margin-top: 65px;
 }
 
 .mini-svg-white {
