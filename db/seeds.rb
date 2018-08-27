@@ -243,7 +243,8 @@ lire_et_faire_lire_ = Organization.create!(
 
 dessins_sans_papiers = Organization.create!(
   name: "Dessins Sans Papiers",
-  description: "DESSINS SANS PAPIERS est un collectif qui organise des ateliers dans des camps de réfugiés
+  description: "DESSINS SANS PAPIERS est un collectif qui organise des ateliers
+  dans des camps de réfugiés
   et des centres d’hébergement depuis 2016. DSP publie aussi des livres de dessins
   pour passer les frontières et partager des histoires que tout le monde peut comprendre.
   Ceux que nous avons rencontrés viennent du Soudan, du Tchad, du Mali, de Guinée Conakry,
@@ -271,8 +272,10 @@ dessins_sans_papiers = Organization.create!(
 )
 
 anade = Organization.create!(
-  name: "Association d'Alphabétisation Des Etrangers",
-  description: "Les cours du soir dispensés s'adressent aux adultes de toute âge et de toutes nationalités désireux d'apprendre ou de se perfectionner dans la pratique du français",
+  name: "Association d'Alphabétisation Des Étrangers",
+  description: "Les cours du soir dispensés s'adressent aux adultes de toute âge et
+  de toutes nationalités désireux
+  d'apprendre ou de se perfectionner dans la pratique du français.",
   email: "anade@sfr.fr",
   password: "azerty",
   phone_number: "07 61 47 72 65",
@@ -286,16 +289,20 @@ anade = Organization.create!(
   twitter: "www.twitter.com",
   address: "42 rue des Hauts Pavés 44000 NANTES",
   creation_year: 1978,
-  logo: "",
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  logo:
+  photo_1:
+  photo_2:
+  photo_3:
 )
 
 association_aurore = Organization.create!(
   name: "Association Aurore",
-  description: "Créée en 1871, l’association Aurore héberge, soigne et accompagne plus de 37 000 personnes en situation de précarité ou d’exclusion vers une insertion sociale et professionnelle.
-  Reconnue d’utilité publique depuis 1875, Aurore s’appuie sur son expérience pour proposer et expérimenter des formes innovantes de prises en charge, qui s’adaptent à l’évolution des phénomènes de précarité et d’exclusion.",
+  description: "Créée en 1871, l’association Aurore héberge, soigne
+  et accompagne plus de 37 000 personnes en situation de précarité ou d’exclusion vers une insertion sociale et professionnelle.
+  Reconnue d’utilité publique depuis 1875, Aurore s’appuie
+  sur son expérience pour proposer et expérimenter des formes
+  innovantes de prises en charge, qui s’adaptent à l’évolution des phénomènes de précarité
+  et d’exclusion.",
   email: "f.beliarde@aurore.asso.fr",
   password: "azerty",
   phone_number: "02 51 82 60 99",
@@ -312,7 +319,7 @@ association_aurore = Organization.create!(
   logo: File.open(Rails.root.join("db/fixtures/organization/association_aurore.jpg")),
   photo_1: "",
   photo_2: "",
-  photo_3: ""
+  photo_3: "",
 )
 
 cfda = Organization.create!(
@@ -535,7 +542,7 @@ gref = Organization.create!(
 )
 
 acceuil = Organization.create!(
-  name: "L'Acceuil d'abord",
+  name: "L'Accueil d'abord",
   description: "> Des logements mis à disposition gratuitement dans l’agglomération
    nantaise, du gros matériel ménager (frigo, machines à laver le linge…)
   > Des personnes pour accompagner les familles hébergées (compétences sociales,
@@ -738,7 +745,14 @@ vetements = Mission.create!({
   category: "Collecte",
   address: "94 rue des hauts pavés, 44000 Nantes",
   volunteers_needed: 0,
-  description: "En partenariat avec des écoles (Algérie, Egypte...) Orient Events recherche une personne en charge d'organiser une collecte de vêtements pour les enfants, livres, fournitures scolaires. Le bénévole sera en charge de - Rédaction du projet, - Recherche de partenaires (écoles, compagnies aériennes...) - Organiser la collecte - Trouver des partenaires afin d'acheminer les objets ",
+  description: "En partenariat avec des écoles (Algérie, Egypte...)
+  Orient Events recherche une personne en charge d'organiser
+  une collecte de vêtements pour les enfants, livres, fournitures scolaires.
+  Le bénévole sera en charge de :
+  - Rédaction du projet,
+  - Recherche de partenaires (écoles, compagnies aériennes...)
+  - Organiser la collecte
+  - Trouver des partenaires afin d'acheminer les objets.",
   starting_at: "2018/10/17 14:00:00",
   duration_in_hours: 10,
   recurrent: false,
@@ -747,11 +761,18 @@ vetements = Mission.create!({
 })
 
 nourriture = Mission.create!({
-  title: "Collecte de nouriture",
+  title: "Collecte de nourriture",
   category: "Collecte",
   address: "94 rue des hauts pavés, 44000 Nantes",
   volunteers_needed: 0,
-  description: "En partenariat avec des écoles (Algérie, Egypte...) Orient Events recherche une personne en charge d'organiser une collecte de vêtements pour les enfants, livres, fournitures scolaires. Le bénévole sera en charge de - Rédaction du projet, - Recherche de partenaires (écoles, compagnies aériennes...) - Organiser la collecte - Trouver des partenaires afin d'acheminer les objets ",
+  description: "En partenariat avec des écoles (Algérie, Egypte...)
+  Orient Events recherche une personne en charge d'organiser une collecte
+  de vêtements pour les enfants, livres, fournitures scolaires.
+  Le bénévole sera en charge de :
+  - Rédaction du projet,
+  - Recherche de partenaires (écoles, compagnies aériennes...),
+  - Organiser la collecte,
+  - Trouver des partenaires afin d'acheminer les objets.",
   skills_needed: "",
   starting_at: "2018/10/17 14:00:00",
   duration_in_hours: 10,
@@ -765,7 +786,11 @@ cours_de_français = Mission.create!({
   category: "Enseignement",
   address: "15 rue Guépin, 44000 Nantes",
   volunteers_needed: 14,
-  description: "Rejoignez notre association du 6eme arrondissement de Paris en tant que formateur PSC 1 (Prévention et secours civiques de niveau 1) Pourquoi former les français aux gestes qui sauvent ? En France, plusieurs milliers de personnes décèdent chaque année des suites d’une méconnaissance des gestes de premiers secours par leur entourage.Par ailleurs, les différents drames auxquels les français ont dû faire face ces deux dernières années rendent cette",
+  description: "Rejoignez notre association du Nantes en tant que formateur PSC 1
+  (Prévention et secours civiques de niveau 1).
+  Pourquoi former les français aux gestes qui sauvent ?
+  En France, plusieurs milliers de personnes décèdent chaque année
+  des suites d’une méconnaissance des gestes de premiers secours par leur entourage.",
   skills_needed: 0,
   starting_at: "2018/10/17 14:00:00",
   duration_in_hours: 4.5,
@@ -778,11 +803,12 @@ cours_de_français = Mission.create!({
 
 
 hébergement = Mission.create!({
-  title: "Hebergement d'urgence pour une famille de 5 personnes",
-  category: "Hebergement",
+  title: "Hébergement d'urgence pour une famille de 5 personnes",
+  category: "Hébergement",
   address: "15 rue Guépin, 44000 Nantes",
   volunteers_needed: 2,
-  description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
+  description: "Besoin d'hébergement une famille de 5 personnes
+  d'origine erythréennes pendant 1 semaine.",
   starting_at: "2018/10/17 14:00:00",
   duration_in_hours: "",
   recurrent: true,
@@ -794,9 +820,9 @@ hébergement = Mission.create!({
 
 
 hébergement_2 = Mission.create!({
-  title: "Hebergement d'urgence pour une mère et sa fille",
-  category: "Hebergement",
-  address: "26 boulevard de stalingrad, 44000 Nantes",
+  title: "Hébergement d'urgence pour une mère et sa fille",
+  category: "Hébergement",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 2,
   description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
   starting_at: "2018/11/17 14:00:00",
@@ -810,9 +836,9 @@ hébergement_2 = Mission.create!({
 
 
 hébergement_3 = Mission.create!({
-  title: "Hebergement d'urgence pour une fille de 15 ans",
-  category: "Hebergement",
-  address: "26 boulevard de stalingrad, 44000 Nantes",
+  title: "Hébergement d'urgence pour une fille de 15 ans",
+  category: "Hébergement",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1,
   description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
   skills_needed: 0,
@@ -826,8 +852,8 @@ hébergement_3 = Mission.create!({
 
 cours_de_dessin = Mission.create!({
   title: "Accompagnateurs pour un cours de dessin",
-  category: "Activite",
-  address: "16 boulevard de stalingrad, 44000 Nantes",
+  category: "Activité",
+  address: "16 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1000,
   description: "Votre mission en tant que bénévole :
   - Encadrer avec 2 autres bénévoles un groupe d'une vingtaine de personnes
@@ -847,21 +873,25 @@ cours_de_dessin = Mission.create!({
 
 cours_de_dessin_1 = Mission.create!({
   title: "Accompagnateurs pour un cours de dessin",
-  category: "Activite",
-  address: "16 boulevard de stalingrad, 44000 Nantes",
+  category: "Activité",
+  address: "16 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 4,
-  description: "Votre mission en tant que bénévole :
-  - Encadrer avec 2 autres bénévoles un groupe d'une vingtaine de personnes
+  description: "
+  - Encadrer avec 2 autres bénévoles un groupe de 10 de personnes
   - Apprendre les bases du dessin
-  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association",
+  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association
+  - Introduire les exilés aux Arts Plastiques.
+  - Enrichir leur imaginaire par l’échange et la pratique des arts
+  plastiques",
   skills_needed: "
   Passionnée par le dessin,
-  Bases en pédagogie,",
+  Bases en pédagogie,
+  BAFA souhaité",
   starting_at: "2018/09/12 15:00:00",
   duration_in_hours: 3,
   recurrent: false,
   end_candidature_date: "2018/09/07 15:00:00",
-  organization: cfda
+  organization: dessins sans papiers
 })
 
 activité_sportive = Mission.create!({
@@ -877,8 +907,7 @@ activité_sportive = Mission.create!({
   skills_needed: "
   Passionnée par le sport,
   Bases en pédagogie,
-  Avoir le BAFA serait un plus
-  ",
+  Avoir le BAFA serait un plus",
   starting_at: "2018/09/03 08:00:00",
   duration_in_hours: 10,
   recurrent: false,
@@ -908,7 +937,8 @@ parrain = Mission.create!({
   category: "Accompagnement",
   address: "16 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Nous recherchons des personnes habitant en france de longue date pour parrainer des réfugiés (1 rencontre par mois minimum pendant 6 mois) avec pour buts: l'amélioration du niveau de français à travers des conversations, sorties, ou toute initiative favorisant les échanges; la découverte de l'environnement et des loisirs (visites de la ville, de musées, séances de cinéma, spectacles, etc.); une meilleure connaissance de la culture française.",
+  description: "Nous recherchons des personnes habitant en
+  france de longue date pour parrainer des réfugiés (1 rencontre par mois minimum pendant 6 mois) avec pour buts: l'amélioration du niveau de français à travers des conversations, sorties, ou toute initiative favorisant les échanges; la découverte de l'environnement et des loisirs (visites de la ville, de musées, séances de cinéma, spectacles, etc.); une meilleure connaissance de la culture française.",
   skills_needed: "
   - goût de l'engagement pour les causes de la solidarité
   - patience, pédagogie et habitude du travail d'équipe",
@@ -924,9 +954,15 @@ parrain = Mission.create!({
 formateur_web = Mission.create!({
   title: "Formateur web",
   category: "Enseignement",
-  address: "16 boulevard de stalingrad, 44000 Nantes",
+  address: "16 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1,
-  description: "La crise migratoire ayant un impact sans précédent sur l'europe et le monde, notre mission est de promouvoir l’inclusion des personnes réfugiées dans ces communautés en s’appuyant sur l'innovation et la technologie. notre organisation s’attaque à la question de l’intégration des personnes réfugiées en leur proposant l’accès et la formation à des connaissances numériques.",
+  description: "La crise migratoire ayant un impact
+  sans précédent sur l'europe et le monde, notre mission est de promouvoir
+  l’inclusion des personnes réfugiées dans ces communautés en s’appuyant
+  sur l'innovation et la technologie.
+  Notre organisation s’attaque
+  à la question de l’intégration des personnes réfugiées
+  en leur proposant l’accès et la formation à des connaissances numériques.",
   skills_needed: "
   - connaissances bureautiques (pour les formateurs du niveau débutant)
   - connaissances essentielles de word, excel et du web (pour les formateurs du niveau intermédiaire)
@@ -947,9 +983,14 @@ formateur_web = Mission.create!({
 insertion_professionnelle = Mission.create!({
   title: "Insertion professionnelle des migrants",
   category: "Accompagnement",
-  address: "1 boulevard de stalingrad, 44000 Nantes",
+  address: "1 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Acina mène un projet d'insertion professionnelle des nouveaux arrivants en situation d'exclusion, dont les personnes vivant en bidonville ou squat. dans ce cadre l'association recherche des personnes souhaitant s'impliquer dans le développement et la consolidation de partenariats avec des entreprises/centres de formation/structures d'insertion. plus largement, les bénévoles sont invités à réfléchir à des stratégies d'insertion innovantes.",
+  description: "Acina mène un projet d'insertion professionnelle des nouveaux
+  arrivants en situation d'exclusion, dont les personnes vivant en bidonville ou squat.
+  Dans ce cadre l'association recherche des personnes souhaitant
+  s'impliquer dans le développement et la consolidation de partenariats avec
+  des entreprises/centres de formation/structures d'insertion. plus largement,
+  les bénévoles sont invités à réfléchir à des stratégies d'insertion innovantes.",
   skills_needed: "
   - compétences linguistiques : anglais est un plus !
   - goût de l'engagement pour les causes de la solidarité
@@ -965,10 +1006,16 @@ insertion_professionnelle = Mission.create!({
 
 maraude = Mission.create!({
   title: "Maraude",
-  category: "Sante",
+  category: "Santé",
   address: "16 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 2,
-  description: "Acina mène un projet d'insertion professionnelle des nouveaux arrivants en situation d'exclusion, dont les personnes vivant en bidonville ou squat. dans ce cadre l'association recherche des personnes souhaitant s'impliquer dans le développement et la consolidation de partenariats avec des entreprises/centres de formation/structures d'insertion. plus largement, les bénévoles sont invités à réfléchir à des stratégies d'insertion innovantes.",
+  description: "Acina mène un projet d'insertion
+  professionnelle des nouveaux arrivants en situation d'exclusion,
+  dont les personnes vivant en bidonville ou squat. dans ce cadre l'association
+  recherche des personnes souhaitant s'impliquer dans le développement
+  et la consolidation de partenariats avec des entreprises/centres de
+  formation/structures d'insertion. plus largement, les bénévoles
+  sont invités à réfléchir à des stratégies d'insertion innovantes.",
   skills_needed: "
   Passionnée par le dessin,
   Bases en pédagogie ",
@@ -981,11 +1028,12 @@ maraude = Mission.create!({
 })
 
 benevoles = Mission.create!({
-  title: "Benevoles pour le festival des réfugiés",
-  category: "Evenement",
+  title: "Bénèvoles pour le festival des réfugiés",
+  category: "Évenement",
   address: "1 place royal, 44000 Nantes",
   volunteers_needed: 15,
-  description: "Votre mission en tant que bénévole sera une des suivantes en fonction du besoin:
+  description: "Votre mission en tant que bénèvole sera une des suivantes
+  en fonction du besoin:
   - Servir au bar
   - Accueil
   - Vente de place",
@@ -1001,11 +1049,12 @@ benevoles = Mission.create!({
 
 
 benevoles_entraide = Mission.create!({
-  title: "Benevoles pour le festival de l'entraide",
-  category: "Evenement",
+  title: "Bénèvoles pour le festival de l'entraide",
+  category: "Évenement",
   address: "5 quai des Antilles, 44000 Nantes",
   volunteers_needed: 2,
-  description: "Votre mission en tant que bénévole sera une des suivantes en fonction du besoin:
+  description: "Votre mission en tant que bénévole
+  sera une des suivantes en fonction du besoin :
   - Servir au bar
   - Accueil
   - Vente de place",
@@ -1025,7 +1074,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2018/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1039,7 +1089,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1053,7 +1104,8 @@ collecte_para = Mission.create!({
   category: "Hebergement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1067,7 +1119,8 @@ collecte_para = Mission.create!({
   category: "Accompagnement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1081,7 +1134,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1095,7 +1149,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1105,11 +1160,12 @@ collecte_para = Mission.create!({
 })
 
 collecte_para = Mission.create!({
-  title: "Collecte de para",
+  title: "Collecte de parapharmacie",
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1125,7 +1181,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2018/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1139,7 +1196,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1150,10 +1208,11 @@ collecte_para = Mission.create!({
 
 collecte_para = Mission.create!({
   title: "Accompagnement d'enfants",
-  category: "Hebergement",
+  category: "Hébergement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1167,7 +1226,8 @@ collecte_para = Mission.create!({
   category: "Accompagnement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1181,7 +1241,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1195,7 +1256,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1209,7 +1271,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1225,7 +1288,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2018/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1238,7 +1302,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1251,7 +1316,8 @@ collecte_para = Mission.create!({
   category: "Hebergement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1264,7 +1330,8 @@ collecte_para = Mission.create!({
   category: "Accompagnement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1277,7 +1344,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1290,7 +1358,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1303,7 +1372,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2016/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1318,7 +1388,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2028/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1331,7 +1402,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2026/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1341,10 +1413,11 @@ collecte_para = Mission.create!({
 
 collecte_para = Mission.create!({
   title: "Accompagnement d'enfants",
-  category: "Hebergement",
+  category: "Hébergement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2026/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1357,7 +1430,8 @@ collecte_para = Mission.create!({
   category: "Accompagnement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2026/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1366,11 +1440,12 @@ collecte_para = Mission.create!({
 })
 
 collecte_para = Mission.create!({
-  title: "Collecte de para",
+  title: "Collecte de parapharmacie",
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2026/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1383,7 +1458,8 @@ collecte_para = Mission.create!({
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie :
+  pansements, serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2026/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1392,11 +1468,12 @@ collecte_para = Mission.create!({
 })
 
 collecte_para = Mission.create!({
-  title: "Collecte de para",
+  title: "Collecte de parapharmacie",
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie : pansements,
+  serviettes hygièniques, tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2026/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1409,10 +1486,16 @@ aide_aux_devoirs = Mission.create!({
   category: "Enseignement",
   address: "6 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 3,
-  description: "Acina mène un projet d'insertion professionnelle des nouveaux arrivants en situation d'exclusion, dont les personnes vivant en bidonville ou squat. dans ce cadre l'association recherche des personnes souhaitant s'impliquer dans le développement et la consolidation de partenariats avec des entreprises/centres de formation/structures d'insertion. plus largement, les bénévoles sont invités à réfléchir à des stratégies d'insertion innovantes.",
-  skills_needed:" - compétences linguistiques : anglais est un plus !
-  - goût de l'engagement pour les causes de la solidarité
-  - patience, pédagogie et habitude du travail d'équipe",
+  description: "Acina mène un projet d'insertion professionnelle
+  des nouveaux arrivants en situation d'exclusion, dont les personnes
+  vivant en bidonville ou squat. Dans ce cadre, l'association recherche
+  des personnes souhaitant s'impliquer dans le développement et la consolidation
+  de partenariats avec des entreprises/centres de formation/structures d'insertion.
+  Plus largement, les bénévoles sont invités à réfléchir à des stratégies
+  d'insertion innovantes.",
+  skills_needed:" - compétences linguistiques : L'anglais est un plus !
+  - Goût de l'engagement pour les causes de la solidarité
+  - Patience, pédagogie et habitude du travail d'équipe",
   starting_at: "2018/09/12 15:00:00",
   duration_in_hours: 3,
   recurrent: true,
@@ -1438,10 +1521,11 @@ collecte_para_4 = Mission.create!({
 })
 collecte_para = Mission.create!({
   title: "Collecte parapharmacie",
-  category: "Sante",
+  category: "Santé",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
+  description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques,
+  tampons, crèmes, ...",
   skills_needed: "",
   starting_at: "2018/10/12 15:00:00",
   duration_in_hours: 10,
@@ -1451,7 +1535,7 @@ collecte_para = Mission.create!({
 })
 collecte_para = Mission.create!({
   title: "Collecte parapharmacie",
-  category: "Sante",
+  category: "Santé",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
   description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
