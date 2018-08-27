@@ -11,33 +11,14 @@
           <option value="urgent" <%= "selected=\"selected\"" unless @recurrency %> >Urgent</option>
           <option value="recurrent" <%= "selected=\"selected\"" if @recurrency %> >Récurrent</option>
         <% end %>
-        <%#= select("category", "id", @missions.map {|mission| [:category, mission.id]},
-      {:prompt => 'Sélectionner une catégorie'}) %>
       </div>
       <div class="field">
       </select>
       </div>
     <% end %>
-    <%#= button_tag type: 'submit', class: "btn-naked" do %>
-        <!-- <p>Urgent</p> -->
-    <%# end %>
-    <%#= form_tag('categories', :remote => true) do %>
-      <%#= select_tag "categories", options_from_collection_for_select(@missions, "id", "category") %>
-      <%#= submit_tag 'Filter' %>
-    <%# end %>
- <!--    <%#= select("category","id", @missions.map { |mission| [mission.category, mission.id] },
-      {:prompt => 'Sélectionner une catégorie'}) %>
-    <select name="category_id" id="category_id">
-      <option type="submit" value="1">Urgent</option>
-      <option value="2">Récurrent</option>
-    </select> -->
   </div>
-
-
 </div>
-<br>
-<br>
-<br>
+<br><br><br>
 <div class="sticky-container">
   <div id="filter-container">
     <div class="filters">
@@ -66,3 +47,5 @@
     <div id="map" data-markers="<%= @markers.to_json %>"></div>
   </div>
 </div>
+
+<%= javascript_pack_tag 'filters' %>

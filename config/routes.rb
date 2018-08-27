@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :organizations
 
-  resources :missions, only: [:index, :show] do
-    resources :applications, only: [:create]
-  end
 
   namespace :account do
     resource :profile, only: [:show, :edit, :update]
@@ -19,5 +16,9 @@ Rails.application.routes.draw do
     resources :missions do
       resources :applications, only: [:show]
     end
+  end
+
+  resources :missions, only: [:index, :show] do
+    resources :applications, only: [:create]
   end
 end
