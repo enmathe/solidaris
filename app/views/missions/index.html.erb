@@ -33,13 +33,13 @@
         <% @missions.each do |mission| %>
           <div class="col-xs-12 col-sm-4">
             <div class="missions-cards">
-              <div class="overlay"></div>
               <%= link_to mission_path(mission) do %>
                 <%= index_svg_div(mission.category) %>
                 <h2><%= mission.title %></h2>
                 <p><%= mission.organization.name%></p>
-              <% end %>
+                <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
             </div>
+              <% end %>
           </div>
         <% end %>
       </div>
