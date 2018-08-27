@@ -9,6 +9,16 @@
     margin-top: 70px;
     font-weight: light;
   }
+  h3 {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 400;
+    color: #31333B;
+    text-transform: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: light;
+  }
 
   h2 {
     position: relative;
@@ -63,14 +73,10 @@
 }
 
 .show-association-wrap {
-  margin: -150px -50px 0px -50px;
   border-radius: 15px;
   display: flex;
-  padding: 40px 80px  20px 80px;
   justify-content: center;
-  div {
-    margin: 25px;
-  }
+  margin-top: 15px;
 }
 
 .description-asso {
