@@ -4,22 +4,19 @@ class MissionsController < ApplicationController
     @mission = Mission.new
     @missions = Mission.all
 
+    @missions = params[:query].present? ? @missions.where("title ILIKE ?", "%#{params[:query]}%") : @missions
+    @missions = (params[:mission].present? and params[:mission]["category"] != "") ? @missions.where("category ILIKE ?", "#{params[:mission]["category"]}") : @missions
+
+    if params[:recurrency].present?
+      if params['recurrency'] == "recurrent"
+        @missions = @missions.where(recurrent: true)
+      elsif params['recurrency'] == "urgent"
+        @missions = @missions.where(recurrent: false)
+      end
+    end
+
+    @missions = @missions.where.not(latitude: nil, longitude: nil)
     @markers = marker(@missions)
-    # if params[:query].present? ? @missions = @missions.where("title ILIKE ?", "%#{params[:query]}%") : @missions
-    # if params[:mission].present? ? @missions = @missions.where("category ILIKE ?", "#{params[:mission]["category"]}") : @missions
-    # @missions = @missions.where () if  params[:recurrency].present?
-
-    # if params[:recurrency].present?
-    #   if params['recurrency'] == "recurrent"
-    #     @recurrency = true
-    #   elsif params['recurrency'] == "urgent"
-    #     @recurrency = false
-    #   end
-    #   missions = missions.where(recurrent: @recurrency)
-    # else
-    #   missions
-    # end
-
   end
 
     # if params[:recurrency].present?²
