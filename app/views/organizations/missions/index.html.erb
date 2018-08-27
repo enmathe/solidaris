@@ -7,6 +7,7 @@
   </div>
   <div class="dashboard-btn">
     <div class="btn btn-success"><%= link_to "Poster un besoin", new_organizations_mission_path %>  </div>
+    <div class="btn btn-success"><%= link_to "Supprimer un besoin", method: :delete, data: { confirm: "Are you sure?" } %>  </div>
   </div>
   <div class="dashboard-stat">
     <div class="stat">
