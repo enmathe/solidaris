@@ -40,8 +40,10 @@ class Organizations::MissionsController < ApplicationController
   def create
     @mission = Mission.new(mission_params)
     @mission.organization = Organization.find(current_organization.id)
+
     if @mission.save
-      redirect_to organizations_mission_path(@mission)
+      raise
+      redirect_to organizations_missions_path
     else
       render :new
     end
@@ -74,6 +76,7 @@ class Organizations::MissionsController < ApplicationController
     params.require(:mission).permit(
       :title,
       :address,
+      :category,
       :description,
       :skills_needed,
       :volunteers_needed

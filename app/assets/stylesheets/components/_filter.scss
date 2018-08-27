@@ -18,16 +18,27 @@
   background-color: white;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   padding: 20px;
-  width: 100%
+  width: 100%;
+  display: flex;
+
   // position: fixed;
   // top: 0; /* Position the navbar at the top of the page */
 }
 
+.filter {
+  margin-left: 101px;
+}
 .form-control-index {
   margin-left: 15px;
-  width: 40%;
+  width: 100%;
   border: none;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.filter-control-index {
+  margin-left: 15px;
   border-radius: 5px;
   padding: 5px;
 }

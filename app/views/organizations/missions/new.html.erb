@@ -2,14 +2,34 @@
 
 
 <div class="container"></div>
-  <%= simple_form_for [@organization, @mission], url:organizations_mission_path(@mission)  do |f| %>
-    <%= f.input :title %>
-    <%= f.input :category %>
-    <%= f.input :address %>
-    <%= f.input :description %>
-    <%= f.input :skills_needed %>
-    <%= f.input :volunteers_needed %>
-    <%= f.submit "Enregistrer mes modifications", class: "btn btn-primary" %>
-  <% end %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-2">
+    <%= simple_form_for [@organization, @mission], url: organizations_missions_path(@mission), method: :post  do |f| %>
+      <%= f.input :title %>
+      <div class="form-group">
+        <label class="control-label check_boxes optional">Categories</label>
+
+        <div class="category-choices">
+          <% Mission.category.values.each do |category| %>
+            <input type="radio" class="hidden" id="mission_category_<%= category %>" value="<%= category %>" name="mission[category]">
+            <label for="mission_category_<%= category %>">
+              <div class="category-choice">
+                <%= category %>
+              </div>
+            </label>
+          <% end %>
+         </div>
+      </div>
+
+      <%= f.input :address %>
+      <%= f.input :description %>
+      <%= f.input :skills_needed %>
+      <%= f.input :volunteers_needed %>
+
+      <%= f.submit "Créer", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </div>
 </div>
 
+<%= javascript_pack_tag 'form' %>

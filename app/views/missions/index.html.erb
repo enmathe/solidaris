@@ -1,33 +1,18 @@
-<!-- <div class="filter-container">
-  <div class="filters">
-      </div>
-      <div class="field"-->
-
-
-</div>
-
 <div class="sticky-container">
   <div id="filter-container">
     <div class="filters">
-    <%= form_tag missions_path, method: :get do %>
-      <div class="field">
-      <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission" %>
-      </div>
-      <div class="field">
-        <%= simple_form_for @mission do |f| %>
-          <%= f.input :category, input_html: {onchange: 'this.form.submit();'} %>
-      </div>
-      <div class="field">
-          <select onchange="this.form.submit();" name="recurrency" id="category_id">
-            <option value="urgent" <%= "selected=\"selected\"" if params[:recurrency] == "urgent"  %> >Missions urgentes</option>
-            <option value="recurrent" <%= "selected=\"selected\"" if params[:recurrency] == "recurrent" %> >Missions récurrentes</option>
-            <option value="both" <%= "selected=\"selected\"" if params[:recurrency] == "both" %> >Toutes les missions</option>
-          </select>
+      <div><%= form_tag missions_path, method: :get do %>
+        <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission" %>
+      <% end %></div>
+      <div class="filter-control-index"><%= simple_form_for @mission do |f| %>
+          <%= f.input :category, input_html: {onchange: 'this.form.submit();'} %></div>
+      <div class="filter-control-index"><select onchange="this.form.submit();" name="recurrency" id="category_id">
+        <option value="urgent" <%= "selected=\"selected\"" if params[:recurrency] == "urgent"  %> >Missions urgentes</option>
+        <option value="recurrent" <%= "selected=\"selected\"" if params[:recurrency] == "recurrent" %> >Missions récurrentes</option>
+        <option value="both" <%= "selected=\"selected\"" if params[:recurrency] == "both" %> >Toutes les missions</option>
+      </select>
         <% end %>
-      </div>
-      <%#= form_tag missions_path, method: :get do %>
-        <%#= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission" %>
-    <% end %>
+    </div>
     </div>
   </div>
   <div class="main-container">
@@ -36,13 +21,13 @@
         <% @missions.each do |mission| %>
           <div class="col-xs-12 col-sm-4">
             <div class="missions-cards">
-              <div class="overlay"></div>
               <%= link_to mission_path(mission) do %>
                 <%= index_svg_div(mission.category) %>
                 <h2><%= mission.title %></h2>
                 <p><%= mission.organization.name%></p>
-              <% end %>
+                <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
             </div>
+              <% end %>
           </div>
         <% end %>
       </div>
@@ -50,3 +35,5 @@
     <div id="map" data-markers="<%= @markers.to_json %>"></div>
   </div>
 </div>
+
+<%= javascript_pack_tag 'filters' %>
