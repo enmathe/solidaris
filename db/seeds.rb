@@ -1459,7 +1459,7 @@ collecte_para = Mission.create!({
   starting_at: "2018/10/12 15:00:00",
   duration_in_hours: 10,
   recurrent: false,
-  end_candidature_date: "2018/10/12 15:00:00",
+  end_candidature_date: "2018/08/28 15:00:00",
   organization: medecins_du_monde
 })
 collecte_para_3 = Mission.create!({
@@ -1486,7 +1486,7 @@ collecte_para = Mission.create!({
   starting_at: "2018/10/12 15:00:00",
   duration_in_hours: 10,
   recurrent: false,
-  end_candidature_date: "2018/10/12 15:00:00",
+  end_candidature_date: "2018/08/28 15:00:00",
   organization: medecins_du_monde
 })
 collecte_para = Mission.create!({
