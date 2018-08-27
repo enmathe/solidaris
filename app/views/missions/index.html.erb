@@ -38,25 +38,31 @@
 <br>
 <br>
 <br>
-<div class="main-container">
-  <div class="container">
-    <div class="row" id="test-filtre">
-      <% @missions.each do |mission| %>
-        <div class="col-xs-12 col-sm-4">
-          <div class="missions-cards">
-            <%= link_to mission_path(mission) do %>
-              <%= svg_div(mission.category) %>
-              <h2><%= mission.title.first(22) %></h2>
-              <p><%= mission.organization.name%></p>
-              <%= image_tag "looking-for.png", class: 'looking-for'%>
-              <h3 class="volunteer"><%= mission.volunteers_needed %></h3>
-              <p><%= mission.starting_at %></p>
-              <%= image_tag "time.png", class: "date" %>
-            <% end %>
-          </div>
-        </div>
+<div class="sticky-container">
+  <div id="filter-container">
+    <div class="filters">
+      <%= form_tag missions_path, method: :get do %>
+        <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission" %>
       <% end %>
     </div>
   </div>
-  <div id="map" data-markers="<%= @markers.to_json %>"></div>
+  <div class="main-container">
+    <div class="container">
+      <div class="row">
+        <% @missions.each do |mission| %>
+          <div class="col-xs-12 col-sm-4">
+            <div class="missions-cards">
+              <div class="overlay"></div>
+              <%= link_to mission_path(mission) do %>
+                <%= index_svg_div(mission.category) %>
+                <h2><%= mission.title %></h2>
+                <p><%= mission.organization.name%></p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div id="map" data-markers="<%= @markers.to_json %>"></div>
+  </div>
 </div>

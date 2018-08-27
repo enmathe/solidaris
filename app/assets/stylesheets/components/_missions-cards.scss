@@ -12,16 +12,26 @@
   color: black;
 }
 
+
 .missions-cards h2 {
-  width: auto;
-  font-size: 1em;
+  width: 90%;
+  font-size: 1.2em;
+  position: absolute;
+  left: 6%;
+  bottom: 20%;
+  line-height: 1.3;
+}
+
+.missions-cards h1 {
+  width: 90%;
+  font-size: 1.2em;
   position: absolute;
   left: 6%;
   bottom: 20%;
 }
 
 .missions-cards p {
-  width: 180px;
+  width: 90%;
   font-size: 0.8em;
   position: absolute;
   left: 6%;
@@ -66,7 +76,7 @@
 
 .looking-for {
   position: absolute;
-  width: 20px;
+  width: 25px;
   top: 10px;
   left: 10px;
 }
@@ -80,7 +90,6 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 20px;
   // z-index: 1;
   // padding-right: 30px;
   // text-indent: -5px;
@@ -89,23 +98,6 @@
   // text-decoration: none;
   // transition: color .2s ease, text-indent .2s ease;
   // cf > transition : webgradients.com
-}
-
-.missions-cards h2 {
-  width: auto;
-  font-size: 1em;
-  position: absolute;
-  left: 6%;
-  bottom: 20%;
-}
-
-.missions-cards p {
-  width: 180px;
-  font-size: 0.8em;
-  position: absolute;
-  left: 6%;
-  bottom: 6%;
-  color: #BDBDBD;
 }
 
 .gradient-general {
@@ -135,27 +127,27 @@
   background-position: center;
 }
 .gradient-collecte {
-  background: linear-gradient(#A3BDED, #6991C7);
+  background: linear-gradient(to left, #A3BDED, #6991C7);
 }
 
 .gradient-hebergement {
-  background: linear-gradient(#c4bcfd, #b3a6f5);
+  background: linear-gradient(to left, #c4bcfd, #b3a6f5);
 }
 
 .gradient-sante {
-  background: linear-gradient(#FF9A9E, #FAD0C4);
+  background: linear-gradient(to left, #FF9A9E, #FAD0C4);
 }
 
 .gradient-accompagnement {
-  background: linear-gradient(#D76666, #E17E7E);
+  background: linear-gradient(to left, #D76666, #E17E7E);
 }
 
 .gradient-enseignement {
-  background: linear-gradient(#8ddad5, #00cdac);
+  background: linear-gradient(to left, #8ddad5, #00cdac);
 }
 
 .gradient-activite {
-  background: linear-gradient(#FFC062, #F5E27F);
+  background: linear-gradient(to left, #FFC062, #F5E27F);
 }
 
 .gradient-mobilisation {
@@ -163,7 +155,7 @@
 }
 
 .gradient-evenement {
-  background: linear-gradient(#b3d7af, #9cd2aa);
+  background: linear-gradient(to left, #b3d7af, #9cd2aa);
 }
 
 
@@ -172,11 +164,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 40px;
   svg {
     width: 70px;
   }
-  margin-top: 45px;
+  margin-top: 25px;
+}
+
+.show-svg-white {
+  fill: white;
+  margin-left: 10px;
+  svg {
+    width: 70px;
+  }
+  margin-top: 65px;
 }
 
 .mini-svg-white {
@@ -217,4 +217,58 @@
 .fill-gradient-evenement {
   fill: #929EAD;
 }
+
+///// TEST ////
+
+// .credentialing {
+//   --bg-color: #B8F9D3;
+//   --bg-color-light: #e2fced;
+//   --text-color-hover: #4C5656;
+// }
+
+// .card {
+//   width: 220px;
+//   height: 321px;
+//   background: #fff;
+//   border-top-right-radius: 10px;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+//   box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+//   transition: all 0.3s ease-out;
+//   text-decoration: none;
+// }
+
+// .card:hover {
+//   transform: translateY(-5px) scale(1.005) translateZ(0);
+//   box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+//     0 24px 46px var(--box-shadow-color);
+// }
+
+// .card:hover .overlay {
+//   transform: scale(4) translateZ(0);
+// }
+
+// .card p {
+//   font-size: 17px;
+//   color: #4C5656;
+//   margin-top: 30px;
+//   z-index: 1000;
+//   transition: color 0.3s ease-out;
+// }
+
+// .overlay {
+//   width: 118px;
+//   position: absolute;
+//   height: 118px;
+//   border-radius: 50%;
+//   background: var(--bg-color);
+//   top: 70px;
+//   left: 50px;
+//   z-index: 0;
+//   transition: transform 0.3s ease-out;
+// }
 

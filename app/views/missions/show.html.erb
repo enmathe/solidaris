@@ -1,49 +1,60 @@
-<div class="show-container">
-  <div class="container">
+<div class="show-container gradient-<%=@mission.category.downcase %>">
+  <div class="first-background-container">
     <div class="row">
-    <div class="col-md-6">
-      <div class="banner-mission">
-        <div class="container">
-          <%= show_svg_div(@mission.category) %>
-          <div class="banner-mission-content">
-            <h1 class="text-center"><%= @mission.title %></h1>
-            <h3 class="text-center"><%= @mission.category %></h3>
+      <div class="col-md-5 col-md-offset-1">
+        <div class="banner-mission-content">
+          <h1><%= @mission.title %></h1>
+          <div class="page-metas" >
+            <div class="meta-item " > <%= @mission.volunteers_needed %> volontaires demandées</div>
           </div>
         </div>
       </div>
     </div>
-    </div>
   </div>
-
-  <div class="container">
+  <div class="background-container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-5 col-md-offset-1">
         <div class="banner-mission-content">
-          <h4 class= "text-center">2 demi-journées par semaine pendant 6 mois</h4>
-          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %></p>
-          <p>Description de la mission :<%= @mission.description %></p>
-          <p>Nb de volontaires demandés :<%= @mission.volunteers_needed %></p>
-          <p>Profil recherché :<%= @mission.skills_needed %></p>
-          <p class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %>
+          <h2>Description</h2>
+          <p><%= @mission.description %></p>
+          <h2>Peine encourue</h2>
+          <p> 2 demi-journées par semaine pendant 6 mois </p>
+          <h2>Profil recherché <h2>
+            <% if @mission.skills_needed.nil? || @mission.skills_needed == "0" %>
+              <p> Aucun profil particulier recherché</p>
+            <% else %>
+              <p><%= @mission.skills_needed %></p>
+            <% end %>
+          <br><br>
+            <%= link_to mission_applications_path(@mission), method: :post, class:"button" do %>
+              <span class="submit">Participer</span>
+              <span class="loading"><i class="fa fa-refresh"></i></span>
+              <span class="check"><i class="fa fa-check"></i></span>
+            <% end %>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-4 col-md-offset-1">
         <div class="banner-mission-organization">
-          <h3 class= "text-center"><%= @mission.organization.name %></h3>
-          <!-- <p><%= cl_image_tag @mission.organization.logo %></p> -->
-          <h4 class= "text-center"><%=@mission.organization.category%></h4>
-          <p class= "text-center"><%=@mission.organization.description%></p>
-          <p class= "text-center"><%= link_to "En savoir plus", association_path(@mission.organization.id) %>
+          <h3 class= "text-justify"><%= @mission.organization.name %></h3>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-3">
+                <!-- <p><%= cl_image_tag @mission.organization.logo, class: "mission-organization-logo" %></p> -->
+              </div>
+            </div>
+          </div>
+          <h2> Description </h2>
+          <div class="asso-desc">
+            <p class= "text-center"><%=@mission.organization.description.first(1000)%></p>
+          </div>
+          <p class= "button-more gradient-<%=@mission.category.downcase %>"><%= link_to "En savoir plus", associations_path(@organization) %> </p>
+
         </div>
       </div>
     </div>
   </div>
-</div>
+<br><br>
+
 
 
 

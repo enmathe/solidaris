@@ -1,10 +1,17 @@
 #map {
   flex: 0 0 33%;
-  height: 100vh;
+  height: calc(100vh - 175px);
+  border-radius: 10px;
   position: sticky !important;
-  top: 0 !important;
+  top: 205px !important;
+  margin-top: 10px;
 }
 
 .main-container {
   display: flex;
+  padding: 0 20px;
+}
+
+.sticky-container {
+  background-color: #F1F3EF;
 }

@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def show_svg_div(category)
-    return content_tag(:div, svg_tag(category), class: ["show-gradient-general", "gradient-#{category.downcase}", "svg-white"])
+    return content_tag(:div, svg_tag(category), class: ["show-gradient-general", "gradient-#{category.downcase}", "show-svg-white"])
   end
 
   def normalize_name(name)
@@ -29,6 +29,13 @@ module ApplicationHelper
     svg_file_path = File.read(file_path).html_safe
 
     return content_tag(:div, svg_file_path, class: ["fill-gradient-#{category.downcase}", "mini-svg-white"])
+  end
+
+  def index_svg_div(category)
+    file_path = "#{Rails.root}/db/fixtures/picto/#{category.downcase}.svg"
+    svg_file_path = File.read(file_path).html_safe
+
+    return content_tag(:div, svg_file_path, class: ["fill-gradient-#{category.downcase}", "show-svg-white"])
   end
 end
 
