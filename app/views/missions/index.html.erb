@@ -1,3 +1,43 @@
+<div class="filter-container">
+  <div class="filters">
+    <%= form_tag missions_path, method: :get do %>
+      <div calss="field">
+      <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Trouver une mission" %>
+      </div>
+      <div class="field">
+        <%= simple_form_for @mission do |f| %>
+          <%= f.input :category, input_html: {onchange: 'this.form.submit();'} %>
+          <select onchange="this.form.submit();" name="recurrency" id="category_id">
+          <option value="urgent" <%= "selected=\"selected\"" unless @recurrency %> >Urgent</option>
+          <option value="recurrent" <%= "selected=\"selected\"" if @recurrency %> >Récurrent</option>
+        <% end %>
+        <%#= select("category", "id", @missions.map {|mission| [:category, mission.id]},
+      {:prompt => 'Sélectionner une catégorie'}) %>
+      </div>
+      <div class="field">
+      </select>
+      </div>
+    <% end %>
+    <%#= button_tag type: 'submit', class: "btn-naked" do %>
+        <!-- <p>Urgent</p> -->
+    <%# end %>
+    <%#= form_tag('categories', :remote => true) do %>
+      <%#= select_tag "categories", options_from_collection_for_select(@missions, "id", "category") %>
+      <%#= submit_tag 'Filter' %>
+    <%# end %>
+ <!--    <%#= select("category","id", @missions.map { |mission| [mission.category, mission.id] },
+      {:prompt => 'Sélectionner une catégorie'}) %>
+    <select name="category_id" id="category_id">
+      <option type="submit" value="1">Urgent</option>
+      <option value="2">Récurrent</option>
+    </select> -->
+  </div>
+
+
+</div>
+<br>
+<br>
+<br>
 <div class="sticky-container">
   <div id="filter-container">
     <div class="filters">
