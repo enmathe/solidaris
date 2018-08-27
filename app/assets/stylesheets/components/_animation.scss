@@ -1,0 +1,53 @@
+@keyframes popup {
+  0% {
+    transform: translateY(150px);
+  }
+  34% {
+    transform: translateY(20px);
+  }
+  37% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(150px);
+  }
+}
+
+@keyframes popupi {
+  0% {
+    transform: translateY(20px);
+  }
+  34% {
+    transform: translateY(150px);
+  }
+  37% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.fist {
+  transform: translateY(150px);
+  animation: popup 5s ease;
+}
+
+.fist-top {
+  transform: translateY(20px);
+  animation: popupi 5s ease infinite;
+}
+
+
+.homepage {
+}
+
+.bottom-fist {
+  margin-left: 35%;
+  height: 50vh;
+}
+
+.top-fist {
+  margin-left: 35%;
+  height: 50vh;
+}

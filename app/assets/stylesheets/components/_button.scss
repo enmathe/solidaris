@@ -28,9 +28,9 @@ $lg: new-breakpoint(min-width 1024px);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 12.5rem;
-  marin: 0;
-  padding: 1.5rem 3.125rem;
+  width: 13rem;
+  margin: 0;
+  padding: 20px 20px;
   background-color: $color-2;
   border: none;
   border-radius: 0.3125rem;
@@ -42,7 +42,6 @@ $lg: new-breakpoint(min-width 1024px);
   //  0 1.25rem 2.5rem rgba(black, 0.2);
   color: white;
   font-weight: 300;
-  text-transform: uppercase;
   //transition: $base-duration ease;
   overflow: hidden;
 
@@ -59,6 +58,7 @@ $lg: new-breakpoint(min-width 1024px);
   span {
     position: absolute;
     line-height: 0;
+    font-size: 18px;
 
     i {
       transform-origin: center center;
@@ -138,10 +138,10 @@ $lg: new-breakpoint(min-width 1024px);
   100% { transform: rotate(360deg); }
 }
 
-@keyframes scale {
-  0%   { transform: scale(10); }
-  50%  { transform: scale(0.2); }
-  70%  { transform: scale(1.2); }
-  90%  { transform: scale(0.7); }
-  100% { transform: scale(1); }
-}
+// @keyframes scale {
+//   0%   { transform: scale(10); }
+//   50%  { transform: scale(0.2); }
+//   70%  { transform: scale(1.2); }
+//   90%  { transform: scale(0.7); }
+//   100% { transform: scale(1); }
+// }

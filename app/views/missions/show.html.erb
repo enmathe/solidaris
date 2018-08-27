@@ -14,9 +14,6 @@
       </div>
     </div>
   </div>
-
-
-
   <div class="first-background-container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -32,13 +29,11 @@
               <p><%= @mission.skills_needed %></p>
             <% end %>
           <br><br>
-          <div class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %>
-          </div>
-          <button class="button">
-            <span class="submit">Participer</span>
-            <span class="loading"><i class="fa fa-refresh"></i></span>
-            <span class="check"><i class="fa fa-check"></i></span>
-          </button>
+            <%= link_to mission_applications_path(@mission), method: :post, class:"button" do %>
+              <span class="submit">Participer</span>
+              <span class="loading"><i class="fa fa-refresh"></i></span>
+              <span class="check"><i class="fa fa-check"></i></span>
+            <% end %>
         </div>
       </div>
     </div>
@@ -74,7 +69,8 @@
           <h2> Description </h2>
           <p class= "text-center"><%=@mission.organization.description.first(800)%></p>
           <div class= "text-center"><%= link_to "Participer", mission_applications_path(@mission), method: :post, class: "btn btn-primary" %></p>
-          <p class= "text-center"><%= link_to "En savoir plus", associations_path(@mission) %>
+          <p class= "text-center"><%= link_to "En savoir plus", associations_path(@organization) %> </p>
+            <%= @mission.organization.id %>
         </div>
       </div>
     </div>
