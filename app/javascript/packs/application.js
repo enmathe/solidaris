@@ -42,3 +42,11 @@ button.addEventListener('transitionend', addClass);
     });
 
 })(jQuery, undefined);
+
+
+
+$(document).ready(function(){
+  $(".category-choice").click(function(){
+    $(this).toggleClass("active");
+  });
+});
