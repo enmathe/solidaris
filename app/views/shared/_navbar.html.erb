@@ -1,7 +1,7 @@
 <% if controller_name == "missions" && action_name == "show" %>
     <div class="navbar-wagon-show gradient-<%=@mission.category.downcase %>">
       <%= link_to missions_path, class: "navbar-wagon-brand" do %>
-        <%= image_tag "fist.png", height: 50 %>"
+        <%= image_tag "motivation.svg", height: 50 %>"
       <% end %>
 <% elsif controller_name == "missions" && action_name == "index" %>
     <div class="navbar-wagon sticky">
