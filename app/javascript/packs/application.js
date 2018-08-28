@@ -5,6 +5,8 @@ import { autocomplete } from '../components/autocomplete';
 // volunteersNeeded();
 import GMaps from 'gmaps';
 import "../plugins/flatpickr"
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
 
 const button = document.querySelector('.button');
 const submit = document.querySelector('.submit');

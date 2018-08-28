@@ -31,6 +31,7 @@ class Organizations::MissionsController < ApplicationController
 
   def show
     @mission = Mission.find(params[:id])
+    @users = @mission.users
   end
 
   def new

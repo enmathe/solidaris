@@ -1,1 +1,57 @@
-// Specific CSS for your home-page
+.home-full-view{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://res.cloudinary.com/dk6mjofqi/image/upload/v1535443328/CARTES-5D-modif.png
+    ");
+  background-color: #F1F3EF;
+  background-repeat: no-repeat;
+  background-position: 120% 50%;
+  // background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #5525E1, #6200EA) !important;
+  h2 {
+    margin-top: 200px;
+  }
+  .div-btn-home {
+    margin-top: 90px;
+  }
+}
+
+.left-side{
+  margin: 25px;
+  padding: 10px;
+  position: absolute;
+  color: #535353;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  top: 25px;
+  font-weight: lighter;
+}
+
+.left-side h2{
+  font-size: 1.6em;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  line-height: 86.4px;
+  font-weight: bold;
+}
+
+.btn-home {
+  background-color: #9B00FF !important;
+  opacity: 1 !important;
+  color: white !important;
+  padding: 20px;
+  line-height: 1;
+  padding: 1em 2em;
+  border-radius: 1px;
+  font-size: 20px;
+  transition: background 0.3s ease;
+}
+
+.btn-home:hover,
+.btn-home:focus {
+  text-decoration: none;
+  opacity: 1 !important;
+  background: #6A00DE !important;
+}
