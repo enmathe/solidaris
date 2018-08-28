@@ -4,7 +4,7 @@ import { autocomplete } from '../components/autocomplete';
 
 // volunteersNeeded();
 import GMaps from 'gmaps';
-import "../plugins/flatpickr"
+import "../plugins/flatpickr";
 import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
 
