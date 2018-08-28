@@ -41,7 +41,7 @@
                   <h2 class= "text-justify"><%= "#{user.last_name.upcase} #{user.first_name}" %></h2>
                   <p class= "text-center"><%= user.phone_number %></p>
                   <p class="text-center"><%= user.email %></p>
-                  <p class= "button-more gradient-<%=@mission.category.downcase %>"><%= link_to "En savoir plus", associations_path(@organization) %> </p>
+                  <p class= "button-hover"><%= link_to "En savoir plus", associations_path(@organization) %> </p>
               </div>
             <% end %>
           </div>
@@ -50,4 +50,4 @@
     </div>
 
 </div>
-
+<!-- gradient-<%#=@mission.category.downcase %> -->
