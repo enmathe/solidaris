@@ -7,7 +7,7 @@
   // box-shadow: 2px 4px 4px rgba(147, 147, 147, 0.28);
 
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
   margin: 10px;
   position: relative;
   font-size: 14px;
@@ -38,7 +38,7 @@
 
   h4 {
   width: 90%;
-  font-size: 0.7em;
+  font-size: 0.8em;
   position: absolute;
   left: 8%;
   bottom: 41%;
@@ -47,11 +47,26 @@
 
   h5 {
   width: 90%;
-  font-size: 0.7em;
+  font-size: 0.8em;
   position: absolute;
   left: 8%;
-  bottom: 21%;
+  right: 8%;
+  top: 55%;
   color: white;
+  text-align: justify;
+  line-height: 1.4;
+  }
+
+  h6 {
+  width: 90%;
+  font-size: 0.8em;
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 71%;
+  color: white;
+  text-align: justify;
+  line-height: 1.4;
   }
 }
 
@@ -187,7 +202,7 @@
 }
 
 .gradient-hebergement {
-  background: #b3a6f5;
+  background: #5525E1;
 }
 
 .gradient-sante {
@@ -195,11 +210,11 @@
 }
 
 .gradient-accompagnement {
-  background: #82C49E;
+  background: #D76666;
 }
 
 .gradient-enseignement {
-  background: #00cdac;
+  background: #82C49E;
 }
 
 .gradient-activite {
@@ -257,7 +272,7 @@
 }
 
 .fill-gradient-hebergement {
-  fill: #6C6E9B;
+  fill: #5525E1;
 }
 
 .fill-gradient-sante {
@@ -269,7 +284,7 @@
 }
 
 .fill-gradient-enseignement {
-  fill: #8ddad5;
+  fill: #82C49E;
 }
 
 .fill-gradient-activite {

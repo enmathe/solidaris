@@ -38,7 +38,8 @@
                     <%= white_svg_div(mission.category) %>
                     <h3><%= mission.title %></h3>
                     <h4><%= mission.organization.name%></h4>
-                    <h5><%= mission.description.first(150)%>...</h5>
+                    <h5><%= mission.starting_at %></h5>
+                    <h6><%= mission.description.first(150)%>...</h6>
                   </div>
               </div>
               <% end %>
