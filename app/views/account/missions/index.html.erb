@@ -9,7 +9,7 @@
     <p> <%= @user.email %></p>
   </div>
   <div class="dashboard-btn">
-    <div class="btn btn-success"> Voir toutes les missions </div>
+    <div class="btn btn-success"> Voir les missions </div>
   </div>
   <div class="dashboard-stat">
     <h10></h10>
@@ -26,18 +26,9 @@
       <div class="col-md-6">
         <div class="stat">
           <div class="stat-card">
-            <h2><%= @past.count %> </h2>
-            <p>missions </p>
-            <p> effectuées</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="stat">
-          <div class="stat-card">
             <h2> <%= @coming.count %></h2>
-            <p>missions </p>
-            <p> à venir</p>
+            <p>missions</p>
+            <p>à venir</p>
           </div>
         </div>
       </div>
@@ -45,7 +36,7 @@
         <div class="stat">
           <div class="stat-card">
             <h2><%= @missions.count %></h2>
-            <p> missions </p>
+            <p>missions</p>
             <p>disponibles</p>
           </div>
         </div>
@@ -78,7 +69,7 @@
     <h10>Mes prochaines missions</h10>
     <div class="row">
       <% @coming.first(6).each do |mission| %>
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <%= link_to mission_path(mission) do %>
         <div class="mini-card-container">
           <div class="mini-card-description">
