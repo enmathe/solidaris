@@ -82,7 +82,8 @@ class Organizations::MissionsController < ApplicationController
       :volunteers_needed,
       :starting_at,
       :end_candidature_date,
-      :duration_in_hours
+      :duration_in_hours,
+      :recurrent
     )
   end
 end

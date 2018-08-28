@@ -58,5 +58,10 @@ module ApplicationHelper
 
     return content_tag(:div, svg_file_path, class: ["white-svg-white"])
   end
+
+  def current_class?(test_path)
+    return 'active' if request.path == test_path
+  end
+
 end
 

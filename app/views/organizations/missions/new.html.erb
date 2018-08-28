@@ -13,7 +13,7 @@
     <br>
   <div class="row" id="category-title">
     <div class="col-md-8 col-md-offset-2">
-      <div class="form-group height-form second">
+      <div class="form-group height-form-category second">
         <h3>Quelle est la catégorie de ce besoin ? </h3>
         <br>
         <br>
@@ -37,37 +37,51 @@
                 </div>
               </label>
             <% end %>
-            <a class="btn btn-primary" data-scroll href="#first" type="button">Suivant</a>
+            <br><br><br><br>
+            <div class="btn-container">
+                <a class="btn btn-primary" data-scroll href="#first" type="button">Suivant</a>
+            </div>
       </div>
-
-      <div class="row height-form" id="first">
-        <%= simple_form_for [@organization, @mission], url: organizations_missions_path(@mission), method: :post  do |f| %>
-          <%= f.input :title, input_html: { class: 'fuu' } %>
-          <label class="control-label check_boxes optional"></label>
-          <%= f.input :address %>
-          <br>
-        <div class="row">
-          <div class="col-md-6">
-            <%= f.input :starting_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-          </div>
-          <div class="col-md-6">
-            <%= f.input :end_candidature_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-          </div>
-          <div class="col-md-6">
-            <%= f.input :duration_in_hours %>
-          </div>
-          <div class="col-md-6">
-            <%= f.input :recurrent %>
-          </div>
+    </div>
+  </div>
+  <div class="row height-form" id="first">
+    <div class="col-md-4">
+    <%= simple_form_for [@organization, @mission], url: organizations_missions_path(@mission), method: :post  do |f| %>
+      <%= f.input :title, input_html: { class: 'fuu' } %>
+      <label class="control-label check_boxes optional"></label>
+      <%= f.input :address %>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.input :starting_at, as: :string, required: false, input_html: {class: "datepicker"} %>
         </div>
-        <a class="btn btn-primary" data-scroll href="#second" type="button">Suivant</a>
+        <div class="col-md-6">
+          <%= f.input :end_candidature_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :duration_in_hours %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :recurrent %>
+        </div>
       </div>
-      <div class="height-form" id="second">
+      <div class="row">
+        <div class="col-md-5">
+          <a class="btn btn-primary" data-scroll href="#second" type="button">Suivant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row height-form">
+    <div class="col-md-6">
+      <div id="second">
         <%= f.input :description %>
         <%= f.input :skills_needed %>
         <%= f.input :volunteers_needed %>
         <%= f.submit "Créer", class: "btn btn-primary" %>
       </div>
+    </div>
+  </div>
     <% end %>
     </div>
   </div>

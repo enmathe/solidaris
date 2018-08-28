@@ -3,6 +3,11 @@
       <%= link_to missions_path, class: "navbar-wagon-brand" do %>
         <%= image_tag "fist.png", height: 50 %>"
       <% end %>
+<% elsif controller_name == "missions" && action_name == "index" %>
+    <div class="navbar-wagon sticky">
+      <%= link_to missions_path, class: "navbar-wagon-brand" do %>
+        <%= image_tag "fist.png", height: 50 %>
+      <% end %>
 <% else %>
     <div class="navbar-wagon">
       <%= link_to missions_path, class: "navbar-wagon-brand" do %>

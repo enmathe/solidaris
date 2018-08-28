@@ -89,7 +89,15 @@
 
 .height-form {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.height-form-category {
+  height: 100vh;
+}
+
 
 .form-svg-white {
   fill: white;
@@ -110,23 +118,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  }
-
-
-.wrapper {
-  min-height: 100vh;
-  background-color: #2D3E4F;
-  color: white;
-  padding: 30px 60px;
 }
 
-input:first-child {
-  margin-right: 5px;
-}
-
-#coordinates {
-  font-size: 24px;
-  text-align: center;
-  margin: 50px 0;
-  font-family: courier;
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
