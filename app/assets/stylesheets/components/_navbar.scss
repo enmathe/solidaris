@@ -10,10 +10,8 @@
   align-items: center;
   justify-content: space-between;
   color: $comet;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   z-index: 2;
+  top: 0;
 }
 
 .navbar-wagon-show {
@@ -32,7 +30,14 @@
   .navbar-wagon-link {
   color: white;
   font-size: 14px;
+  }
 }
+
+.sticky {
+  z-index: 5;
+  position: webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 /* Logo */

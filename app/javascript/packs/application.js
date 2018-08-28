@@ -1,8 +1,11 @@
 import "bootstrap";
 // import { volunteersNeeded } from "../components/volunteers_needed.js"
+import { autocomplete } from '../components/autocomplete';
 
 // volunteersNeeded();
 import GMaps from 'gmaps';
+
+import "../plugins/flatpickr"
 import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
 
@@ -21,5 +24,5 @@ function addClass() {
 // button.addEventListener('transitionend', toggleClass);
 // button.addEventListener('transitionend', addClass);
 
-
+// autocomplete();
 
