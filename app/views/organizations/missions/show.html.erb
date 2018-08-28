@@ -13,26 +13,26 @@
   </div>
   <div class="background-container">
     <div class="row">
-          <div class="col-md-5 col-md-offset-1">
-            <div class="banner-mission-content-asso">
-              <h2>Description</h2>
-              <p><%= @mission.description %></p>
-              <h2>Peine encourue</h2>
-              <p> 2 demi-journées par semaine pendant 6 mois </p>
-              <h2>Profil recherché <h2>
-                <% if @mission.skills_needed.nil? || @mission.skills_needed == "0" %>
-                  <p> Aucun profil particulier recherché</p>
-                <% else %>
-                  <p><%= @mission.skills_needed %></p>
-                <% end %>
-              <br><br>
-                <%= link_to edit_organizations_mission_path(@mission), class:"button" do %>
-                  <span class="submit">Modifier</span>
-                  <span class="loading"><i class="fa fa-refresh"></i></span>
-                  <span class="check"><i class="fa fa-check"></i></span>
-                <% end %>
+            <div class="col-md-5 col-md-offset-1">
+              <div class="banner-mission-content-asso">
+                <h2>Description</h2>
+                <p><%= @mission.description %></p>
+                <h2>Peine encourue</h2>
+                <p> 2 demi-journées par semaine pendant 6 mois </p>
+                <h2>Profil recherché <h2>
+                  <% if @mission.skills_needed.nil? || @mission.skills_needed == "0" %>
+                    <p> Aucun profil particulier recherché</p>
+                  <% else %>
+                    <p><%= @mission.skills_needed %></p>
+                  <% end %>
+                <br><br>
+                  <%= link_to edit_organizations_mission_path(@mission), class:"button" do %>
+                    <span class="submit">Modifier</span>
+                    <span class="loading"><i class="fa fa-refresh"></i></span>
+                    <span class="check"><i class="fa fa-check"></i></span>
+                  <% end %>
+              </div>
             </div>
-          </div>
         <div class="move">
           <div class="col-md-4 col-md-offset-1">
             <p><strong><%= pluralize @mission.users.count, "candidat" %></strong></p>
