@@ -6,14 +6,14 @@
         <br>
         <br>
         <br>
-        <a class="btn btn-primary btn-lg"data-scroll href="#category-title" type="button">C'est parti</a>
+        <a class="btn btn-primary btn-lg">C'est parti</a>
       </div>
     </div>
     <br>
     <br>
-  <div class="row" id="category-title">
+  <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <div class="form-group height-form second">
+      <div class="form-group height-form">
         <h3>Quelle est la catégorie de ce besoin ? </h3>
         <br>
         <br>
@@ -37,12 +37,11 @@
                 </div>
               </label>
             <% end %>
-            <a class="btn btn-primary" data-scroll href="#first" type="button">Suivant</a>
       </div>
 
-      <div class="row height-form" id="first">
+      <div class="row height-form">
         <%= simple_form_for [@organization, @mission], url: organizations_missions_path(@mission), method: :post  do |f| %>
-          <%= f.input :title, input_html: { class: 'fuu' } %>
+          <%= f.input :title %>
           <label class="control-label check_boxes optional"></label>
           <%= f.input :address %>
           <br>
@@ -60,17 +59,15 @@
             <%= f.input :recurrent %>
           </div>
         </div>
-        <a class="btn btn-primary" data-scroll href="#second" type="button">Suivant</a>
       </div>
-      <div class="height-form" id="second">
+      <div class="height-form">
         <%= f.input :description %>
         <%= f.input :skills_needed %>
         <%= f.input :volunteers_needed %>
-        <%= f.submit "Créer", class: "btn btn-primary" %>
       </div>
+
+      <%= f.submit "Créer", class: "btn btn-primary" %>
     <% end %>
     </div>
   </div>
 </div>
-
-

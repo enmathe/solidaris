@@ -1,5 +1,6 @@
-// import "bootstrap";
+import "bootstrap";
 // import { volunteersNeeded } from "../components/volunteers_needed.js"
+import { autocomplete } from '../components/autocomplete';
 
 // volunteersNeeded();
 import GMaps from 'gmaps';
@@ -20,5 +21,5 @@ function addClass() {
 // button.addEventListener('transitionend', toggleClass);
 // button.addEventListener('transitionend', addClass);
 
-
+// autocomplete();
 

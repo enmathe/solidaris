@@ -1,14 +1,4 @@
-// $(document).ready(function(){
-//   $(".js-category-choice").click(function(){
-//     $('.js-category-choice').each(function(card) {
-//       card.find('.overlay-2').removeClass('card-active');
-//     });
-
-//     $(this).find('.overlay-2').addClass("card-active");
-//   });
-// });
-
-
+import SmoothScroll from 'smooth-scroll';
 
 let cards = document.querySelectorAll('.js-category-choice');
 
@@ -20,3 +10,10 @@ cards.forEach((card) => {
     card.querySelector('.overlay-2').classList.add('card-active');
   });
 });
+
+var scroll = new SmoothScroll('a[data-scroll]', {
+  speed: 500,
+  easing: 'easeInOutCubic'
+});
+
+console.log(scroll);

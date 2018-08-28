@@ -42,9 +42,9 @@ class Organizations::MissionsController < ApplicationController
     @mission.organization = Organization.find(current_organization.id)
 
     if @mission.save
-      raise
       redirect_to organizations_missions_path
     else
+      raise
       render :new
     end
   end
@@ -81,7 +81,8 @@ class Organizations::MissionsController < ApplicationController
       :skills_needed,
       :volunteers_needed,
       :starting_at,
-      :end_candidature_date
+      :end_candidature_date,
+      :duration_in_hours
     )
   end
 end
