@@ -98,11 +98,6 @@
   padding: 0px 15px;
 }
 
-
-.show-container {
-}
-
-
 .mission-organization-logo {
   width: 160px;
   length: 160px;
@@ -175,3 +170,130 @@
 .asso-desc {
   height: 20vh;
 }
+
+.banner-mission-organization-2 {
+  border: 0.5px solid white;
+  color: white;
+  padding-right: 55px;
+  padding-left: 55px;
+  padding-top: 10px;
+  border-radius: 5px;
+  margin: 25px 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  // height: calc(100vh - 400px);
+  h2 {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 20px;
+    font-weight: 400;
+  }
+  h2:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #EEEEEE;
+    content: ' ';
+    color: white;
+  }
+}
+
+.button-hover {
+  display: none;
+}
+
+.banner-mission-organization-2:hover {
+  transition: 5s ease;
+  .button-hover {
+    transition: 1s ease;
+    display: inline-block;
+    border: 0.5px solid white;
+    padding: 10px 20px;
+    text-align: center;
+    color: grey;
+    border-radius: 0.3125rem;
+    background-color: white;
+    animation: zoom .2s;
+    a {
+      color: grey;
+      text-decoration: none;
+      padding: 100px;
+    }
+  }
+}
+
+@keyframes zoom {
+  from {transform: scale(0);}
+  to { transform: scale(1)}
+}
+
+.show-container-asso {
+  color: white;
+  height: calc(100vh - 70px);
+  h1 {
+    font-size: 40px;
+    // line-height: 45px;
+    font-weight: 400;
+    color: white;
+    text-transform: none;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 25px;
+    // line-height: 45px;
+    font-weight: 400;
+    color: white;
+    text-transform: none;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 400;
+  }
+
+  h2 {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 20px;
+    font-weight: 400;
+  }
+
+  h2:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #EEEEEE;
+    content: ' ';
+  }
+
+  p {
+    font-size: 14px;
+    text-align: justify;
+    font-weight: lighter;
+    // margin: 20px 0;
+    // margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  .meta-item {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 23px;
+    color: white;
+    white-space: nowrap;
+    text-align: justify;
+    font-weight: lighter;
+  }
+
+  .page-metas {
+    display: flex;
+    margin-bottom: 50px;
+  }
+}
+
+

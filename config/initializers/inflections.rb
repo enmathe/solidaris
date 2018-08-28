@@ -14,3 +14,7 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+ActiveSupport::Inflector.inflections(:fr) do |inflect|
+  inflect.plural(/$/, 's')
+  inflect.plural(/(hib|ch|bij|caill|p|gen|jouj)ou$/i, '\1oux')
+end
