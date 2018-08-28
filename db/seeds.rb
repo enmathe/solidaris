@@ -799,7 +799,7 @@ cours_de_français = Mission.create!({
 })
 
 hébergement_2 = Mission.create!({
-  title: "Hébergement d'urgence pour une mère et sa fille",
+  title: "Hébergement d'urgence",
   category: "Hebergement",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 2,
@@ -815,7 +815,7 @@ hébergement_2 = Mission.create!({
 
 
 hébergement_3 = Mission.create!({
-  title: "Hébergement d'urgence pour une fille de 15 ans",
+  title: "Hébergement d'urgence",
   category: "Hebergement",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1,
@@ -830,8 +830,8 @@ hébergement_3 = Mission.create!({
 })
 
 cours_de_dessin = Mission.create!({
-  title: "Accompagnateurs pour un cours de dessin",
-  category: "Activité",
+  title: "Cours de dessin",
+  category: "Activite",
   address: "16 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1000,
   description: "Votre mission en tant que bénévole :
@@ -850,8 +850,30 @@ cours_de_dessin = Mission.create!({
   organization: diaconat
 })
 
+
+activité_sportive = Mission.create!({
+  title: "Encadrement tournoi",
+  category: "Activite",
+  address: "6 rue de l'Indre 44000 Nantes",
+  volunteers_needed: 5,
+  description: "Votre mission en tant que bénévole :
+  - Encadrer avec 10 autres bénévoles un groupe d'une cinquantaine de personnes agées de 12 à 15 ans
+  - Organiser un tournoi multisport (rugby, foot, hand, ... )
+  - Aider les autres bénévoles à la préparation de la nourriture pour la journée
+  - Aider à la mise en place et à la desinstallation des activités",
+  skills_needed: "
+  Passionnée par le sport,
+  Bases en pédagogie,
+  Avoir le BAFA serait un plus",
+  starting_at: "2018/09/03 08:00:00",
+  duration_in_hours: 10,
+  recurrent: false,
+  end_candidature_date: "2018/08/31 08:00:00",
+  organization: gref
+})
+
 cours_de_dessin_1 = Mission.create!({
-  title: "Accompagnateurs pour un cours de dessin",
+  title: "Cours de dessin",
   category: "Activite",
   address: "16 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 4,
@@ -873,29 +895,8 @@ cours_de_dessin_1 = Mission.create!({
   organization: dessins_sans_papiers
 })
 
-activité_sportive = Mission.create!({
-  title: "Activité sportive (tournoi multisport)",
-  category: "Activite",
-  address: "6 rue de l'Indre 44000 Nantes",
-  volunteers_needed: 5,
-  description: "Votre mission en tant que bénévole :
-  - Encadrer avec 10 autres bénévoles un groupe d'une cinquantaine de personnes agées de 12 à 15 ans
-  - Organiser un tournoi multisport (rugby, foot, hand, ... )
-  - Aider les autres bénévoles à la préparation de la nourriture pour la journée
-  - Aider à la mise en place et à la desinstallation des activités",
-  skills_needed: "
-  Passionnée par le sport,
-  Bases en pédagogie,
-  Avoir le BAFA serait un plus",
-  starting_at: "2018/09/03 08:00:00",
-  duration_in_hours: 10,
-  recurrent: false,
-  end_candidature_date: "2018/08/31 08:00:00",
-  organization: gref
-})
-
 accompagnateur_refugie = Mission.create!({
-  title: "Accompagnateur binôme avec un réfugié",
+  title: "Parrainage",
   category: "Accompagnement",
   address: "94 rue des hauts pavés, 44000 Nantes",
   volunteers_needed: 10,
@@ -911,24 +912,6 @@ accompagnateur_refugie = Mission.create!({
   organization: gref
 })
 
-parrain = Mission.create!({
-  title: "Parrain d'une personne réfugié",
-  category: "Accompagnement",
-  address: "16 boulevard de stalingrad, 44000 Nantes",
-  volunteers_needed: 1000,
-  description: "Nous recherchons des personnes habitant en
-  france de longue date pour parrainer des réfugiés (1 rencontre par mois minimum pendant 6 mois) avec pour buts: l'amélioration du niveau de français à travers des conversations, sorties, ou toute initiative favorisant les échanges; la découverte de l'environnement et des loisirs (visites de la ville, de musées, séances de cinéma, spectacles, etc.); une meilleure connaissance de la culture française.",
-  skills_needed: "
-  - goût de l'engagement pour les causes de la solidarité
-  - patience, pédagogie et habitude du travail d'équipe",
-  starting_at: "2018/09/12 15:00:00",
-  duration_in_hours: 2,
-  recurrent: true,
-  recurrency_in_days: 3,
-  recurrency_ending_on: "2018/03/12 15:00:00",
-  end_candidature_date: "2018/09/09 15:00:00",
-  organization: mrap
-})
 
 formateur_web = Mission.create!({
   title: "Formateur web",
@@ -959,8 +942,27 @@ formateur_web = Mission.create!({
   organization: saint_jean
 })
 
+parrain = Mission.create!({
+  title: "Parrain d'une personne réfugié",
+  category: "Accompagnement",
+  address: "16 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Nous recherchons des personnes habitant en
+  france de longue date pour parrainer des réfugiés (1 rencontre par mois minimum pendant 6 mois) avec pour buts: l'amélioration du niveau de français à travers des conversations, sorties, ou toute initiative favorisant les échanges; la découverte de l'environnement et des loisirs (visites de la ville, de musées, séances de cinéma, spectacles, etc.); une meilleure connaissance de la culture française.",
+  skills_needed: "
+  - goût de l'engagement pour les causes de la solidarité
+  - patience, pédagogie et habitude du travail d'équipe",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 2,
+  recurrent: true,
+  recurrency_in_days: 3,
+  recurrency_ending_on: "2018/03/12 15:00:00",
+  end_candidature_date: "2018/09/09 15:00:00",
+  organization: mrap
+})
+
 insertion_professionnelle = Mission.create!({
-  title: "Insertion professionnelle des migrants",
+  title: "Aide insertion professionnelle",
   category: "Accompagnement",
   address: "1 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1000,
@@ -1007,7 +1009,7 @@ maraude = Mission.create!({
 })
 
 benevoles = Mission.create!({
-  title: "Bénèvoles pour le festival des réfugiés",
+  title: "Bénèvoles festival",
   category: "Evenement",
   address: "1 place royal, 44000 Nantes",
   volunteers_needed: 15,
@@ -1026,26 +1028,6 @@ benevoles = Mission.create!({
   organization: diaconat
 })
 
-
-benevoles_entraide = Mission.create!({
-  title: "Bénèvoles pour le festival de l'entraide",
-  category: "Evenement",
-  address: "5 quai des Antilles, 44000 Nantes",
-  volunteers_needed: 2,
-  description: "Votre mission en tant que bénévole
-  sera une des suivantes en fonction du besoin :
-  - Servir au bar
-  - Accueil
-  - Vente de place",
-  skills_needed: "",
-  starting_at: "2018/09/12 15:00:00",
-  duration_in_hours: 4,
-  recurrent: false,
-  recurrency_in_days: 1,
-  recurrency_ending_on: "2018/09/15 15:00:00",
-  end_candidature_date: "2018/09/12 14:00:00",
-  organization: fbna
-})
 
 
 collecte_para = Mission.create!({
@@ -1076,6 +1058,26 @@ collecte_para = Mission.create!({
   recurrent: false,
   end_candidature_date: "2018/10/12 15:00:00",
   organization: medecins_du_monde
+})
+
+benevoles_entraide = Mission.create!({
+  title: "Bénèvoles festival",
+  category: "Evenement",
+  address: "5 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 2,
+  description: "Votre mission en tant que bénévole
+  sera une des suivantes en fonction du besoin :
+  - Servir au bar
+  - Accueil
+  - Vente de place",
+  skills_needed: "",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 4,
+  recurrent: false,
+  recurrency_in_days: 1,
+  recurrency_ending_on: "2018/09/15 15:00:00",
+  end_candidature_date: "2018/09/12 14:00:00",
+  organization: fbna
 })
 
 collecte_para = Mission.create!({
@@ -1109,7 +1111,7 @@ collecte_para = Mission.create!({
 })
 
 collecte_para = Mission.create!({
-  title: "Collecte de para",
+  title: "Collecte de parapharmacie",
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
@@ -1607,18 +1609,13 @@ collecte_para = Mission.create!({
 
 puts "Creating applications..."
 
-candidature_1 = Application.create!({
-  user: fatou,
-  mission: hébergement
-})
-
 candidature_2 = Application.create!({
   user: fatou,
   mission: aide_aux_devoirs
 })
 candidature_3 = Application.create!({
   user: enzo,
-  mission: hébergement
+  mission: hébergement_2
 })
 candidature_4 = Application.create!({
   user: enzo,
@@ -1630,7 +1627,7 @@ candidature_5 = Application.create!({
 })
 candidature_6 = Application.create!({
   user: enzo,
-  mission: hébergement
+  mission: hébergement_2
 })
 candidature_7 = Application.create!({
   user: enzo,

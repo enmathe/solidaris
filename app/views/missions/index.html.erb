@@ -34,6 +34,12 @@
                   <h2><%= mission.title %></h2>
                   <p><%= mission.organization.name%></p>
                   <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
+                  <div class="overlay gradient-<%=mission.category.downcase%>">
+                    <%= white_svg_div(mission.category) %>
+                    <h3><%= mission.title %></h3>
+                    <h4><%= mission.organization.name%></h4>
+                    <h5><%= mission.description.first(150)%>...</h5>
+                  </div>
               </div>
               <% end %>
             </div>
