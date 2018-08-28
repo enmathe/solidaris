@@ -37,15 +37,23 @@
       <div class="row">
         <% @missions.each do |mission| %>
           <div class="col-xs-12 col-sm-4">
-            <div class="missions-cards">
-              <%= link_to mission_path(mission) do %>
-                <%= index_svg_div(mission.category) %>
-                <h2><%= mission.title %></h2>
-                <!-- <p><%# mission.organization.name%></p> -->
-                <p><%= l(mission.starting_at, format: :short) %></p>
-                <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
-            </div>
+            <div class="shadow-missions">
+              <div class="missions-cards">
+                <%= link_to mission_path(mission) do %>
+                  <%= index_svg_div(mission.category) %>
+                  <h2><%= mission.title %></h2>
+                  <p><%= mission.organization.name%></p>
+                  <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
+                  <div class="overlay gradient-<%=mission.category.downcase%>">
+                    <%= white_svg_div(mission.category) %>
+                    <h3><%= mission.title %></h3>
+                    <h4><%= mission.organization.name%></h4>
+                    <h5><%= mission.starting_at %></h5>
+                    <h6><%= mission.description.first(150)%>...</h6>
+                  </div>
+              </div>
               <% end %>
+            </div>
           </div>
         <% end %>
       </div>

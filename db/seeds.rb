@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 puts "Cleaning database..."
 Application.destroy_all
 Mission.destroy_all
@@ -106,7 +107,7 @@ enzo = User.create!(
 puts "Creating organizations..."
 
 cnrw = Organization.create!(
-  name: "CNRW - Cercle National Richard Wagner",
+  name: "Cercle National Richard Wagner",
   description: "Le Cercle Richard Wagner
   rassemble aussi bien des passionnés convaincus
   que des curieux en quête de découverte
@@ -289,10 +290,6 @@ anade = Organization.create!(
   twitter: "www.twitter.com",
   address: "42 rue des Hauts Pavés 44000 NANTES",
   creation_year: 1978,
-  logo:
-  photo_1:
-  photo_2:
-  photo_3:
 )
 
 association_aurore = Organization.create!(
@@ -323,7 +320,7 @@ association_aurore = Organization.create!(
 )
 
 cfda = Organization.create!(
-  name: "CFDA Coordination Française pour le Droit d'Asile",
+  name: "Coordination Française pour le Droit d'Asile",
   description: "Née au début de l'année 2000 de la fusion de la Commission de
   Sauvegarde du droit d'Asile, de la Coordination Réfugiés et du Comité de liaison,
   qu'elle remplace, la CFDA rassemble une vingtaine d'organisations qui, en France,
@@ -450,7 +447,7 @@ emmaus = Organization.create!(
 )
 
 fbna = Organization.create!(
-  name: "FBNA - France Bénévolat Nantes Atlantique",
+  name: "France Bénévolat Nantes Atlantique",
   description: "Association ressource, France Bénévolat Nantes Atlantique
   participe au développement de la vie associative et de l'engagement bénévole
   pour une citoyenneté active.
@@ -504,7 +501,7 @@ gasprom = Organization.create!(
 )
 
 gref = Organization.create!(
-  name: "GREF - Groupement des Educateurs sans Frontières",
+  name: "Groupement des Educateurs sans Frontières",
   description: "NOS VALEURS
   Engagement bénévole de professionnels expérimentés en éducation et formation.
   Partage et solidarité ici et là-bas
@@ -801,27 +798,9 @@ cours_de_français = Mission.create!({
   organization: fbna
 })
 
-
-hébergement = Mission.create!({
-  title: "Hébergement d'urgence pour une famille de 5 personnes",
-  category: "Hébergement",
-  address: "15 rue Guépin, 44000 Nantes",
-  volunteers_needed: 2,
-  description: "Besoin d'hébergement une famille de 5 personnes
-  d'origine erythréennes pendant 1 semaine.",
-  starting_at: "2018/10/17 14:00:00",
-  duration_in_hours: "",
-  recurrent: true,
-  recurrency_in_days: 5,
-  recurrency_ending_on: "2018/12/22 14:00:00",
-  end_candidature_date: "2018/10/17 14:00:00",
-  organization: ligue_droits_de_lhomme
-})
-
-
 hébergement_2 = Mission.create!({
-  title: "Hébergement d'urgence pour une mère et sa fille",
-  category: "Hébergement",
+  title: "Hébergement d'urgence",
+  category: "Hebergement",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 2,
   description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
@@ -836,8 +815,8 @@ hébergement_2 = Mission.create!({
 
 
 hébergement_3 = Mission.create!({
-  title: "Hébergement d'urgence pour une fille de 15 ans",
-  category: "Hébergement",
+  title: "Hébergement d'urgence",
+  category: "Hebergement",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1,
   description: "Besoin d'hébergement une famille de 5 personnes d'origine erythréennes pendant 1 semaine.",
@@ -851,8 +830,8 @@ hébergement_3 = Mission.create!({
 })
 
 cours_de_dessin = Mission.create!({
-  title: "Accompagnateurs pour un cours de dessin",
-  category: "Activité",
+  title: "Cours de dessin",
+  category: "Activite",
   address: "16 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1000,
   description: "Votre mission en tant que bénévole :
@@ -871,31 +850,9 @@ cours_de_dessin = Mission.create!({
   organization: diaconat
 })
 
-cours_de_dessin_1 = Mission.create!({
-  title: "Accompagnateurs pour un cours de dessin",
-  category: "Activité",
-  address: "16 boulevard de Stalingrad, 44000 Nantes",
-  volunteers_needed: 4,
-  description: "
-  - Encadrer avec 2 autres bénévoles un groupe de 10 de personnes
-  - Apprendre les bases du dessin
-  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association
-  - Introduire les exilés aux Arts Plastiques.
-  - Enrichir leur imaginaire par l’échange et la pratique des arts
-  plastiques",
-  skills_needed: "
-  Passionnée par le dessin,
-  Bases en pédagogie,
-  BAFA souhaité",
-  starting_at: "2018/09/12 15:00:00",
-  duration_in_hours: 3,
-  recurrent: false,
-  end_candidature_date: "2018/09/07 15:00:00",
-  organization: dessins sans papiers
-})
 
 activité_sportive = Mission.create!({
-  title: "Activité sportive (tournoi multisport)",
+  title: "Encadrement tournoi",
   category: "Activite",
   address: "6 rue de l'Indre 44000 Nantes",
   volunteers_needed: 5,
@@ -915,8 +872,31 @@ activité_sportive = Mission.create!({
   organization: gref
 })
 
+cours_de_dessin_1 = Mission.create!({
+  title: "Cours de dessin",
+  category: "Activite",
+  address: "16 boulevard de Stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "
+  - Encadrer avec 2 autres bénévoles un groupe de 10 de personnes
+  - Apprendre les bases du dessin
+  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association
+  - Introduire les exilés aux Arts Plastiques.
+  - Enrichir leur imaginaire par l’échange et la pratique des arts
+  plastiques",
+  skills_needed: "
+  Passionnée par le dessin,
+  Bases en pédagogie,
+  BAFA souhaité",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 3,
+  recurrent: false,
+  end_candidature_date: "2018/09/07 15:00:00",
+  organization: dessins_sans_papiers
+})
+
 accompagnateur_refugie = Mission.create!({
-  title: "Accompagnateur binôme avec un réfugié",
+  title: "Parrainage",
   category: "Accompagnement",
   address: "94 rue des hauts pavés, 44000 Nantes",
   volunteers_needed: 10,
@@ -932,24 +912,6 @@ accompagnateur_refugie = Mission.create!({
   organization: gref
 })
 
-parrain = Mission.create!({
-  title: "Parrain d'une personne réfugié",
-  category: "Accompagnement",
-  address: "16 boulevard de stalingrad, 44000 Nantes",
-  volunteers_needed: 1000,
-  description: "Nous recherchons des personnes habitant en
-  france de longue date pour parrainer des réfugiés (1 rencontre par mois minimum pendant 6 mois) avec pour buts: l'amélioration du niveau de français à travers des conversations, sorties, ou toute initiative favorisant les échanges; la découverte de l'environnement et des loisirs (visites de la ville, de musées, séances de cinéma, spectacles, etc.); une meilleure connaissance de la culture française.",
-  skills_needed: "
-  - goût de l'engagement pour les causes de la solidarité
-  - patience, pédagogie et habitude du travail d'équipe",
-  starting_at: "2018/09/12 15:00:00",
-  duration_in_hours: 2,
-  recurrent: true,
-  recurrency_in_days: 3,
-  recurrency_ending_on: "2018/03/12 15:00:00",
-  end_candidature_date: "2018/09/09 15:00:00",
-  organization: mrap
-})
 
 formateur_web = Mission.create!({
   title: "Formateur web",
@@ -980,8 +942,27 @@ formateur_web = Mission.create!({
   organization: saint_jean
 })
 
+parrain = Mission.create!({
+  title: "Parrain d'une personne réfugié",
+  category: "Accompagnement",
+  address: "16 boulevard de stalingrad, 44000 Nantes",
+  volunteers_needed: 1000,
+  description: "Nous recherchons des personnes habitant en
+  france de longue date pour parrainer des réfugiés (1 rencontre par mois minimum pendant 6 mois) avec pour buts: l'amélioration du niveau de français à travers des conversations, sorties, ou toute initiative favorisant les échanges; la découverte de l'environnement et des loisirs (visites de la ville, de musées, séances de cinéma, spectacles, etc.); une meilleure connaissance de la culture française.",
+  skills_needed: "
+  - goût de l'engagement pour les causes de la solidarité
+  - patience, pédagogie et habitude du travail d'équipe",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 2,
+  recurrent: true,
+  recurrency_in_days: 3,
+  recurrency_ending_on: "2018/03/12 15:00:00",
+  end_candidature_date: "2018/09/09 15:00:00",
+  organization: mrap
+})
+
 insertion_professionnelle = Mission.create!({
-  title: "Insertion professionnelle des migrants",
+  title: "Aide insertion professionnelle",
   category: "Accompagnement",
   address: "1 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 1000,
@@ -1006,7 +987,7 @@ insertion_professionnelle = Mission.create!({
 
 maraude = Mission.create!({
   title: "Maraude",
-  category: "Santé",
+  category: "Sante",
   address: "16 boulevard de stalingrad, 44000 Nantes",
   volunteers_needed: 2,
   description: "Acina mène un projet d'insertion
@@ -1028,8 +1009,8 @@ maraude = Mission.create!({
 })
 
 benevoles = Mission.create!({
-  title: "Bénèvoles pour le festival des réfugiés",
-  category: "Évenement",
+  title: "Bénèvoles festival",
+  category: "Evenement",
   address: "1 place royal, 44000 Nantes",
   volunteers_needed: 15,
   description: "Votre mission en tant que bénèvole sera une des suivantes
@@ -1047,26 +1028,6 @@ benevoles = Mission.create!({
   organization: diaconat
 })
 
-
-benevoles_entraide = Mission.create!({
-  title: "Bénèvoles pour le festival de l'entraide",
-  category: "Évenement",
-  address: "5 quai des Antilles, 44000 Nantes",
-  volunteers_needed: 2,
-  description: "Votre mission en tant que bénévole
-  sera une des suivantes en fonction du besoin :
-  - Servir au bar
-  - Accueil
-  - Vente de place",
-  skills_needed: "",
-  starting_at: "2018/09/12 15:00:00",
-  duration_in_hours: 4,
-  recurrent: false,
-  recurrency_in_days: 1,
-  recurrency_ending_on: "2018/09/15 15:00:00",
-  end_candidature_date: "2018/09/12 14:00:00",
-  organization: fbna
-})
 
 
 collecte_para = Mission.create!({
@@ -1097,6 +1058,26 @@ collecte_para = Mission.create!({
   recurrent: false,
   end_candidature_date: "2018/10/12 15:00:00",
   organization: medecins_du_monde
+})
+
+benevoles_entraide = Mission.create!({
+  title: "Bénèvoles festival",
+  category: "Evenement",
+  address: "5 quai des Antilles, 44000 Nantes",
+  volunteers_needed: 2,
+  description: "Votre mission en tant que bénévole
+  sera une des suivantes en fonction du besoin :
+  - Servir au bar
+  - Accueil
+  - Vente de place",
+  skills_needed: "",
+  starting_at: "2018/09/12 15:00:00",
+  duration_in_hours: 4,
+  recurrent: false,
+  recurrency_in_days: 1,
+  recurrency_ending_on: "2018/09/15 15:00:00",
+  end_candidature_date: "2018/09/12 14:00:00",
+  organization: fbna
 })
 
 collecte_para = Mission.create!({
@@ -1130,7 +1111,7 @@ collecte_para = Mission.create!({
 })
 
 collecte_para = Mission.create!({
-  title: "Collecte de para",
+  title: "Collecte de parapharmacie",
   category: "Collecte",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
@@ -1206,20 +1187,6 @@ collecte_para = Mission.create!({
   organization: fbna
 })
 
-collecte_para = Mission.create!({
-  title: "Accompagnement d'enfants",
-  category: "Hébergement",
-  address: "15 quai des Antilles, 44000 Nantes",
-  volunteers_needed: 1000,
-  description: "Collecte de tout élément de parapharmacie :
-  pansements, serviettes hygièniques, tampons, crèmes, ...",
-  skills_needed: "",
-  starting_at: "2016/10/12 15:00:00",
-  duration_in_hours: 10,
-  recurrent: true,
-  recurrency_ending_on: "2028/10/12 15:00:00",
-  organization: medecins_du_monde
-})
 
 collecte_para = Mission.create!({
   title: "Accompagnement d'adultes",
@@ -1413,7 +1380,7 @@ collecte_para = Mission.create!({
 
 collecte_para = Mission.create!({
   title: "Accompagnement d'enfants",
-  category: "Hébergement",
+  category: "Hebergement",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
   description: "Collecte de tout élément de parapharmacie :
@@ -1521,7 +1488,7 @@ collecte_para_4 = Mission.create!({
 })
 collecte_para = Mission.create!({
   title: "Collecte parapharmacie",
-  category: "Santé",
+  category: "Sante",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
   description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques,
@@ -1535,7 +1502,7 @@ collecte_para = Mission.create!({
 })
 collecte_para = Mission.create!({
   title: "Collecte parapharmacie",
-  category: "Santé",
+  category: "Sante",
   address: "15 quai des Antilles, 44000 Nantes",
   volunteers_needed: 1000,
   description: "Collecte de tout élément de parapharmacie : pansements, serviettes hygièniques, tampons, crèmes, ...",
@@ -1642,18 +1609,13 @@ collecte_para = Mission.create!({
 
 puts "Creating applications..."
 
-candidature_1 = Application.create!({
-  user: fatou,
-  mission: hébergement
-})
-
 candidature_2 = Application.create!({
   user: fatou,
   mission: aide_aux_devoirs
 })
 candidature_3 = Application.create!({
   user: enzo,
-  mission: hébergement
+  mission: hébergement_2
 })
 candidature_4 = Application.create!({
   user: enzo,
@@ -1665,7 +1627,7 @@ candidature_5 = Application.create!({
 })
 candidature_6 = Application.create!({
   user: enzo,
-  mission: hébergement
+  mission: hébergement_2
 })
 candidature_7 = Application.create!({
   user: enzo,

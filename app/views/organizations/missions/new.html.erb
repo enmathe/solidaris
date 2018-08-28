@@ -13,9 +13,13 @@
           <% Mission.category.values.each do |category| %>
             <input type="radio" class="hidden" id="mission_category_<%= category %>" value="<%= category %>" name="mission[category]">
             <label for="mission_category_<%= category %>">
-              <div class="category-choice">
-                <%= category %>
+              <div class="shadow-missions">
+              <div class="missions-cards">
+                  <%= index_svg_div(category) %>
+                  <h2><%= category %></h2>
+                  <div class="border-bottom gradient-<%=category.downcase%>"></div>
               </div>
+            </div>
             </label>
           <% end %>
          </div>
