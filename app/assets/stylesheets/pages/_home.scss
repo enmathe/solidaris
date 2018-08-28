@@ -19,6 +19,7 @@
   font-family: 'Roboto', sans-serif;
   font-size: 35px;
   top: 25px;
+  font-weight: lighter;
 }
 
 .left-side h2{
@@ -27,9 +28,24 @@
   text-transform: capitalize;
   margin-bottom: 16px;
   line-height: 86.4px;
+  font-weight: bold;
 }
 
-.btn-home{
-  margin-top: 40px;
+.btn-home {
+  color: #535353;
+  padding: 20px;
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  padding: 1em 2em;
+  border-radius: 1px;
+  font-size: 20px;
 }
 
+.btn-home:hover,
+.btn-home:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(#fff,0);
+  text-decoration: none;
+}
