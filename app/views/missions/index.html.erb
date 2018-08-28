@@ -1,27 +1,37 @@
 <div class="sticky-container">
- <div id="filter-container">
-   <div class="filters">
-     <div>
-      <%= form_tag missions_path, method: :get do %>
-      <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission" %>
-     </div>
-     <div class="filter-control-index">
-       <%= simple_form_for @mission do |f| %>
-        <%= f.input :category, input_html: {onchange: 'this.form.submit();'} %>
-     </div>
-     <div class="filter-control-index">
-         <select onchange="this.form.submit();" name="recurrency" id="category_id">
-           <option value="urgent" <%= "selected=\"selected\"" if params[:recurrency] == "urgent"  %> >Missions urgentes</option>
-           <option value="recurrent" <%= "selected=\"selected\"" if params[:recurrency] == "recurrent" %> >Missions récurrentes</option>
-           <option value="both" <%= "selected=\"selected\"" if params[:recurrency] == "both" %> >Toutes les missions</option>
-         </select>
-       <% end %>
-     </div>
-     <%#= form_tag missions_path, method: :get do %>
-       <%#= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission" %>
-   <% end %>
-   </div>
- </div>
+  <div id="filter-container">
+    <div class="filters">
+      <div><%= form_tag missions_path, method: :get do %>
+        <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission" %>
+      <%# end %></div>
+      <div class="filter-control-index">
+        <%= simple_form_for @mission do |f| %>
+          <!-- <%#= f.input :category, input_html: {onchange: 'this.form.submit();'} %></div> -->
+      <!-- <div class="filter-control-index"> -->
+        <select onchange="this.form.submit();" name="recurrency">
+          <option value="both">Toutes les missions</option>
+          <option value="urgent" <%= "selected=\"selected\"" if params[:recurrency] == "urgent" %> >Missions urgentes</option>
+          <option value="ponctuel" <%= "selected=\"selected\"" if params[:recurrency] == "ponctuel"  %> >Missions ponctuelles</option>
+          <option value="recurrent" <%= "selected=\"selected\"" if params[:recurrency] == "recurrent" %> >Missions récurrentes</option>
+        </select>
+      </div>
+      <div class="filter-control-index">
+        <select onchange="this.form.submit();" name="category">
+          <option value="categories">Toutes les catégories</option>
+          <option value="hebergement" <%= "selected=\"selected\"" if params[:category] == "hebergement"  %> >Hébergement</option>
+          <option value="activite" <%= "selected=\"selected\"" if params[:category] == "activite" %> >Activité</option>
+          <option value="collecte" <%= "selected=\"selected\"" if params[:category] == "collecte" %> >Collecte</option>
+          <option value="accompagnement" <%= "selected=\"selected\"" if params[:category] == "accompagnement"  %> >Accompagnement</option>
+          <option value="evenement" <%= "selected=\"selected\"" if params[:category] == "evenement" %> >Evènement</option>
+          <option value="sante" <%= "selected=\"selected\"" if params[:category] == "sante" %> >Santé</option>
+          <option value="enseignement" <%= "selected=\"selected\"" if params[:category] == "enseignement"  %> >Enseignement</option>
+          <option value="autre" <%= "selected=\"selected\"" if params[:category] == "autre" %> >Autre</option>
+        </select>
+        <% end %>
+      <% end %>
+    </div>
+    </div>
+  </div>
   <div class="main-container">
     <div class="container">
       <div class="row">
