@@ -3,6 +3,8 @@
 
 // volunteersNeeded();
 import GMaps from 'gmaps';
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
 
 const button = document.querySelector('.button');
 const submit = document.querySelector('.submit');
