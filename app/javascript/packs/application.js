@@ -5,6 +5,7 @@ import { autocomplete } from '../components/autocomplete';
 // volunteersNeeded();
 import GMaps from 'gmaps';
 import "../plugins/flatpickr";
+import '../components/select2';
 import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
 
@@ -24,4 +25,6 @@ function addClass() {
 // button.addEventListener('transitionend', addClass);
 
 // autocomplete();
+
+
 
