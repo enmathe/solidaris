@@ -7,11 +7,9 @@
     "flatpickr": "^4.5.1",
     "gmaps": "^0.4.24",
     "jquery": "^3.3.1",
-<<<<<<< HEAD
-    "smooth-scroll": "^14.2.1"
-=======
+    "smooth-scroll": "^14.2.1",
     "typed.js": "^2.0.9"
->>>>>>> 5b299bb4310bb23c3422a8dddac25d05cf00168e
+
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
