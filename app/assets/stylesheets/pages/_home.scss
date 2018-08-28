@@ -9,6 +9,12 @@
   background-position: 120% 50%;
   // background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
   // background: linear-gradient(to right, #5525E1, #6200EA) !important;
+  h2 {
+    margin-top: 200px;
+  }
+  .div-btn-home {
+    margin-top: 90px;
+  }
 }
 
 .left-side{
@@ -32,20 +38,20 @@
 }
 
 .btn-home {
-  color: #535353;
+  background-color: #9B00FF !important;
+  opacity: 1 !important;
+  color: white !important;
   padding: 20px;
-  background: none;
-  border: 2px solid;
-  font: inherit;
   line-height: 1;
   padding: 1em 2em;
   border-radius: 1px;
   font-size: 20px;
+  transition: background 0.3s ease;
 }
 
 .btn-home:hover,
 .btn-home:focus {
-  animation: pulse 1s;
-  box-shadow: 0 0 0 2em rgba(#fff,0);
   text-decoration: none;
+  opacity: 1 !important;
+  background: #6A00DE !important;
 }
