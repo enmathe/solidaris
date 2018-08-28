@@ -79,7 +79,9 @@ class Organizations::MissionsController < ApplicationController
       :category,
       :description,
       :skills_needed,
-      :volunteers_needed
+      :volunteers_needed,
+      :starting_at,
+      :end_candidature_date
     )
   end
 end

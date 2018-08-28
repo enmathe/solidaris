@@ -12,7 +12,30 @@
   position: relative;
   font-size: 14px;
   color: black;
+  &.active {
+  color: white;
+  opacity: 1;
+  }
+  h2 {
+  width: 90%;
+  font-size: 1.2em;
+  position: absolute;
+  left: 8%;
+  bottom: 28%;
+  line-height: 1.3;
+  color: $comet;
+  margin-bottom: 5;
+  }
+  p {
+  width: 90%;
+  font-size: 0.8em;
+  position: absolute;
+  left: 8%;
+  bottom: 22%;
+  color: #BDBDBD;
+  }
 }
+
 
 .overlay {
   position: absolute;
@@ -74,18 +97,6 @@
   opacity:1;
 }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 .border-bottom {
   height: 10px;
   position: absolute;
@@ -93,26 +104,6 @@
   left: 0;
   width: 100%;
   margin-bottom: -1;
-}
-
-.missions-cards h2 {
-  width: 90%;
-  font-size: 1.2em;
-  position: absolute;
-  left: 8%;
-  bottom: 28%;
-  line-height: 1.3;
-  color: $comet;
-  margin-bottom: 5;
-}
-
-.missions-cards p {
-  width: 90%;
-  font-size: 0.8em;
-  position: absolute;
-  left: 8%;
-  bottom: 22%;
-  color: #BDBDBD;
 }
 
 
@@ -128,18 +119,15 @@
   position: relative;
   font-size: 14px;
   color: black;
-}
-
-.dashboard-missions-cards h2 {
+  h2 {
   height: 240px;
   width: auto;
   font-size: 1em;
   position: absolute;
   left: 6%;
   bottom: 20%;
-}
-
-.dashboard-missions-cards p {
+  }
+  p {
   width: 180px;
   font-size: 0.8em;
   position: absolute;
@@ -148,6 +136,7 @@
   color: #BDBDBD;
   margin-top: 10px;
   text-align: justify;
+  }
 }
 
 .looking-for {
@@ -197,6 +186,7 @@
   background-size: cover;
   background-position: center;
 }
+
 .gradient-collecte {
   background: #6991C7;
 }
@@ -206,6 +196,10 @@
 }
 
 .gradient-sante {
+  background: #FAD0C4;
+}
+
+.gradient-maraude {
   background: #FAD0C4;
 }
 

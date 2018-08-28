@@ -3,6 +3,7 @@
 
 // volunteersNeeded();
 import GMaps from 'gmaps';
+import "../plugins/flatpickr"
 
 const button = document.querySelector('.button');
 const submit = document.querySelector('.submit');
