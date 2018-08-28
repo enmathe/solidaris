@@ -5,14 +5,13 @@ class MissionsController < ApplicationController
     @missions = Mission.all
 
     @missions = params[:query].present? ? @missions.where("title ILIKE ?", "%#{params[:query]}%") : @missions
-    # @missions = (params[:mission].present? and params[:mission]["category"] != "") ? @missions.where("category ILIKE ?", "#{params[:mission]["category"]}") : @missions
     @missions = (params[:category].present? and params[:category] != "") ? @missions.where("category ILIKE ?", "#{params[:category]}") : @missions
 
     missions_urg = []
     @missions.each do |mission|
       if mission.end_candidature_date != nil
         if (mission.end_candidature_date < (Date.today - 7)) && mission.recurrent == false
-          missions_urg << mission
+          @missions_urg << mission
         end
       end
     end
@@ -23,7 +22,7 @@ class MissionsController < ApplicationController
       elsif params['recurrency'] == "ponctuel"
         @missions = @missions.where(recurrent: false)
       else params['recurrency'] == "urgent"
-        @missions = missions_urg
+        @missions = @missions_urg
       end
     end
 
