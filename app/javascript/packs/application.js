@@ -24,7 +24,7 @@ function addClass() {
 // button.addEventListener('transitionend', toggleClass);
 // button.addEventListener('transitionend', addClass);
 
-// autocomplete();
+autocomplete();
 
 
 
