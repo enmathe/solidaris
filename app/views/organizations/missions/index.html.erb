@@ -1,54 +1,46 @@
-<div class="green-background">
-</div>
-<div class="dashboard-container">
-  <div class="asso-namelogo">
-    <div class="dashboard-logo", style="background-image: url('<%#= cl_image_path(@organization.logo) %>'); background-size: cover;"></div>
-    <h3><%= @organization.name %></h3>
-  </div>
-  <div class="dashboard-btn">
-    <div class="btn btn-success"><%= link_to "Poster un besoin", new_organizations_mission_path %>  </div>
-    <div class="btn btn-success"><%= link_to "Supprimer un besoin", method: :delete, data: { confirm: "Are you sure?" } %>  </div>
-  </div>
-  <div class="dashboard-stat">
-    <div class="stat">
-      <h2><%= @past.count %> </h2> <p>missions passés</p>
-    </div>
-    <div class="stat">
-      <h2><%= @current.count %></h2> <p>en cours</p>
-    </div>
-    <div class="stat">
-      <h2> <%= @coming.count %></h2><p>à venir</p>
-    </div>
-  </div>
-  <div class="mission-information">
-    <p>Besoins en cours</p>
-    <% @missions.first(3).each do |mission| %>
-    <div class="row">
-      <div class="container">
-        <div class="row">
-          <h4><% mission.title %></h4>
-            <div class="col-xs-12 col-sm-4">
-             <div class="missions-cards">
-                <div class="gradient-general gradient-hebergement svg-white">
-                  <%= svg_tag('bed') %>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    <h10>Besoins passés</h10>
 
-    <div class="row">
-      <% @missions.first(6).each do |mission| %>
-      <div class="col-md-4">
-        <div class="mini-card-container">
-          <p><%= mission.title %></p>
-        </div>
+  <div class="dashboard-organization-container">
+    <div class="asso-namelogo">
+      <%= cl_image_tag(@organization.logo, width: "100", :crop=>"scale", class: "logo-asso")%>
+      <div class="asso-infos">
+        <h1><%= @organization.name %></h1>
+        <%= link_to @organization.website, class: "url-asso" %>
       </div>
-      <% end %>
     </div>
   </div>
-</div>
+
+  <div class="wrapper-grey">
+    <div class="wrapper-left">
+      <div class="btn btn-primary"><%= link_to "Poster un besoin", new_organizations_mission_path(@mission) %>
+        <div class="container-stats">
+          <div class="stat">
+            <h3>4</h3>
+            <p>besoins en cours</p>
+          </div>
+          <div class="stat">
+            <h3>4</h3>
+            <p>besoins postés</p>
+          </div>
+          <div class="stat">
+            <h3>4</h3>
+            <p>besoins récurrents</p>
+          </div>
+          <div class="stat">
+            <h3>4</h3>
+            <p>besoins pourvus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper-right">
+    <div class="row">
+      <div class="col-md-4">
+        <h2 Besoin en cours>
+          </h2>
+            <div class="row">
+              <div class="col-md-4">
+                <h2 Besoin à venir>
+                  </h2>
 
