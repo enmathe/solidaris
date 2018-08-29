@@ -2,6 +2,7 @@
   height: 20vh;
   padding: 10px;
   border-bottom: 6px solid #F6F6F6;
+  display: flex;
 }
 
 .asso-namelogo {
@@ -11,6 +12,14 @@
   }
   margin-top: 45px;
   margin-left: 35px;
+  position: relative;
+}
+
+.navbar-button {
+  position: absolute;
+  right: 40px;
+  top: 150px;
+
 }
 
 .wrapper-bottom {
