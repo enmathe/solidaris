@@ -26,11 +26,7 @@
               <p><%= @mission.skills_needed %></p>
             <% end %>
           <br><br>
-            <%= link_to mission_applications_path(@mission), method: :post, class:"button" do %>
-              <span class="submit">Participer</span>
-              <span class="loading"><i class="fa fa-refresh"></i></span>
-              <span class="check"><i class="fa fa-check"></i></span>
-            <% end %>
+              <div class= "button-more-2 gradient-<%=@mission.category.downcase %>"><%= link_to "Participer à cette mission", mission_applications_path(@mission), method: :post %> </div>
         </div>
       </div>
       <div class="col-md-4 col-md-offset-1">
