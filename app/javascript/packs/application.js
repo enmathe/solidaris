@@ -6,8 +6,8 @@ import { autocomplete } from '../components/autocomplete';
 import GMaps from 'gmaps';
 import "../plugins/flatpickr";
 import '../components/select2';
-import { loadDynamicBannerText } from '../components/banner';
-loadDynamicBannerText();
+
+autocomplete();
 
 const button = document.querySelector('.button');
 const submit = document.querySelector('.submit');
@@ -24,7 +24,6 @@ function addClass() {
 // button.addEventListener('transitionend', toggleClass);
 // button.addEventListener('transitionend', addClass);
 
-autocomplete();
 
 
 
