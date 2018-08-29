@@ -8,7 +8,7 @@
   </div>
 </div>
 <div class="wrapper-bottom">
-  <div class="wrapper-left">
+  <!-- <div class="wrapper-left">
     <div class="container-grey-left">
         <div class="container-stats">
           <div class="stat">
@@ -29,12 +29,12 @@
           </div>
         </div>
     </div>
-  </div>
+  </div> -->
   <div class="wrapper-right">
       <div class="row container-grey-right">
         <h4>Besoins en cours </h4>
-        <% @missions.first(3).each do |mission| %>
-          <div class="col-xs-12 col-sm-4">
+        <% @missions.first(4).each do |mission| %>
+          <div class="col-xs-12 col-sm-3">
             <div class="shadow-missions">
               <div class="missions-cards">
                 <%= link_to mission_path(mission) do %>
@@ -56,8 +56,8 @@
       </div>
     <div class="row container-grey-right-bottom">
       <h4>Prochains besoins </h4>
-      <% @missions.first(4).each do |mission| %>
-      <div class="col-sm-3">
+      <% @missions.first(6).each do |mission| %>
+      <div class="col-sm-2">
         <%= link_to mission_path(mission) do %>
         <div class="mini-card-container">
           <div class="mini-card-description">

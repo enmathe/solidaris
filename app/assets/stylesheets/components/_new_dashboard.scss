@@ -10,22 +10,24 @@
     font-weight: 600;
   }
   margin-top: 45px;
+  margin-left: 35px;
 }
 
 .wrapper-bottom {
   display: flex;
   height: calc(100vh - 20vh);
+  background-color: #F6F6F6;
 }
 
 .wrapper-right {
-  width: 75%;
+  width: 100%;
   padding-right: 50px;
   padding-left: 50px;
   padding-top: 20px;
 }
 
 .wrapper-left {
-  width: 25%;
+  width: 18%;
   position: relative;
   padding: 15px;
 
