@@ -1,9 +1,9 @@
 #filter-container {
   height: 15vh;
   border-bottom: 20px;
-  padding-top: 25px;
+  padding-top: 30px;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
   position: -webkit-sticky;
   position: sticky;
   top: 70px;
@@ -26,18 +26,19 @@
   margin-left: 101px;
 }
 .form-control-index {
-  margin-left: 15px;
-  width: 100%;
+  margin-left: 25px;
   border: none;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   border-radius: 5px;
   padding: 5px;
+  padding-right: 360px;
 }
 
 .filter-control-index {
-  margin-left: 15px;
+  margin-left: 50px;
   border-radius: 5px;
   padding: 5px;
+  width: 245px;
 }
 
 .form-control-filter {

@@ -13,32 +13,33 @@
   </div>
   <div class="background-container">
     <div class="row">
-          <div class="col-md-5 col-md-offset-1">
-            <div class="banner-mission-content-asso">
-              <h2>Description</h2>
-              <p><%= @mission.description %></p>
-              <h2>Peine encourue</h2>
-              <p> 2 demi-journées par semaine pendant 6 mois </p>
-              <h2>Profil recherché <h2>
-                <% if @mission.skills_needed.nil? || @mission.skills_needed == "0" %>
-                  <p> Aucun profil particulier recherché</p>
-                <% else %>
-                  <p><%= @mission.skills_needed %></p>
-                <% end %>
-              <br><br>
-                <%= link_to edit_organizations_mission_path(@mission), class:"button" do %>
-                  <span class="submit">Modifier</span>
-                  <span class="loading"><i class="fa fa-refresh"></i></span>
-                  <span class="check"><i class="fa fa-check"></i></span>
-                <% end %>
+            <div class="col-md-5 col-md-offset-1">
+              <div class="banner-mission-content-asso">
+                <h2>Description</h2>
+                <p><%= @mission.description %></p>
+                <h2>Peine encourue</h2>
+                <p> 2 demi-journées par semaine pendant 6 mois </p>
+                <h2>Profil recherché <h2>
+                  <% if @mission.skills_needed.nil? || @mission.skills_needed == "0" %>
+                    <p> Aucun profil particulier recherché</p>
+                  <% else %>
+                    <p><%= @mission.skills_needed %></p>
+                  <% end %>
+                <br><br>
+                  <%= link_to edit_organizations_mission_path(@mission), class:"button" do %>
+                    <span class="submit">Modifier</span>
+                    <span class="loading"><i class="fa fa-refresh"></i></span>
+                    <span class="check"><i class="fa fa-check"></i></span>
+                  <% end %>
+              </div>
             </div>
-          </div>
         <div class="move">
           <div class="col-md-4 col-md-offset-1">
-            <p><strong><%= pluralize @mission.users.count, "candidat" %></strong></p>
+            <h2>Candidat(s)</h2>
+
             <% @users.each do |user| %>
               <div class="banner-mission-organization-2">
-                  <h2 class= "text-justify"><%= "#{user.last_name.upcase} #{user.first_name}" %></h2>
+                  <h4 class= "text-justify"><%= user.first_name %> <%= user.last_name %></h4r>
                   <p class= "text-center"><%= user.phone_number %></p>
                   <p class="text-center"><%= user.email %></p>
                   <p class= "button-hover"><%= link_to "En savoir plus", associations_path(@organization) %> </p>
