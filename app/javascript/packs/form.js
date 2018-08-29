@@ -12,8 +12,13 @@ cards.forEach((card) => {
 });
 
 var scroll = new SmoothScroll('a[data-scroll]', {
-  speed: 500,
-  easing: 'easeInOutCubic'
+  speed: 2000,
+  easing: 'easeOutQuint'
 });
 
 console.log(scroll);
+
+
+var scroll2 = new SmoothScroll('.scroll',{
+    header: '[data-scroll-header]'
+  });

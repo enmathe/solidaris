@@ -37,9 +37,9 @@
       <div class="container-grey-right">
         <h4>Besoins en cours </h4>
         <div class="flex-container">
-          <% @missions.first(8).each do |mission| %>
+          <% @recurrent_current.first(8).each do |mission| %>
               <div class="missions-cards-dashboard">
-                <%= link_to mission_path(mission) do %>
+                <%= link_to organizations_mission_path(mission) do %>
                   <%= index_svg_div(mission.category) %>
                   <h2><%= mission.title %></h2>
                   <p><%= mission.organization.name%></p>
@@ -55,10 +55,10 @@
         <% end %>
         </div>
       </div>
-    <div class="rcontainer-grey-right-bottom">
+    <div class="container-grey-right-bottom">
       <h4>Prochains besoins </h4>
       <div class="flex-container">
-        <% @missions.first(8).each do |mission| %>
+        <% @coming.each do |mission| %>
           <%= link_to mission_path(mission) do %>
             <div class="mini-card-container">
               <div class="mini-card-description">

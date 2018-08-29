@@ -45,7 +45,6 @@ class Organizations::MissionsController < ApplicationController
     if @mission.save
       redirect_to organizations_missions_path
     else
-      raise
       render :new
     end
   end
