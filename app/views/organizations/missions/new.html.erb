@@ -1,5 +1,5 @@
 <div class="container"></div>
-    <div class="height-form form-start">
+    <!-- <div class="height-form form-start">
       <div style="text-align: center;">
         <h1>Créer un besoin</h1>
         <br>
@@ -10,13 +10,15 @@
       </div>
     </div>
     <br>
-    <br>
+    <br> -->
   <div class="row" id="category-title">
     <div class="col-md-8 col-md-offset-2">
       <div class="form-group height-form-category second">
-        <h3>Quelle est la catégorie de ce besoin ? </h3>
         <br>
         <br>
+        <br>
+        <br>
+        <h3 form-control-label >Quelle est la catégorie de ce besoin ? </h3>
         <br>
           <label class="control-label check_boxes optional"></label>
     <%= simple_form_for [@organization, @mission], url: organizations_missions_path(@mission), method: :post  do |f| %>
@@ -39,27 +41,27 @@
               </label>
             <% end %>
             <br><br><br><br>
-            <div class="btn-container">
+            <div class="btn-container col-md-offset-5">
                 <a class="btn btn-primary" data-scroll href="#first" type="button">Suivant</a>
             </div>
       </div>
     </div>
   </div>
   <div class="row height-form" id="first">
-    <div class="col-md-4">
-      <%= f.input :title, label: 'Titre' %>
+    <div class="col-md-6">
+      <%= f.input :title, label: 'Quel titre souhaitez-vous donner à votre besoin ?' %>
       <label class="control-label check_boxes optional"></label>
-      <%= f.input :address, placeholder: "", label: "Adresse de la mission" %>   <!--  , input_html: { id: "address-auto" } -->
+      <%= f.input :address, placeholder: "", label: "Où aura lieu ce besoin ?" %>   <!--  , input_html: { id: "address-auto" } -->
       <br>
       <div class="row">
         <div class="col-md-12">
-          <%= f.input :starting_at, as: :string, required: false, input_html: {class: "datepicker"}, label: 'Début de la mission' %>
+          <%= f.input :starting_at, as: :string, required: false, input_html: {class: "datepicker"}, label: 'A quelle date se déroulera cette mission ? ' %>
         </div>
         <!-- <div class="col-md-6">
-          <%= f.input :end_candidature_date, as: :string, required: false, input_html: {class: "datepicker"}, label: 'Date de fin de candidature' %>
+          <%= f.input :end_candidature_date, as: :string, required: false, input_html: {class: "datepicker"}, label: "Jusqu'à quand souhaitez-vous recevoir des candidatures ?" %>
         </div> -->
         <div class="col-md-12">
-          <%= f.input :duration_in_hours,  label: 'Durée (en heures)'%>
+          <%= f.input :duration_in_hours,  label: 'Combien de temps durera cette mission ? (en heures)'%>
         </div>
         <!-- <div class="col-md-6">
           <%= f.input :recurrent %>
@@ -74,15 +76,15 @@
     </div>
   </div>
   <div class="row height-form">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div id="second">
         <div class="row">
           <div class="col-md-12">
-            <%= f.input :volunteers_needed, label: 'Nombre de volontaires recherchés' %>
+            <%= f.input :volunteers_needed, label: 'Combien de volontaires recherchez-vous ?' %>
           </div>
         </div>
-        <%= f.input :description, :input_html => {:rows => 5} %>
-        <%= f.input :skills_needed, label: 'Profil recherché', :input_html => {:rows => 5} %>
+        <%= f.input :description, label: 'Ajoutez une description pour recevoir plus de candidatures' %>
+        <%= f.input :skills_needed, label: 'Quel type de profil recherchez-vous ?' %>
         <%= f.submit "Créer", class: "btn btn-primary" %>
       </div>
     </div>
