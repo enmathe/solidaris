@@ -31,7 +31,27 @@ class MissionsController < ApplicationController
     end
 
 
-    @missions = @missions.where("starting_at BETWEEN ? AND ?")
+
+
+
+
+    if params[:starting_at].present?
+      starting_on, ending_on = params[:starting_at].split(' au ')
+
+      starting_on = Date.strptime(starting_on, '%d.%m.%Y')
+      ending_on = Date.strptime(ending_on, '%d.%m.%Y')
+
+      @missions = @missions.where("date(starting_at) BETWEEN ? AND ?", starting_on, ending_on)
+    end
+    # mission[starting_at]=30.08.2018+to+31.08.2018
+
+
+
+
+
+
+
+
 
     unless @missions.empty?
       @markers = marker(@missions.where.not(latitude: nil, longitude: nil))

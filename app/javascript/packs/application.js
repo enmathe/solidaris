@@ -1,13 +1,14 @@
 import "bootstrap";
 // import { volunteersNeeded } from "../components/volunteers_needed.js"
 import { autocomplete } from '../components/autocomplete';
-
+import { addAttributes } from '../components/flatpickrcount.js';
 // volunteersNeeded();
 import GMaps from 'gmaps';
 import "../plugins/flatpickr";
 import '../components/select2';
 
 autocomplete();
+addAttributes();
 
 const button = document.querySelector('.button');
 const submit = document.querySelector('.submit');

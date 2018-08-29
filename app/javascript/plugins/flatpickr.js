@@ -1,4 +1,5 @@
 import flatpickr from "flatpickr"
+import { French } from "flatpickr/dist/l10n/fr.js"
 import "flatpickr/dist/flatpickr.min.css" // Note this is important!
 
 flatpickr(".datepicker", {
@@ -12,4 +13,5 @@ flatpickr(".userdatepicker", {
   enableTime: true,
   dateFormat: "d.m.Y",
   minDate: "today",
+  locale: French,
 })
