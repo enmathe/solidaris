@@ -23,7 +23,3 @@ function addClass() {
 // button.addEventListener('click', toggleClass);
 // button.addEventListener('transitionend', toggleClass);
 // button.addEventListener('transitionend', addClass);
-
-
-
-
