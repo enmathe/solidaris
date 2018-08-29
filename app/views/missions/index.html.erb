@@ -2,12 +2,10 @@
   <div id="filter-container">
     <div class="filters">
       <div><%= form_tag missions_path, method: :get do %>
-        <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission" %>
-      <%# end %></div>
+        <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission près de chez vous" %>
+      </div>
       <div class="filter-control-index">
         <%= simple_form_for @mission do |f| %>
-          <!-- <%#= f.input :category, input_html: {onchange: 'this.form.submit();'} %></div> -->
-      <!-- <div class="filter-control-index"> -->
         <select class="select2" onchange="this.form.submit();" name="recurrency">
           <option value="both">Type</option>
           <option value="urgent" <%= "selected=\"selected\"" if params[:recurrency] == "urgent" %> >Missions urgentes</option>
@@ -27,9 +25,16 @@
           <option value="enseignement" <%= "selected=\"selected\"" if params[:category] == "enseignement"  %> >Enseignement</option>
           <option value="autre" <%= "selected=\"selected\"" if params[:category] == "autre" %> >Autre</option>
         </select>
+    </div>
+      <div class="filter-control-index">
+          <%#= f.input :starting_at, as: :string, required: false, input_html: {class: "userdatepicker"}, placeholder: 'Quelles sont vos disponibilités ? ' %>
+          <input name="starting_at" id="mission_starting_at" value="<%= params[:starting_at] %>" class="userdatepicker form-control filter-control-index" placeholder="Quelles sont vos disponibilités ?" autocomplete="off" type="text">
+      </div>
+      <!-- <div class="filter-control-index">
+          <%#= f.input :end_candidature_date, as: :string, required: false, input_html: {class: "datepicker"}, label: "Jusqu'à quand souhaitez-vous recevoir des candidatures ?" %>
+      </div> -->
         <% end %>
       <% end %>
-    </div>
     </div>
   </div>
   <div class="main-container">
@@ -57,7 +62,7 @@
         <% end %>
       </div>
     </div>
-    <div id="map" data-markers="<%= @markers.to_json %>"></div>
+    <div id="map" data-markers="<%= @markers.present? ? @markers.to_json : [] %>"></div>
   </div>
 </div>
 
