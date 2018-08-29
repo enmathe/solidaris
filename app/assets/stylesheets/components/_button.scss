@@ -160,3 +160,16 @@ $lg: new-breakpoint(min-width 1024px);
     padding: 100px;
   }
 }
+
+.button-more-2 {
+  border: 0.5px solid white;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}

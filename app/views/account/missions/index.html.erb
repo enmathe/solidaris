@@ -1,87 +1,77 @@
-<div class="green-background">
-</div>
-<div class="grey-background">
-</div>
-<div class="dashboard-container">
+<div class="dashboard-name-container">
   <div class="asso-namelogo">
-    <div class="dashboard-logo", style="background-image: url('<%= cl_image_path(@user.picture) %>'); background-size: cover;"></div>
-    <h3><%= @user.first_name %> <%= @user.last_name %></h3>
-    <p> <%= @user.email %></p>
-  </div>
-  <div class="dashboard-btn">
-    <div class="btn btn-success"> Voir les missions </div>
-  </div>
-  <div class="dashboard-stat">
-    <h10></h10>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="stat">
-          <div class="stat-card">
-            <h2> <%= @recurrent_current.count %></h2>
-            <p> missions </p>
-            <p> en cours </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="stat">
-          <div class="stat-card">
-            <h2> <%= @coming.count %></h2>
-            <p>missions</p>
-            <p>à venir</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="stat">
-          <div class="stat-card">
-            <h2><%= @missions.count %></h2>
-            <p>missions</p>
-            <p>disponibles</p>
-          </div>
-        </div>
-      </div>
+    <%= cl_image_tag(@user.picture, width: "100", :crop=>"scale", class: "logo-asso")%>
+    <div class="asso-infos">
+      <h1><%= @user.first_name%> <%= @user.last_name %></h1>
+      <%= link_to @user.email, class: "url-asso" %>
     </div>
   </div>
-  <div class="dashboard-mission-current">
-  <h10> Mes missions en cours</h10>
-    <div class="row">
-      <% @recurrent_current.first(3).each do |mission| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="missions-cards">
-          <%= link_to mission_path(mission) do %>
-            <%= svg_div(mission.category) %>
-            <h2><%= mission.title %></h2>
-            <p><%= mission.organization.name%></p>
-            <%= image_tag "looking-for.png", class: 'looking-for'%>
-              <!-- <h3 class="volunteer"><%#= mission.volunteers_needed %></h3>
-              <p><%#= mission.starting_at %></p> -->
-            <div class="date">
-              <%= mission.starting_at.strftime('%d %B') %>
+  <div class="navbar-button">
+   <!--  <%= link_to "VO", new_organizations_mission_path, class: "btn btn-primary" %> -->
+  </div>
+</div>
+<div class="wrapper-bottom">
+  <!-- <div class="wrapper-left">
+    <div class="container-grey-left">
+        <div class="container-stats">
+          <div class="stat">
+            <h3>6</h3>
+            <p>besoins en cours</p>
+          </div>
+          <div class="stat">
+            <h3>2</h3>
+            <p>besoins postés</p>
+          </div>
+          <div class="stat">
+            <h3>15</h3>
+            <p>besoins récurrents</p>
+          </div>
+          <div class="stat">
+            <h3>8</h3>
+            <p>besoins récurrents</p>
+          </div>
+        </div>
+    </div>
+  </div> -->
+  <div class="wrapper-right">
+      <div class="container-grey-right">
+        <h4>Mes missions en cours </h4>
+        <div class="flex-container">
+          <% @recurrent_current.reverse_each do |mission| %>
+              <div class="missions-cards-dashboard">
+                <%= link_to organizations_mission_path(mission) do %>
+                  <%= index_svg_div(mission.category) %>
+                  <h2><%= mission.title %></h2>
+                  <p><%= mission.organization.name%></p>
+                  <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
+                  <div class="overlay gradient-<%=mission.category.downcase%>">
+                    <%= white_svg_div(mission.category) %>
+                    <h3><%= mission.title %></h3>
+                    <h4><%= mission.organization.name%></h4>
+                    <h5><%= l(mission.starting_at, format: :short) %></h5>
+                  </div>
+              <% end %>
             </div>
-          <%end  %>
+        <% end %>
         </div>
       </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="dashboard-mission-past">
-    <h10>Mes prochaines missions</h10>
-    <div class="row">
-      <% @coming.first(6).each do |mission| %>
-      <div class="col-sm-6">
-        <%= link_to mission_path(mission) do %>
-        <div class="mini-card-container">
-          <div class="mini-card-description">
-            <%= mini_svg_div(mission.category) %>
-            <h2><%= mission.title %></h2>
-            <p><%= mission.organization.name %></p>
-          </div>
-        </div>
+    <div class="container-grey-right-bottom">
+      <h4>Prochaines missions </h4>
+      <div class="flex-container">
+        <% @coming.reverse_each do |mission| %>
+          <%= link_to organizations_mission_path(mission) do %>
+            <div class="mini-card-container">
+              <div class="mini-card-description">
+                <%= mini_svg_div(mission.category) %>
+                <h2><%= mission.title %></h2>
+                <p><%= mission.organization.name %></p>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
-    <% end %>
     </div>
   </div>
 </div>
+
 
