@@ -30,6 +30,9 @@ class MissionsController < ApplicationController
       end
     end
 
+
+    @missions = @missions.where("starting_at BETWEEN ? AND ?")
+
     unless @missions.empty?
       @markers = marker(@missions.where.not(latitude: nil, longitude: nil))
     end

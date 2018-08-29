@@ -27,9 +27,15 @@
           <option value="enseignement" <%= "selected=\"selected\"" if params[:category] == "enseignement"  %> >Enseignement</option>
           <option value="autre" <%= "selected=\"selected\"" if params[:category] == "autre" %> >Autre</option>
         </select>
+    </div>
+      <div class="filter-control-index">
+          <%= f.input :starting_at, as: :string, required: false, input_html: {class: "userdatepicker"}, label: 'Quelles sont vos disponibilités ? ' %>
+      </div>
+      <!-- <div class="filter-control-index">
+          <%#= f.input :end_candidature_date, as: :string, required: false, input_html: {class: "datepicker"}, label: "Jusqu'à quand souhaitez-vous recevoir des candidatures ?" %>
+      </div> -->
         <% end %>
       <% end %>
-    </div>
     </div>
   </div>
   <div class="main-container">

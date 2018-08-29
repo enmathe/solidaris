@@ -30,9 +30,9 @@
       <%= link_to "Associations", associations_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Tableau de Bord", account_missions_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Profil", account_profile_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-      <% end %>
+  <!--     <%#= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%#= t(".sign_out", default: "Log out") %>
+      <%# end %> -->
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -60,9 +60,9 @@
       <%= link_to "Créer un Délit", new_organizations_mission_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Tableau de Bord", organizations_missions_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Mon profil", '#', class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to destroy_organization_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-      <% end %>
+      <!-- <%#= link_to destroy_organization_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%#= t(".sign_out", default: "Log out") %>
+      <%# end %> -->
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">

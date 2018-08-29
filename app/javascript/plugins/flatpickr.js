@@ -6,3 +6,10 @@ flatpickr(".datepicker", {
   dateFormat: "d.m.Y",
   minDate: "today",
 })
+
+flatpickr(".userdatepicker", {
+  mode: "range",
+  enableTime: true,
+  dateFormat: "d.m.Y",
+  minDate: "today",
+})
