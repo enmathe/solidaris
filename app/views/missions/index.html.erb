@@ -8,16 +8,16 @@
         <%= simple_form_for @mission do |f| %>
           <!-- <%#= f.input :category, input_html: {onchange: 'this.form.submit();'} %></div> -->
       <!-- <div class="filter-control-index"> -->
-        <select onchange="this.form.submit();" name="recurrency">
-          <option value="both">Toutes les missions</option>
+        <select class="select2" onchange="this.form.submit();" name="recurrency">
+          <option value="both">Type</option>
           <option value="urgent" <%= "selected=\"selected\"" if params[:recurrency] == "urgent" %> >Missions urgentes</option>
           <option value="ponctuel" <%= "selected=\"selected\"" if params[:recurrency] == "ponctuel"  %> >Missions ponctuelles</option>
           <option value="recurrent" <%= "selected=\"selected\"" if params[:recurrency] == "recurrent" %> >Missions récurrentes</option>
         </select>
       </div>
       <div class="filter-control-index">
-        <select onchange="this.form.submit();" name="category">
-          <option value="categories">Toutes les catégories</option>
+        <select class="select2" onchange="this.form.submit();" name="category">
+          <option value="categories"> Catégorie</option>
           <option value="hebergement" <%= "selected=\"selected\"" if params[:category] == "hebergement"  %> >Hébergement</option>
           <option value="activite" <%= "selected=\"selected\"" if params[:category] == "activite" %> >Activité</option>
           <option value="collecte" <%= "selected=\"selected\"" if params[:category] == "collecte" %> >Collecte</option>
@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="main-container">
-    <div class="container">
+    <div class="mission-container">
       <div class="row">
         <% @missions.each do |mission| %>
           <div class="col-xs-12 col-sm-4">
@@ -49,7 +49,6 @@
                     <h3><%= mission.title %></h3>
                     <h4><%= mission.organization.name%></h4>
                     <h5><%= l(mission.starting_at, format: :short) %></h5>
-                    <h6><%= mission.description.first(150)%>...</h6>
                   </div>
               </div>
               <% end %>

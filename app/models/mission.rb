@@ -16,8 +16,7 @@ class Mission < ApplicationRecord
    :Evenement,
    :Maraude,
    :Enseignement,
-   :Sante,
-   :Autre
+   :Sante
  ]
 end
 
