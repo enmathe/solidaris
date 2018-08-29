@@ -1,43 +1,79 @@
-  <div class="dashboard-organization-container">
-    <div class="asso-namelogo">
-      <%= cl_image_tag(@organization.logo, width: "100", :crop=>"scale", class: "logo-asso")%>
-      <div class="asso-infos">
-        <h1><%= @organization.name %></h1>
-        <%= link_to @organization.website, class: "url-asso" %>
-      </div>
+<div class="dashboard-name-container">
+  <div class="asso-namelogo">
+    <%= cl_image_tag(@organization.logo, width: "100", :crop=>"scale", class: "logo-asso")%>
+    <div class="asso-infos">
+      <h1><%= @organization.name %></h1>
+      <%= link_to @organization.website, class: "url-asso" %>
     </div>
   </div>
-  <div class="wrapper-grey">
-    <div class="wrapper-left">
-      <div class="btn btn-primary"><%= link_to "Poster un besoin", new_organizations_mission_path(@mission) %>
+  <div class="navbar-button">
+    <%= link_to "Créer un délit", new_organizations_mission_path, class: "btn btn-primary" %>
+  </div>
+</div>
+<div class="wrapper-bottom">
+  <!-- <div class="wrapper-left">
+    <div class="container-grey-left">
         <div class="container-stats">
           <div class="stat">
-            <h3>4</h3>
+            <h3>6</h3>
             <p>besoins en cours</p>
           </div>
           <div class="stat">
-            <h3>4</h3>
+            <h3>2</h3>
             <p>besoins postés</p>
           </div>
           <div class="stat">
-            <h3>4</h3>
+            <h3>15</h3>
             <p>besoins récurrents</p>
           </div>
           <div class="stat">
-            <h3>4</h3>
-            <p>besoins pourvus</p>
+            <h3>8</h3>
+            <p>besoins récurrents</p>
           </div>
         </div>
+    </div>
+  </div> -->
+  <div class="wrapper-right">
+      <div class="row container-grey-right">
+        <h4>Besoins en cours </h4>
+        <% @missions.first(4).each do |mission| %>
+          <div class="col-xs-12 col-sm-3">
+            <div class="shadow-missions">
+              <div class="missions-cards">
+                <%= link_to mission_path(mission) do %>
+                  <%= index_svg_div(mission.category) %>
+                  <h2><%= mission.title %></h2>
+                  <p><%= mission.organization.name%></p>
+                  <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
+                  <div class="overlay gradient-<%=mission.category.downcase%>">
+                    <%= white_svg_div(mission.category) %>
+                    <h3><%= mission.title %></h3>
+                    <h4><%= mission.organization.name%></h4>
+                    <h5><%= l(mission.starting_at, format: :short) %></h5>
+                  </div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
+    <div class="row container-grey-right-bottom">
+      <h4>Prochains besoins </h4>
+      <% @missions.first(6).each do |mission| %>
+      <div class="col-sm-2">
+        <%= link_to mission_path(mission) do %>
+        <div class="mini-card-container">
+          <div class="mini-card-description">
+            <%= mini_svg_div(mission.category) %>
+            <h2><%= mission.title %></h2>
+            <p><%= mission.organization.name %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
     </div>
   </div>
+</div>
 
-  <div class="wrapper-right">
-    <div class="row">
-      <div class="col-md-4">
-        <h2 Besoin en cours>
-          </h2>
-            <div class="row">
-              <div class="col-md-4">
-                <h2 Besoin à venir>
-                  </h2>
+
