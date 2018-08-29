@@ -2,7 +2,7 @@
   <div id="filter-container">
     <div class="filters">
       <div><%= form_tag missions_path, method: :get do %>
-        <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission près de chez vous" %>
+        <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Rentrez votre addresse" %>
       </div>
       <div class="filter-control-index">
         <%= simple_form_for @mission do |f| %>
