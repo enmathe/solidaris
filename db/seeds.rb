@@ -867,7 +867,7 @@ activité_sportive = Mission.create!({
 })
 
 cours_de_dessin_1 = Mission.create!({
-  title: "Cours de dessin",
+  title: "Atelier de dessin",
   category: "Activite",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 4,
@@ -875,16 +875,17 @@ cours_de_dessin_1 = Mission.create!({
   leur créativité et leur esprit critique.",
   skills_needed: "Compétences artistiques : histoire de l’art, techniques et pratiques
   ne doivent avoir aucun secret pour vous.",
-  starting_at: "2017/03/02 14:00:00",
+  starting_at: "2016/03/02 14:00:00",
   duration_in_hours: 3,
-  recurrent: false,
-  end_candidature_date: "2017/02/02 14:00:00",
+  recurrent: true,
+  end_candidature_date: "2019/02/02 14:00:00",
+  recurrency_ending_on: "2019/02/02 14:00:00",
   organization: dessins_sans_papiers
 })
 
 cours_de_dessin_2 = Mission.create!({
-  title: "Cours de dessin",
-  category: "Activite",
+  title: "Accompagnement mineurs isolés ",
+  category: "Accompagnement",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 4,
   description: "
@@ -892,15 +893,16 @@ cours_de_dessin_2 = Mission.create!({
   le dessin, mais aussi la peinture, la sculpture ou la bande dessinée.",
   skills_needed: "
   Le BAFA serait un plus",
-  starting_at: "2017/07/04 09:00:00",
+  starting_at: "2016/07/04 09:00:00",
   duration_in_hours: 2,
-  recurrent: false,
-  end_candidature_date: "2017/06/01 14:00:00",
+  recurrent: true,
+  recurrency_ending_on: "2019/02/02 14:00:00",
+  end_candidature_date: "2019/06/01 14:00:00",
   organization: dessins_sans_papiers
 })
 
 cours_de_dessin_3 = Mission.create!({
-  title: "Cours de dessin",
+  title: "Atelier de dessin",
   category: "Activite",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 4,
@@ -909,16 +911,17 @@ cours_de_dessin_3 = Mission.create!({
   Vous organisez ponctuellement des sorties au musée des Beaux-Art de Nantes.",
   skills_needed: "
   CAPES souhaité",
-  starting_at: "2017/10/10 10:00:00",
+  starting_at: "2019/01/01 10:00:00",
   duration_in_hours: 3,
-  recurrent: false,
-  end_candidature_date: "2017/09/01 14:00:00",
+  recurrent: true,
+  recurrency_ending_on: "2019/02/02 14:00:00",
+  end_candidature_date: "2027/09/01 14:00:00",
   organization: dessins_sans_papiers
 })
 
 cours_de_dessin_4 = Mission.create!({
   title: "Cours de dessin",
-  category: "Activite",
+  category: "Sante",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 4,
   description: "
@@ -933,7 +936,7 @@ cours_de_dessin_4 = Mission.create!({
 })
 
 cours_de_dessin_5 = Mission.create!({
-  title: "Cours de dessin",
+  title: "Atelier d'écriture",
   category: "Activite",
   address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 4,
@@ -942,7 +945,7 @@ cours_de_dessin_5 = Mission.create!({
   - Apprendre les bases du dessin
   - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association",
   skills_needed: "",
-  starting_at: "2017/05/02 08:00:00",
+  starting_at: "2027/05/02 08:00:00",
   duration_in_hours: 2,
   recurrent: false,
   end_candidature_date: "2017/04/15 14:00:00",
