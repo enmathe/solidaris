@@ -5,11 +5,11 @@
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   border-radius: 21px;
   margin: 20px;
-  position: relative;
   h2 {
     color: $comet;
     font-size: 14px;
     margin-top: 5px;
+    line-height: 18px;
   }
   p {
     color: $comet;
@@ -21,7 +21,7 @@
 }
 
 .mini-card-description {
-  position: absolute;
+  // position: absolute;
   bottom: 0px;
   left: 10px;
   padding: 10px;

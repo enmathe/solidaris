@@ -12,16 +12,13 @@
     <br>
     <br> -->
   <div class="row" id="category-title">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="form-group height-form-category second">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="form-group height-form-category second text-center">
         <br>
-        <br>
-        <br>
-        <br>
-        <h4 form-control-label >Quelle est la catégorie de ce besoin ? </h4>
+        <h4 form-control-label class="text-left">Quelle est la catégorie de ce besoin ? </h4>
         <br>
           <label class="control-label check_boxes optional"></label>
-    <%= simple_form_for [@organization, @mission], url: organizations_missions_path(@mission), method: :post  do |f| %>
+    <%= simple_form_for [@organization, @mission], url: organizations_missions_path(@mission), method: :post do |f| %>
           <% Mission.category.values.shuffle.each do |category| %>
               <input type="radio" class="hidden" id="mission_category_<%= category.downcase %>" value="<%= category %>" name="mission[category]">
               <label for="mission_category_<%= category.downcase %>">
@@ -58,7 +55,7 @@
           <%= f.input :starting_at, as: :string, required: false, input_html: {class: "datepicker"}, label: 'A quelle date se déroulera cette mission ? ' %>
         </div>
         <div class="col-md-6">
-          <%= f.input :duration_in_hours,  label: 'Combien de temps durera cette mission ?'%>
+          <%= f.input :duration_in_hours,  label: 'Combien d\'heures durera cette mission ?'%>
         </div>
         <!-- <div class="col-md-6">
           <%= f.input :recurrent %>
@@ -82,7 +79,9 @@
         </div>
         <%= f.input :description, label: 'Ajoutez une description pour recevoir plus de candidatures' %>
         <%= f.input :skills_needed, label: 'Quel type de profil recherchez-vous ?' %>
-        <%= f.submit "Créer", class: "btn btn-primary" %>
+        <div class="btn-container col-md-offset-9">
+          <%= f.submit "Créer", class: "btn btn-primary" %>
+        </div>
       </div>
     </div>
   </div>

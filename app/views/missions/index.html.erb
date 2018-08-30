@@ -39,8 +39,8 @@
   <div class="main-container">
     <div class="mission-container">
       <div class="row">
-        <% @missions.each do |mission| %>
-          <div class="col-xs-12 col-sm-4">
+        <% @missions.reverse_each do |mission| %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="shadow-missions">
               <div class="missions-cards">
                 <%= link_to mission_path(mission) do %>
