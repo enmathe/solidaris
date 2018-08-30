@@ -43,7 +43,7 @@
           <h4>Besoins en cours </h4>
           <div class="flex-container">
             <% if @recurrent_current.present? %>
-              <% @recurrent_current.reverse_each.last(6) do |mission| %>
+              <% @recurrent_current.reverse_each do |mission| %>
                   <div class="missions-cards-dashboard">
                     <%= link_to organizations_mission_path(mission) do %>
                       <%= index_svg_div(mission.category) %>
