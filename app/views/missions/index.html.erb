@@ -2,39 +2,38 @@
   <div id="filter-container">
     <div class="filters">
       <div><%= form_tag missions_path, method: :get do %>
-        <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Chercher une mission près de chez vous" %>
-      </div>
-      <div class="filter-control-index">
-        <%= simple_form_for @mission do |f| %>
-        <select class="select2" onchange="this.form.submit();" name="recurrency">
-          <option value="both">Type</option>
-          <option value="urgent" <%= "selected=\"selected\"" if params[:recurrency] == "urgent" %> >Missions urgentes</option>
-          <option value="ponctuel" <%= "selected=\"selected\"" if params[:recurrency] == "ponctuel"  %> >Missions ponctuelles</option>
-          <option value="recurrent" <%= "selected=\"selected\"" if params[:recurrency] == "recurrent" %> >Missions récurrentes</option>
-        </select>
-      </div>
-      <div class="filter-control-index">
-        <select class="select2" onchange="this.form.submit();" name="category">
-          <option value="categories"> Catégorie</option>
-          <option value="hebergement" <%= "selected=\"selected\"" if params[:category] == "hebergement"  %> >Hébergement</option>
-          <option value="activite" <%= "selected=\"selected\"" if params[:category] == "activite" %> >Activité</option>
-          <option value="collecte" <%= "selected=\"selected\"" if params[:category] == "collecte" %> >Collecte</option>
-          <option value="accompagnement" <%= "selected=\"selected\"" if params[:category] == "accompagnement"  %> >Accompagnement</option>
-          <option value="evenement" <%= "selected=\"selected\"" if params[:category] == "evenement" %> >Evènement</option>
-          <option value="sante" <%= "selected=\"selected\"" if params[:category] == "sante" %> >Santé</option>
-          <option value="enseignement" <%= "selected=\"selected\"" if params[:category] == "enseignement"  %> >Enseignement</option>
-          <option value="autre" <%= "selected=\"selected\"" if params[:category] == "autre" %> >Autre</option>
-        </select>
-    </div>
-      <div class="filter-control-index">
-          <%#= f.input :starting_at, as: :string, required: false, input_html: {class: "userdatepicker"}, placeholder: 'Quelles sont vos disponibilités ? ' %>
-          <input name="starting_at" id="mission_starting_at" value="<%= params[:starting_at] %>" class="userdatepicker form-control filter-control-index" placeholder="Date" autocomplete="off" type="text">
-      </div>
-      <!-- <div class="filter-control-index">
-          <%#= f.input :end_candidature_date, as: :string, required: false, input_html: {class: "datepicker"}, label: "Jusqu'à quand souhaitez-vous recevoir des candidatures ?" %>
-      </div> -->
-        <% end %>
+            <%= text_field_tag :query, params[:query], class: "form-control-index", placeholder: "Votre adresse" %>
+        </div>
+        <div class="filter-control-index">
+          <select class="select2" onchange="this.form.submit();" name="recurrency">  <!-- form-control-index -->
+            <option value="both">Type</option>
+            <option value="urgent" <%= "selected=\"selected\"" if params[:recurrency] == "urgent" %> >Missions urgentes</option>
+            <option value="ponctuel" <%= "selected=\"selected\"" if params[:recurrency] == "ponctuel"  %> >Missions ponctuelles</option>
+            <option value="recurrent" <%= "selected=\"selected\"" if params[:recurrency] == "recurrent" %> >Missions récurrentes</option>
+          </select>
+        </div>
+        <div class="filter-control-index">
+          <select class="select2" onchange="this.form.submit();" name="category"> <!-- form-control-index -->
+            <option value="categories"> Catégorie</option>
+            <option value="hebergement" <%= "selected=\"selected\"" if params[:category] == "hebergement"  %> >Hébergement</option>
+            <option value="activite" <%= "selected=\"selected\"" if params[:category] == "activite" %> >Activité</option>
+            <option value="collecte" <%= "selected=\"selected\"" if params[:category] == "collecte" %> >Collecte</option>
+            <option value="accompagnement" <%= "selected=\"selected\"" if params[:category] == "accompagnement"  %> >Accompagnement</option>
+            <option value="evenement" <%= "selected=\"selected\"" if params[:category] == "evenement" %> >Evènement</option>
+            <option value="sante" <%= "selected=\"selected\"" if params[:category] == "sante" %> >Santé</option>
+            <option value="enseignement" <%= "selected=\"selected\"" if params[:category] == "enseignement"  %> >Enseignement</option>
+            <option value="autre" <%= "selected=\"selected\"" if params[:category] == "autre" %> >Autre</option>
+          </select>
+        </div>
+        <div class="filter-control-index">
+            <input name="starting_at" id="mission_starting_at" value="<%= params[:starting_at] %>" class="userdatepicker form-control filter-control-index" placeholder="Date" autocomplete="off" type="text">
+        </div>
+        <input type="submit" class="hidden"><!-- KEEP ME HERE!!! -->
       <% end %>
+        <!-- <div class="filter-control-index">
+            <%#= f.input :end_candidature_date, as: :string, required: false, input_html: {class: "datepicker"}, label: "Jusqu'à quand souhaitez-vous recevoir des candidatures ?" %>
+        </div> -->
+
     </div>
   </div>
   <div class="main-container">
