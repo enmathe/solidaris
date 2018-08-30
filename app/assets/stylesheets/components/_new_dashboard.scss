@@ -148,6 +148,33 @@
 
 }
 
-.missions-cards-dashboard:hover .overlay {
+.missions-cards-dashboard:hover .overlay-dashboard {
   opacity:1;
+}
+
+.overlay-dashboard {
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  opacity:0;
+  height: 100%;
+  transition: 0.5s ease;
+
+  h2 {
+  color: white !important;
+  }
+
+  p {
+  font-size: 0.8em;
+  color: white !important;
+  margin: 0 0 12.5px;
+  line-height: 1.4;
+  }
+
+
 }
