@@ -44,11 +44,11 @@
                   <h2><%= mission.title %></h2>
                   <p><%= mission.organization.name%></p>
                   <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
-                  <div class="gradient-<%=mission.category.downcase%> overlay"> <!-- overlay dashboard-svg -->
+                  <div class="gradient-<%=mission.category.downcase%> overlay-dashboard"> <!-- overlay dashboard-svg -->
                     <%= white_svg_div(mission.category) %>
-                    <h3><%= mission.title %></h3>
-                    <h4><%= mission.organization.name%></h4>
-                    <h5><%= l(mission.starting_at, format: :short) %></h5>
+                    <h2><%= mission.title %></h2>
+                    <p><%= mission.organization.name%></p>
+                    <p><strong><%= l(mission.starting_at, format: :short) %></strong></p>
                   </div>
               <% end %>
             </div>
