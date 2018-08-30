@@ -155,9 +155,10 @@
   padding-right: 55px;
   padding-left: 55px;
   padding-top: 10px;
+  padding-bottom: 30px;
   border-radius: 5px;
-  height: calc(100vh - 310px);
-  position: absolute;
+  position: sticky !important;
+  top: 0 !important;
   h2 {
     position: relative;
     font-size: 20px;
@@ -179,7 +180,6 @@
 }
 
 .asso-desc {
-  height: 33vh;
 }
 
 .banner-mission-organization-2 {

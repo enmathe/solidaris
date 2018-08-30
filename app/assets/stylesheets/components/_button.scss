@@ -169,11 +169,88 @@ $lg: new-breakpoint(min-width 1024px);
   font-size: 15px;
   font-weight: 300;
   a {
-    color: white;
-    text-decoration: none;
+    color: white
   }
 }
 
+.button-white:hover{
+  background-color: white;
+  a {
+    color: black
+  }
+}
+
+.button-white-collecte:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #6991C7;
+  }
+}
+
+.button-white-hebergement:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #6a2c70;
+  }
+}
+
+.button-white-sante:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #FAD0C4;
+  }
+}
+
+.button-white-accompagnement:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #D76666;
+  }
+}
+
+.button-white-enseignement:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #00adb5;
+  }
+}
+
+.button-white-activite:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #FFC062;
+  }
+}
+
+.button-white-mobilisation:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #0000F7;
+  }
+}
+
+.button-white-evenement:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #929EAD;
+  }
+}
+
+.button-white-maraude:hover {
+  background-color: white;
+  a {
+    font-weight: 400;
+    color: #88304e;
+  }
+}
 // .button-more-2:hover {
 //   color: $comet;
 //   background-color: white;
