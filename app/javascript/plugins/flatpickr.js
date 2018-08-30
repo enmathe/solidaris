@@ -15,3 +15,5 @@ flatpickr(".userdatepicker", {
   minDate: "today",
   locale: French,
 })
+
+console.log("test Lisiane");
