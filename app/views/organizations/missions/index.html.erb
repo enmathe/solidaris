@@ -3,8 +3,12 @@
     <div class="asso-namelogo">
       <%= cl_image_tag(@organization.logo, width: "100", :crop=>"scale", class: "logo-asso")%>
       <div class="asso-infos">
-        <h1><%= @organization.name %></h1>
-        <%= link_to @organization.website, class: "url-asso" %>
+        <% if @organization.name.present? && @organization.website.present? %>
+          <h1><%= @organization.name %></h1>
+          <%= link_to @organization.website, class: "url-asso" %>
+        <% else %>
+          <%= link_to "Modifier votre profil", edit_organizations_mission_path(@organization), class: "btn btn-primary" %>
+        <% end %>
       </div>
     </div>
     <div class="navbar-button">
@@ -38,22 +42,24 @@
         <div class="container-grey-right">
           <h4>Besoins en cours </h4>
           <div class="flex-container">
-            <% @recurrent_current.reverse_each.last(6) do |mission| %>
-                <div class="missions-cards-dashboard">
-                  <%= link_to organizations_mission_path(mission) do %>
-                    <%= index_svg_div(mission.category) %>
-                    <h2><%= mission.title %></h2>
-                    <p><%= mission.organization.name%></p>
-                    <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
-                    <div class="overlay gradient-<%=mission.category.downcase%>">
-                      <%= white_svg_div(mission.category) %>
-                      <h3><%= mission.title %></h3>
-                      <h4><%= mission.organization.name%></h4>
-                      <h5><%= l(mission.starting_at, format: :short) %></h5>
-                    </div>
-                <% end %>
-              </div>
-          <% end %>
+            <% if @recurrent_current.present? %>
+              <% @recurrent_current.reverse_each.last(6) do |mission| %>
+                  <div class="missions-cards-dashboard">
+                    <%= link_to organizations_mission_path(mission) do %>
+                      <%= index_svg_div(mission.category) %>
+                      <h2><%= mission.title %></h2>
+                      <p><%= mission.organization.name%></p>
+                      <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
+                      <div class="overlay gradient-<%=mission.category.downcase%>">
+                        <%= white_svg_div(mission.category) %>
+                        <h3><%= mission.title %></h3>
+                        <h4><%= mission.organization.name%></h4>
+                        <h5><%= l(mission.starting_at, format: :short) %></h5>
+                      </div>
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
           </div>
         </div>
       <div class="container-grey-right-bottom">
