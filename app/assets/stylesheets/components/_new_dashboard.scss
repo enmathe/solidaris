@@ -1,5 +1,4 @@
 .dashboard-name-container {
-  height: 20vh;
   padding: 10px;
   border-bottom: 6px solid #F6F6F6;
 }
@@ -63,7 +62,6 @@
 
 .wrapper-bottom {
   display: flex;
-  height: calc(100vh - 20vh);
   // background-color: #F6F6F6;
   h4 {
     margin-left: 20px;
@@ -93,7 +91,6 @@
 .container-grey-left {
   // background-color: #F6F6F6;
   padding: 15px;
-  height: 100%;
   border-radius: 5px;
 }
 
@@ -121,7 +118,6 @@
 
 .stat {
     width: 132px;
-    height: 115px;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
@@ -146,10 +142,6 @@
 
 .logo-asso {
   border-radius: 10px;
-}
-
-.dashboard-container {
-  height: 100vh;
 }
 
 .dashboard-position {

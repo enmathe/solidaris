@@ -18,8 +18,8 @@
                 <h2>Description</h2>
                 <p><%= @mission.description %></p>
                 <h2>Peine encourue</h2>
-                <p> 2 demi-journées par semaine pendant 6 mois </p>
-                <h2>Profil recherché <h2>
+                <p> <%= @mission.duration_in_hours %> heures </p>
+                <h2>Profil recherché </h2>
                   <% if @mission.skills_needed.nil? || @mission.skills_needed == "0" %>
                     <p> Aucun profil particulier recherché</p>
                   <% else %>

@@ -17,9 +17,6 @@
 .dashboard-container {
   z-index: 10;
   height: calc(100vh - 70px);
-  display: grid;
-  grid-template-columns: 400px 1fr 1fr 1fr;
-  grid-template-rows: 35% 15% 55%;
   position: relative;
   p10 {
     font-weight: 600;
