@@ -31,19 +31,6 @@ module ApplicationHelper
     return content_tag(:div, svg_file_path, class: ["fill-gradient-#{category.downcase}", "mini-svg-white"])
   end
 
-  def index_svg_div(category)
-    file_path = "#{Rails.root}/db/fixtures/picto/#{category.downcase}.svg"
-    svg_file_path = File.read(file_path).html_safe
-
-    return content_tag(:div, svg_file_path, class: ["fill-gradient-#{category.downcase}", "show-svg-white"])
-  end
-
-  def form_svg_div(category)
-    file_path = "#{Rails.root}/db/fixtures/picto/#{category.downcase}.svg"
-    svg_file_path = File.read(file_path).html_safe
-
-    return content_tag(:div, svg_file_path, class: ["fill-gradient-#{category.downcase}", "form-svg"])
-  end
 
   def white_form_svg_div(category)
     file_path = "#{Rails.root}/db/fixtures/picto/#{category.downcase}.svg"
@@ -51,12 +38,25 @@ module ApplicationHelper
 
     return content_tag(:div, svg_file_path, class: ["form-svg-white"])
   end
+  def form_svg_div(category)
+    file_path = "#{Rails.root}/db/fixtures/picto/#{category.downcase}.svg"
+    svg_file_path = File.read(file_path).html_safe
+
+    return content_tag(:div, svg_file_path, class: ["fill-gradient-#{category.downcase}", "form-svg"])
+  end
+
+  def index_svg_div(category)
+    file_path = "#{Rails.root}/db/fixtures/picto/#{category.downcase}.svg"
+    svg_file_path = File.read(file_path).html_safe
+
+    return content_tag(:div, svg_file_path, class: ["fill-gradient-#{category.downcase}", "show-svg-white"])
+  end
 
   def white_svg_div(category)
     file_path = "#{Rails.root}/db/fixtures/picto/#{category.downcase}.svg"
     svg_file_path = File.read(file_path).html_safe
 
-    return content_tag(:div, svg_file_path, class: ["white-svg-white"])
+    return content_tag(:div, svg_file_path, class: ["show-svg-white"])
   end
 
   def current_class?(test_path)

@@ -4,8 +4,9 @@
       <div class="col-md-5 col-md-offset-1">
         <div class="banner-mission-content">
           <h1><%= @mission.title %></h1>
-          <div class="page-metas" >
-            <div class="meta-item " > <%= @mission.volunteers_needed %> volontaires demandés</div>
+          <div>
+            <div class="meta-item " > le <%= l(@mission.starting_at, format: :short) %> - </div>
+            <div class="meta-item " >  <%= @mission.volunteers_needed %> volontaires demandés</div>
           </div>
         </div>
       </div>
@@ -25,7 +26,7 @@
             <% else %>
               <p><%= @mission.skills_needed %></p>
             <% end %>
-          <div class= "button-more-2 gradient-<%=@mission.category.downcase %>"><%= link_to "Participer à cette mission", mission_applications_path(@mission), method: :post %> </div>
+          <div class= "button-more-2 gradient-<%=@mission.category.downcase %> button-white-<%=@mission.category.downcase %>"><%= link_to "Participer à cette mission", mission_applications_path(@mission), method: :post %> </div>
         </div>
       </div>
       <div class="col-md-4 col-md-offset-1">
@@ -33,10 +34,9 @@
           <h3 class= "text-justify"><%= @mission.organization.name %></h3>
           <h2> Description </h2>
           <div class="asso-desc">
-            <p class= "text-center"><%=@mission.organization.description.first(300)%></p>
+            <p class= "text-center"><%=@mission.organization.description.first(500)%></p>
           </div>
-          <div class= "button-more-2 gradient-<%=@mission.category.downcase %> dashboard-position"><%= link_to "En savoir plus", associations_path(@organization) %> </div>
-
+          <div class= "button-more-2 gradient-<%=@mission.category.downcase %> button-white-<%=@mission.category.downcase %>"><%= link_to "En savoir plus", association_path(@organization) %> </div>
         </div>
       </div>
     </div>

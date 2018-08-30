@@ -18,7 +18,7 @@
   }
   h2 {
   width: 90%;
-  font-size: 1.1em;
+  font-size: 1.05em;
   position: absolute;
   left: 8%;
   bottom: 28%;
@@ -38,6 +38,7 @@
 
 
 .overlay {
+  padding: 15px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -51,7 +52,7 @@
 
   h3 {
   width: 90%;
-  font-size: 1.2em;
+  font-size: 1.05em;
   position: absolute;
   left: 8%;
   bottom: 28%;
@@ -62,7 +63,7 @@
 
   h4 {
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.7em;
   position: absolute;
   left: 8%;
   bottom: 20%;
@@ -72,7 +73,7 @@
 
   h5 {
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.7em;
   position: absolute;
   left: 8%;
   right: 8%;
@@ -84,7 +85,7 @@
 
   h6 {
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.7em;
   position: absolute;
   left: 8%;
   right: 8%;
@@ -97,7 +98,6 @@
 
 .missions-cards:hover .overlay {
   opacity:1;
-  transform: scale(1.02);
 }
 
 .border-bottom {
@@ -132,7 +132,7 @@
   }
   p {
   width: 180px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   position: absolute;
   left: 6%;
   bottom: 6%;
@@ -240,7 +240,6 @@
 
 .show-svg-white {
   fill: white;
-  margin-left: 10px;
   svg {
     width: 70px;
   }
@@ -250,11 +249,11 @@
 
 .white-svg-white {
   fill: white;
-  margin-left: 20px;
+  margin-left: 50px;
   svg {
     width: 70px;
   }
-  margin-top: 105px;
+  margin-top: 115px;
 }
 
 .mini-svg-white {
