@@ -65,3 +65,7 @@
 .select2-dropdown--below {
   z-index: 1000;
 }
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: none !important;
+}
