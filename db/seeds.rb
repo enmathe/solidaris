@@ -37,8 +37,8 @@ binta = User.create!(
   last_name: "Diallo",
   phone_number: "0677779865",
   description: "Je suis très méticuleuse et organisée.
-  Je viens de finir un master en Art Appliqué est
-  c'est ma soeur Fatou qui m'a parlé de cette plateforme et c'est la 1ère fois
+  Je viens de finir un master en Art Appliqué.
+  C'est ma soeur Fatou qui m'a parlé de cette plateforme et c'est la 1ère fois
   que je participe à une action humanitaire. Jai envie d'animer un atelier dessin une fois par semaine.",
   skills: "Dessin, Peinture, Street Art, Logiciels de PAO.",
   experiences: "Baby-Sitter pendant 5 ans / prof d'anglais pour des collégiens.",
@@ -53,7 +53,7 @@ elena = User.create!(
   phone_number: "0655323411",
   description: "J'ai 26 ans et je suis étudiante à la faculté de Droit de Nantes.
   Je viens de Colombie et je vis avec mon fiancé Thomas à Saint-Sébastien. Véhiculée, les déplacements
-  à Nantes Centre ne sont pas un problème.
+  au centre de Nnates ne sont pas un problème.
   Pour toutes questions relatives au juridique/droit, vous pouvez compter sur moi !",
   skills: "Spécialisée en Droit des Familles. Je parle anglais et espagnol.",
   experiences: "Stage de 6 mois au Barreau de Nantes.",
@@ -68,7 +68,7 @@ yulia = User.create!(
   phone_number: "0627658398",
   description: "J'ai 31 ans, je suis russe et j'habite à Nantes depuis 2 ans
   Je suis Chef Cuisto à la Cigale et j'adore mon métier ! Je souhaite donner mon temps pour cuisiner pour les exilés.
-  Mon patron est d'ailleurs d'accord pour faire des dons ponctuels.",
+  Mon patron est d'ailleurs d'accord pour faire des dons de manière ponctuelle.",
   skills: "Cuisine moléculaire/Cuisine Bistronomique",
   experiences: "Je me suis occupée d'enfants dans un orphelinat de ma ville natale
   et je gérais les repas pour 65 enfants.",
@@ -82,7 +82,7 @@ romain = User.create!(
   last_name: "Pazo",
   phone_number: "0675410100",
   description: "J'ai 50 ans et je suis professeur de mathématique au Lycée Saint Stanislas.
-  Je souhaite donner des cours de mathématique.",
+  Je souhaite donner des cours de Mathématique.",
   skills: "Agrégé en mathématique",
   experiences: "Professeur de mathématique (hypokhâgne)",
   picture: File.open(Rails.root.join("db/fixtures/users/romain.jpg"))
@@ -98,7 +98,7 @@ enzo = User.create!(
   des Affaires étrangères. Je suis passionné de moto.
   et je pars tous les week-ends faire des ballades
   au bord de la mer. Je n'ai pas beaucoup de temps, mais une à deux fois
-  par mois, je voudrais animer des ateliers 'Initiation à l'informatique'.",
+  par mois, je voudrais animer des ateliers 'Initiation à l'Informatique'.",
   skills: "Architecture Réseau / Machine Learning",
   experiences: "Web Ninja depuis l'âge de 8 ans.",
   picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
@@ -108,12 +108,9 @@ puts "Creating organizations..."
 
 cnrw = Organization.create!(
   name: "Cercle National Richard Wagner",
-  description: "Le Cercle Richard Wagner
-  rassemble aussi bien des passionnés convaincus
-  que des curieux en quête de découverte
-  de l’œuvre de Richard Wagner. Nous nous proposons
-  de former les exilés au chant lyrique. Nous vous laisserons le soin de fixer
-  les horaires car nous sommes relativement flexibles.",
+  description: "Le Cercle Richard Wagner rassemble aussi bien des passionnés convaincus
+  que des curieux en quête de découverte de l’œuvre de Richard Wagner. Nous nous proposons
+  de former les exilés au chant lyrique. Nous vous laisserons le soin de fixer les horaires car nous sommes relativement flexibles.",
   email: "cnrw@fr",
   password: "azerty",
   kind: "Association",
@@ -135,7 +132,7 @@ cnrw = Organization.create!(
 
 kollectif_93 = Organization.create!(
   name: "Kollectif_93",
-  description: "Le Kollectif_93 est une équipe de passionnés d’art urbain.
+  description: "Le Kollectif_93 est une équipe de passionnés d’Art Urbain.
   Nous prenons le parti d’accompagner de jeunes artistes français et internationaux du milieu graffiti
   et street art. Nous souhaitons animer des ateliers 'street-art' pour les exilés de Nantes.",
   email: "kollectif_93@fr",
@@ -160,13 +157,16 @@ kollectif_93 = Organization.create!(
 bns = Organization.create!(
   name: "Boxe Nantaise Savate",
   description: "C'est Jules Germany, 2 fois champion de France de boxe française, qui a fondé cette structure originale.
-  Les valeurs qu'il souhaite inculquer à ses champions en herbe sont le respect, l'humilité, le courage
+  Les valeurs qu'il souhaite inculquer à ses champions en herbe
+  sont le respect, l'humilité, le courage
   et la détermination.
   Ce n'est pas un club de boxe comme les autres : On y apprend bien sûr le combat
   mais on peut aussi profiter de soutien scolaire et
   d'accompagnement professionnel avant l'entrainement ! Nous souhaitons donner 2 entraînements
-  de 2h par semaine et nous fournissons les tickets de tram pour se rendre à la salle de sport. Une paire de basket
-  est demandée mais nous mettons à disposition gants, protège-dent et protège-tibia.",
+  de 2h par semaine et nous fournissons les tickets de bus/trammay
+  pour se rendre à la salle de sport.
+  Une paire de basket est demandée mais nous mettons à
+  disposition gants, protège-dent et protège-tibia.",
   email: "bns@gmail.fr",
   password: "azerty",
   phone_number: "06 55 88 23 00",
@@ -188,11 +188,13 @@ bns = Organization.create!(
 
 réseau_entreprendre = Organization.create!(
   name: "Réseau Entreprendre",
-  description: "L’histoire de Réseau Entreprendre débute en 1986 lorsqu’André Mulliez, industriel du Nord
+  description: "L’histoire de Réseau Entreprendre débute en 1986 lorsqu’André Mulliez,
+  industriel du Nord
   de la France confronté à des licenciements massifs dans son entreprise Phildar,
   lance cette maxime visionnaire et pleine de bon sens : « Pour créer des emplois, créons des employeurs ».
   Son idée : faire réussir des entrepreneurs à potentiel de création d’emplois en leur transmettant le savoir-être et l’expérience de chefs d’entreprise en activité,
-  au travers d’échanges de pairs à pairs. Réseau Entreprendre ce sont des milliers de success stories
+  au travers d’échanges de pairs à pairs.
+  Réseau Entreprendre ce sont des milliers de success stories
   (Michel & Augustin, Sushi Daily, My Little Paris…).
   Nous nous proposons d'aller à la rencontre des exilés pour les accompagner sur leur propre projet et les faire
   pitcher. 3 sessions de 1h sont prévues.",
@@ -219,7 +221,7 @@ lire_et_faire_lire_ = Organization.create!(
   name: "Lire et Faire Lire",
   description: "
   Lire et faire lire est un programme national d’ouverture à la lecture et de solidarité intergénérationnelle.
-  Des bénévoles de plus de 50 ans offrent une partie de leur temps libre aux mineurs pour
+  Des bénévoles de plus de 50 ans offrent une partie de leur temps libre à des mineurs pour
   stimuler le goût de la lecture et de la littérature.
   Des séances de lecture sont organisées en petit groupe, une ou plusieurs fois par semaine, durant toute
   l’année, dans une démarche axée sur le plaisir de lire et la rencontre entre les générations.",
@@ -244,14 +246,13 @@ lire_et_faire_lire_ = Organization.create!(
 
 dessins_sans_papiers = Organization.create!(
   name: "Dessins Sans Papiers",
-  description: "DESSINS SANS PAPIERS est un collectif qui organise des ateliers
-  dans des camps de réfugiés
-  et des centres d’hébergement depuis 2016. DSP publie aussi des livres de dessins
+  description: "Dessins sans Papiers est un collectif qui organise des ateliers
+  dans des camps de réfugiés et des centres d’hébergement depuis 2016. DSP publie aussi des livres de dessins
   pour passer les frontières et partager des histoires que tout le monde peut comprendre.
   Ceux que nous avons rencontrés viennent du Soudan, du Tchad, du Mali, de Guinée Conakry,
-  d’Érythrée, d’Éthiopie,
-  du Tibet, d’Égypte, d’Iran, d’Irak, de Syrie, du Pakistan …
-  ou d’Afghanistan. Leurs dessins montrent des milices qui tirent sur des hommes, des oiseaux fatigués,
+  d’Érythrée, d’Éthiopie, du Tibet, d’Égypte, d’Iran, d’Irak, de Syrie,
+  du Pakistan ou d’Afghanistan. Leurs dessins montrent des milices qui tirent sur des hommes,
+  des oiseaux fatigués,
   des messages d’amitié accrochés
   à la Tour Eiffel. Ils nous disent ce qu’ils ont fui et pourquoi ils ont besoin de notre hospitalité.",
   email: "dessinssanspapiers@gmail.fr",
@@ -832,24 +833,17 @@ hébergement_3 = Mission.create!({
 cours_de_dessin = Mission.create!({
   title: "Cours de dessin",
   category: "Activite",
-  address: "16 boulevard de Stalingrad, 44000 Nantes",
+  address: "4 rue de la Gare, 44000 Nantes",
   volunteers_needed: 1000,
-  description: "Votre mission en tant que bénévole :
-  - Encadrer avec 2 autres bénévoles un groupe d'une vingtaine de personnes
-  - Apprendre les bases du dessin
-  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association
-  ",
-  skills_needed: "
-  Passionnée par le dessin,
-  Bases en pédagogie,
-  ",
+  description: "Votre principale mission : donner l’envie aux exilés de développer leur créativité et leur esprit critique.",
+  skills_needed: "Compétences artistiques : histoire de l’art, techniques et pratiques
+  ne doivent avoir aucun secret pour vous.",
   starting_at: "2018/09/12 15:00:00",
   duration_in_hours: 4,
   recurrent: false,
   end_candidature_date: "2018/09/12 15:00:00",
   organization: diaconat
 })
-
 
 activité_sportive = Mission.create!({
   title: "Encadrement tournoi",
@@ -866,7 +860,7 @@ activité_sportive = Mission.create!({
   Bases en pédagogie,
   Avoir le BAFA serait un plus",
   starting_at: "2018/09/03 08:00:00",
-  duration_in_hours: 10,
+  duration_in_hours: 2,
   recurrent: false,
   end_candidature_date: "2018/08/31 08:00:00",
   organization: gref
@@ -875,23 +869,133 @@ activité_sportive = Mission.create!({
 cours_de_dessin_1 = Mission.create!({
   title: "Cours de dessin",
   category: "Activite",
-  address: "16 boulevard de Stalingrad, 44000 Nantes",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
   volunteers_needed: 4,
-  description: "
-  - Encadrer avec 2 autres bénévoles un groupe de 10 de personnes
-  - Apprendre les bases du dessin
-  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association
-  - Introduire les exilés aux Arts Plastiques.
-  - Enrichir leur imaginaire par l’échange et la pratique des arts
-  plastiques",
-  skills_needed: "
-  Passionnée par le dessin,
-  Bases en pédagogie,
-  BAFA souhaité",
-  starting_at: "2018/09/12 15:00:00",
+  description: "Votre principale mission : donner l’envie aux mineurs isolés de développer
+  leur créativité et leur esprit critique.",
+  skills_needed: "Compétences artistiques : histoire de l’art, techniques et pratiques
+  ne doivent avoir aucun secret pour vous.",
+  starting_at: "2017/03/02 14:00:00",
   duration_in_hours: 3,
   recurrent: false,
-  end_candidature_date: "2018/09/07 15:00:00",
+  end_candidature_date: "2017/02/02 14:00:00",
+  organization: dessins_sans_papiers
+})
+
+cours_de_dessin_2 = Mission.create!({
+  title: "Cours de dessin",
+  category: "Activite",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "
+  Vous éveillez la curiosité des exilés à travers différentes techniques d’expression artistique :
+  le dessin, mais aussi la peinture, la sculpture ou la bande dessinée.",
+  skills_needed: "
+  Le BAFA serait un plus",
+  starting_at: "2017/07/04 09:00:00",
+  duration_in_hours: 2,
+  recurrent: false,
+  end_candidature_date: "2017/06/01 14:00:00",
+  organization: dessins_sans_papiers
+})
+
+cours_de_dessin_3 = Mission.create!({
+  title: "Cours de dessin",
+  category: "Activite",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "Vous incitez vos élèves à s’intéresser à
+  des techniques d’expression artistique dites 'modernes' comme le collage ou l'art urbain.
+  Vous organisez ponctuellement des sorties au musée des Beaux-Art de Nantes.",
+  skills_needed: "
+  CAPES souhaité",
+  starting_at: "2017/10/10 10:00:00",
+  duration_in_hours: 3,
+  recurrent: false,
+  end_candidature_date: "2017/09/01 14:00:00",
+  organization: dessins_sans_papiers
+})
+
+cours_de_dessin_4 = Mission.create!({
+  title: "Cours de dessin",
+  category: "Activite",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "
+  Votre principale mission : donner l’envie aux mineurs isolés de développer
+  leur créativité et leur esprit critique.",
+  skills_needed: "Bases en pédagogie",
+  starting_at: "2017/12/10 10:00:00",
+  duration_in_hours: 3,
+  recurrent: false,
+  end_candidature_date: "2017/11/15 14:00:00",
+  organization: dessins_sans_papiers
+})
+
+cours_de_dessin_5 = Mission.create!({
+  title: "Cours de dessin",
+  category: "Activite",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "
+  - Encadrer avec 2 autres bénévoles un groupe de 10 personnes
+  - Apprendre les bases du dessin
+  - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association",
+  skills_needed: "",
+  starting_at: "2017/05/02 08:00:00",
+  duration_in_hours: 2,
+  recurrent: false,
+  end_candidature_date: "2017/04/15 14:00:00",
+  organization: dessins_sans_papiers
+})
+
+cours_de_dessin_6 = Mission.create!({
+  title: "Cours de dessin",
+  category: "Activite",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "
+  Vous éveillez la curiosité des exilés à travers différentes techniques d’expression artistique :
+  le dessin, mais aussi la peinture, la sculpture ou la bande dessinée.",
+  skills_needed: "L'anglais est nécessaire.",
+  starting_at: "2018/10/25 14:00:00",
+  duration_in_hours: 3,
+  recurrent: false,
+  end_candidature_date: "2018/09/10 14:00:00",
+  organization: dessins_sans_papiers
+})
+
+cours_de_dessin_7 = Mission.create!({
+  title: "Cours de dessin",
+  category: "Activite",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "
+  Vous enrichissez l'imaginaire des exilés par l’échange et la pratique des arts
+  plastiques",
+  skills_needed: "
+  Bonne humeur...et puis c'est tout !",
+  starting_at: "2018/10/23 09:00:00",
+  duration_in_hours: 2,
+  recurrent: false,
+  end_candidature_date: "2018/09/10 14:00:00",
+  organization: dessins_sans_papiers
+})
+
+cours_de_dessin_8 = Mission.create!({
+  title: "Cours de dessin",
+  category: "Activite",
+  address: "26 boulevard de Stalingrad, 44000 Nantes",
+  volunteers_needed: 4,
+  description: "
+  Vous incitez vos élèves à s’intéresser à
+  des techniques d’expression artistique dites 'modernes' comme le collage ou l'art urbain.
+  Vous organisez ponctuellement des sorties au musée des Beaux-Art de Nantes.",
+  skills_needed: "",
+  starting_at: "2018/09/19 15:00:00",
+  duration_in_hours: 3,
+  recurrent: false,
+  end_candidature_date: "2018/09/01 14:00:00",
   organization: dessins_sans_papiers
 })
 
@@ -902,7 +1006,6 @@ accompagnateur_refugie = Mission.create!({
   volunteers_needed: 10,
   description: "Votre mission en tant que bénévole :
   - Encadrer avec 2 autres bénévoles un groupe d'une vingtaine de personnes
-  - Apprendre les bases du dessin
   - Accompagner les personnes depuis leur domicile jusqu'au siège de l'association",
   skills_needed:"",
   starting_at: "2018/09/11 07:00:00",
@@ -1611,10 +1714,10 @@ puts "Creating applications..."
 
 candidature_2 = Application.create!({
   user: fatou,
-  mission: aide_aux_devoirs
+  mission: cours_de_dessin_1
 })
 candidature_3 = Application.create!({
-  user: enzo,
+  user: fatou,
   mission: hébergement_2
 })
 candidature_4 = Application.create!({
@@ -1622,15 +1725,15 @@ candidature_4 = Application.create!({
   mission: accompagnateur_refugie
 })
 candidature_5 = Application.create!({
-  user: enzo,
-  mission: collecte_para_4
+  user: yulia,
+  mission: cours_de_dessin_5
 })
 candidature_6 = Application.create!({
   user: enzo,
   mission: hébergement_2
 })
 candidature_7 = Application.create!({
-  user: enzo,
+  user: binta,
   mission: maraude
 })
 candidature_8 = Application.create!({
@@ -1646,11 +1749,11 @@ candidature_10 = Application.create!({
   mission: benevoles_entraide
 })
 candidature_11 = Application.create!({
-  user: romain,
-  mission: insertion_professionnelle
+  user: yulia,
+  mission: cours_de_dessin_7
 })
 candidature_12 = Application.create!({
-  user: romain,
+  user: elena,
   mission: parrain
 })
 
