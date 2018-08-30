@@ -1,6 +1,6 @@
 .show-container {
   color: white;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   h1 {
     font-size: 40px;
     line-height: 45px;
@@ -52,6 +52,7 @@
     font-size: 14px;
     text-align: justify;
     font-weight: lighter;
+    letter-spacing: 1.1;
     margin: 20px 0;
     margin-bottom: 40px;
     line-height: 1.7;
@@ -61,6 +62,7 @@
     display: inline-block;
     font-size: 16px;
     line-height: 23px;
+    font-weight: 100;
     color: white;
     white-space: nowrap;
     text-align: justify;
@@ -154,7 +156,7 @@
   padding-left: 55px;
   padding-top: 10px;
   border-radius: 5px;
-  height: calc(100vh - 330px);
+  height: calc(100vh - 310px);
   position: absolute;
   h2 {
     position: relative;
@@ -177,7 +179,7 @@
 }
 
 .asso-desc {
-  height: 20vh;
+  height: 33vh;
 }
 
 .banner-mission-organization-2 {
@@ -290,17 +292,14 @@
   }
 
   .meta-item {
-    display: inline-block;
     font-size: 16px;
     line-height: 23px;
     color: white;
-    white-space: nowrap;
     text-align: justify;
     font-weight: lighter;
   }
 
   .page-metas {
-    display: flex;
     margin-bottom: 50px;
   }
 }
