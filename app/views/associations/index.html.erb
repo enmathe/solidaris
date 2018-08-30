@@ -1,8 +1,10 @@
-<h1>Organizations</h1>
-
-<ul>
-<% @associations.each do |association| %>
-  <li><%= association.name %></li>
-  <%#= association.description %>
-<% end %>
-</ul>
+<div class="asso-listing-container">
+  <h1>Associations & organisations</h1>
+  <div class="asso-listing-">
+    <% @associations.each do |association| %>
+      <div class=""><%= association.name %>
+      </div>
+      <%#= association.description %>
+    <% end %>
+  </div>
+</div>
