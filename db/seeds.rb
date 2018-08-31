@@ -124,10 +124,10 @@ cnrw = Organization.create!(
   twitter: "https://twitter.com/YendeJulie",
   address: "2 bd de la Marine Marchande, 44300 Nantes",
   creation_year: "1978",
-  logo: File.open(Rails.root.join("db/fixtures/organization/cnrw/logo.jpg")),
-  photo_1: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_2.jpg")),
-  photo_3: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_3.jpg")),
+  # logo: File.open(Rails.root.join("db/fixtures/organization/cnrw/logo.jpg")),
+  # photo_1: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_1.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_2.jpg")),
+  # photo_3: File.open(Rails.root.join("db/fixtures/organization/cnrw/pic_3.jpg")),
 )
 
 kollectif_93 = Organization.create!(
@@ -148,10 +148,10 @@ kollectif_93 = Organization.create!(
   twitter: "https://twitter.com/YendeJulie",
   address: "5 rue du tour du monde, 44300 Nantes",
   creation_year: 2007,
-  logo: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/logo.jpg")),
-  photo_1: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_2.jpg")),
-  photo_3: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_3.jpg")),
+  # logo: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/logo.jpg")),
+  # photo_1: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_1.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_2.jpg")),
+  # photo_3: File.open(Rails.root.join("db/fixtures/organization/kollectif_93/pic_3.jpg")),
 )
 
 bns = Organization.create!(
@@ -180,10 +180,10 @@ bns = Organization.create!(
   twitter: "https://twitter.com/YendeJulie",
   address: "2 rue de la Poste, 44000 Nantes",
   creation_year: 1998,
-  logo: File.open(Rails.root.join("db/fixtures/organization/bns/logo.jpg")),
-  photo_1: File.open(Rails.root.join("db/fixtures/organization/bns/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/bns/pic_2.jpg")),
-  photo_3: File.open(Rails.root.join("db/fixtures/organization/bns/pic_3.jpg")),
+  # logo: File.open(Rails.root.join("db/fixtures/organization/bns/logo.jpg")),
+  # photo_1: File.open(Rails.root.join("db/fixtures/organization/bns/pic_1.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/bns/pic_2.jpg")),
+  # photo_3: File.open(Rails.root.join("db/fixtures/organization/bns/pic_3.jpg")),
 )
 
 réseau_entreprendre = Organization.create!(
@@ -211,10 +211,10 @@ réseau_entreprendre = Organization.create!(
   twitter: "https://twitter.com/YendeJulie",
   address: "54 rue du Costa Rica, 44000 Nantes",
   creation_year: 1986,
-  logo: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/logo.jpg")),
-  photo_1: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_1.jpg")),
-  # photo_2: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_2.jpg")),
-  # photo_3: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_3.jpg")),
+  # logo: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/logo.jpg")),
+  # photo_1: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_1.jpg")),
+  # # photo_2: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_2.jpg")),
+  # # photo_3: File.open(Rails.root.join("db/fixtures/organization/reseau_entreprendre/pic_3.jpg")),
 )
 
 lire_et_faire_lire_ = Organization.create!(
@@ -238,10 +238,10 @@ lire_et_faire_lire_ = Organization.create!(
   twitter: "https://twitter.com/YendeJulie",
   address: "28 Boulevard Allende, 44000 Nantes",
   creation_year: 1991,
-  logo: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/logo.jpg")),
-  # photo_1: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_1.jpg")),
-  # photo_2: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_2.jpg")),
-  photo_3: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_3.jpg")),
+  # logo: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/logo.jpg")),
+  # # photo_1: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_1.jpg")),
+  # # photo_2: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_2.jpg")),
+  # photo_3: File.open(Rails.root.join("db/fixtures/organization/lire_et_faire_lire/pic_3.jpg")),
 )
 
 dessins_sans_papiers = Organization.create!(
@@ -268,9 +268,9 @@ dessins_sans_papiers = Organization.create!(
   address: "2 Cours des Paludiers, 44100 Nantes",
   creation_year: 2005,
   logo: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/logo_dsp.jpg")),
-  photo_1: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_2.jpg")),
-  photo_3: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_3.jpg")),
+  # photo_1: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_1.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_2.jpg")),
+  # photo_3: File.open(Rails.root.join("db/fixtures/organization/dessins_sans_papiers/pic_3.jpg")),
 )
 
 anade = Organization.create!(
@@ -314,10 +314,10 @@ association_aurore = Organization.create!(
   twitter: "@AssoAurore",
   address: "29, allée de l'Indre, 44000 Nantes",
   creation_year: 1871,
-  logo: File.open(Rails.root.join("db/fixtures/organization/association_aurore.jpg")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: "",
+  # logo: File.open(Rails.root.join("db/fixtures/organization/association_aurore.jpg")),
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: "",
 )
 
 cfda = Organization.create!(
@@ -362,10 +362,10 @@ cfda = Organization.create!(
   twitter: "www.twitter.com",
   address: "36 quai de la fosse 44100 Nantes",
   creation_year: 2000,
-  logo: File.open(Rails.root.join("db/fixtures/organization/cfda.jpg")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: File.open(Rails.root.join("db/fixtures/organization/cfda.jpg")),
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 croix_rouge = Organization.create!(
@@ -391,10 +391,10 @@ croix_rouge = Organization.create!(
   twitter: "https://twitter.com/croixrouge",
   address: "10, rue d'Athènes, 44300 Nantes",
   creation_year: "1859",
-  logo: File.open(Rails.root.join("db/fixtures/organization/croix_rouge/logo.jpg")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: File.open(Rails.root.join("db/fixtures/organization/croix_rouge/logo.jpg")),
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 diaconat = Organization.create!(
@@ -414,10 +414,10 @@ diaconat = Organization.create!(
   twitter: "https://twitter.com/FeProtest",
   address: "15bis place Edouard Normand, 44000 Nantes",
   creation_year: 1984,
-  logo: "",
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: "",
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 emmaus = Organization.create!(
@@ -441,10 +441,10 @@ emmaus = Organization.create!(
   twitter: "https://twitter.com/croixrouge",
   address: "La Guilloterie Rue d'Emmaüs 44340 Bouguenais",
   creation_year: 1950,
-  logo: File.open(Rails.root.join("db/fixtures/organization/emmaus.jpg")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: File.open(Rails.root.join("db/fixtures/organization/emmaus.jpg")),
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 fbna = Organization.create!(
@@ -468,10 +468,10 @@ fbna = Organization.create!(
   twitter: "https://twitter.com/francebenevolat",
   address: "9 Place Mangin 44200 Nantes",
   creation_year: 1965,
-  logo: File.open(Rails.root.join("db/fixtures/organization/fbna.jpg")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: File.open(Rails.root.join("db/fixtures/organization/fbna.jpg")),
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 gasprom = Organization.create!(
@@ -495,10 +495,10 @@ gasprom = Organization.create!(
   twitter: "www.twitter.com",
   address: "24 rue Fouré 44000 Nantes",
   creation_year: 1970,
-  logo: "",
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: "",
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 gref = Organization.create!(
@@ -533,10 +533,10 @@ gref = Organization.create!(
   twitter: "www.twitter.com",
   address: "Rue meuris, Nantes",
   creation_year: 1980,
-  logo: File.open(Rails.root.join("db/fixtures/organization/gref.png")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: File.open(Rails.root.join("db/fixtures/organization/gref.png")),
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 acceuil = Organization.create!(
@@ -559,10 +559,10 @@ acceuil = Organization.create!(
   twitter: "www.twitter.com",
   address: "7 chemin de la Censive du Tertre 44300 Nantes",
   creation_year: 1987,
-  logo: "",
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: "",
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 pastorale = Organization.create!(
@@ -587,10 +587,10 @@ pastorale = Organization.create!(
   twitter: "www.twitter.com",
   address: "43 Rue Gaston Turpin 44000 Nantes",
   creation_year: 2006,
-  logo: "",
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: "",
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 gout_des_autres = Organization.create!(
@@ -627,10 +627,10 @@ gout_des_autres = Organization.create!(
   twitter: "www.twitter.com",
   address: "23, rue Henri Brunelière 44000 Nantes",
   creation_year: 2009,
-  logo: "",
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: "",
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 ligue_droits_de_lhomme = Organization.create!(
@@ -655,10 +655,10 @@ ligue_droits_de_lhomme = Organization.create!(
   twitter: "www.twitter.com",
   address: "4 Place de la Manu 44000 Nantes",
   creation_year: 1898,
-  logo: "",
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: "",
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 saint_jean = Organization.create!(
@@ -678,10 +678,10 @@ saint_jean = Organization.create!(
   twitter: "www.twitter.com",
   address: "11 Rue du Chapeau Rouge 44000 Nantes",
   creation_year: 2010,
-  logo: "",
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: "",
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 mrap = Organization.create!(
@@ -703,10 +703,10 @@ mrap = Organization.create!(
   twitter: "www.twitter.com",
   address: "11 rue de Prinquiau 44100 Nantes",
   creation_year: 1949,
-  logo: File.open(Rails.root.join("db/fixtures/organization/mrap.jpg")),
-  photo_1: "",
-  photo_2: "",
-  photo_3: ""
+  # logo: File.open(Rails.root.join("db/fixtures/organization/mrap.jpg")),
+  # photo_1: "",
+  # photo_2: "",
+  # photo_3: ""
 )
 
 medecins_du_monde = Organization.create!(
@@ -730,10 +730,10 @@ medecins_du_monde = Organization.create!(
   twitter: "www.twitter.com",
   address: "33 Rue Fouré 44000 Nantes",
   creation_year: 1954,
-  logo: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/logo.jpg")),
-  photo_1: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_1.jpg")),
-  photo_2: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_2.jpg")),
-  photo_3: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_3.jpg"))
+  # logo: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/logo.jpg")),
+  # photo_1: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_1.jpg")),
+  # photo_2: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_2.jpg")),
+  # photo_3: File.open(Rails.root.join("db/fixtures/organization/medecin_du_monde/pic_3.jpg"))
 )
 
 puts "Creating missions..."
