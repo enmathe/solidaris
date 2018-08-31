@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,9 +9,10 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://delit-de-solidarite.com/" />
     <meta property="og:description" content="Le seul délit que vous encourez, c'est de donner de votre temps"/>
-    <meta property="og:image" content="https://res.cloudinary.com/dk6mjofqi/image/upload/v1535629988/delitdesolidarite-coverpicture.jpg" />
+    <meta property="og:image" content="<%= image_url "banner.jpg" %>" />
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+    <%= favicon_link_tag 'favicon.png' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
