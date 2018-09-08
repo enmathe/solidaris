@@ -79,7 +79,9 @@
         </div>
         <%= f.input :description, label: 'Ajoutez une description pour recevoir plus de candidatures' %>
         <%= f.input :skills_needed, label: 'Quel type de profil recherchez-vous ?' %>
-        <%= f.submit "Créer", class: "btn btn-primary" %>
+        <div class="btn-container col-md-offset-9">
+          <%= f.submit "Créer", class: "btn btn-primary" %>
+        </div>
       </div>
     </div>
   </div>

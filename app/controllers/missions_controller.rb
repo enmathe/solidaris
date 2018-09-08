@@ -45,12 +45,7 @@ class MissionsController < ApplicationController
     end
     # mission[starting_at]=30.08.2018+to+31.08.2018
 
-
-
-
-
-
-
+    @missions = @missions.order(created_at: :desc)
 
 
     unless @missions.empty?

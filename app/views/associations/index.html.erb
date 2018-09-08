@@ -1,10 +1,16 @@
-<div class="asso-listing-container">
-  <h1>Associations & organisations</h1>
-  <div class="asso-listing-">
-    <% @associations.each do |association| %>
-      <div class=""><%= association.name %>
-      </div>
-      <%#= association.description %>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">Associations & organisations</h1>
+  </div>
+  <div class="row">
+      <% @associations.each do |association| %>
+        <div class="col-xs-12 col-sm-9 col-md-3">
+          <div class="associations-cards">
+            <h2><%= association.name %></h2>
+        <%#= association.description %>
+          </div>
+        </div>
+      <% end %>
   </div>
 </div>
+

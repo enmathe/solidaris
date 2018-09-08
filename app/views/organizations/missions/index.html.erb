@@ -12,7 +12,6 @@
       </div>
     </div>
     <div class="navbar-button">
-      <%= link_to "Créer un délit", new_organizations_mission_path, class: "btn btn-primary" %>
     </div>
   </div>
   <div class="wrapper-bottom">
@@ -43,7 +42,7 @@
           <h4>Besoins en cours </h4>
           <div class="flex-container">
             <% if @recurrent_current.present? %>
-              <% @recurrent_current.reverse_each.last(6) do |mission| %>
+              <% @recurrent_current.reverse_each do |mission| %>
                   <div class="missions-cards-dashboard">
                     <%= link_to organizations_mission_path(mission) do %>
                       <%= index_svg_div(mission.category) %>

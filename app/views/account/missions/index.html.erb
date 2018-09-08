@@ -7,7 +7,6 @@
     </div>
   </div>
   <div class="navbar-button">
-   <!--  <%= link_to "VO", new_organizations_mission_path, class: "btn btn-primary" %> -->
   </div>
 </div>
 <div class="wrapper-bottom">
@@ -44,11 +43,11 @@
                   <h2><%= mission.title %></h2>
                   <p><%= mission.organization.name%></p>
                   <div class="border-bottom gradient-<%=mission.category.downcase%>"></div>
-                  <div class="overlay gradient-<%=mission.category.downcase%>">
+                  <div class="gradient-<%=mission.category.downcase%> overlay-dashboard"> <!-- overlay dashboard-svg -->
                     <%= white_svg_div(mission.category) %>
-                    <h3><%= mission.title %></h3>
-                    <h4><%= mission.organization.name%></h4>
-                    <h5><%= l(mission.starting_at, format: :short) %></h5>
+                    <h2><%= mission.title %></h2>
+                    <p><%= mission.organization.name%></p>
+                    <p><strong><%= l(mission.starting_at, format: :short) %></strong></p>
                   </div>
               <% end %>
             </div>
@@ -60,12 +59,10 @@
       <div class="flex-container">
         <% @coming.reverse_each do |mission| %>
           <%= link_to organizations_mission_path(mission) do %>
-            <div class="mini-card-container">
-              <div class="mini-card-description">
+            <div class="mini-card-container mini-card-description">
                 <%= mini_svg_div(mission.category) %>
                 <h2><%= mission.title %></h2>
                 <p><%= mission.organization.name %></p>
-              </div>
             </div>
           <% end %>
         <% end %>
@@ -73,5 +70,4 @@
     </div>
   </div>
 </div>
-
 
