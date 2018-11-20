@@ -27,7 +27,7 @@ fatou = User.create!(
   skills: "Diplomée du CHU de Nantes / Maîtrise de l'anglais, de l'espagnol et de l'arabe.
   Je suis patiente et empathique.",
   experiences: "Membre d'une association pour faire avancer la science depuis 2011.",
-  picture: File.open(Rails.root.join("db/fixtures/users/fatou.jpg"))
+  # picture: File.open(Rails.root.join("db/fixtures/users/fatou.jpg"))
 )
 
 binta = User.create!(
@@ -42,7 +42,7 @@ binta = User.create!(
   que je participe à une action humanitaire. Jai envie d'animer un atelier dessin une fois par semaine.",
   skills: "Dessin, Peinture, Street Art, Logiciels de PAO.",
   experiences: "Baby-Sitter pendant 5 ans / prof d'anglais pour des collégiens.",
-  picture: File.open(Rails.root.join("db/fixtures/users/binta.jpg"))
+  # picture: File.open(Rails.root.join("db/fixtures/users/binta.jpg"))
 )
 
 elena = User.create!(
@@ -57,7 +57,7 @@ elena = User.create!(
   Pour toutes questions relatives au juridique/droit, vous pouvez compter sur moi !",
   skills: "Spécialisée en Droit des Familles. Je parle anglais et espagnol.",
   experiences: "Stage de 6 mois au Barreau de Nantes.",
-  picture: File.open(Rails.root.join("db/fixtures/users/elena.jpg"))
+  # picture: File.open(Rails.root.join("db/fixtures/users/elena.jpg"))
 )
 
 yulia = User.create!(
@@ -72,7 +72,7 @@ yulia = User.create!(
   skills: "Cuisine moléculaire/Cuisine Bistronomique",
   experiences: "Je me suis occupée d'enfants dans un orphelinat de ma ville natale
   et je gérais les repas pour 65 enfants.",
-  picture: File.open(Rails.root.join("db/fixtures/users/yulia.jpg"))
+  # picture: File.open(Rails.root.join("db/fixtures/users/yulia.jpg"))
 )
 
 romain = User.create!(
@@ -85,7 +85,7 @@ romain = User.create!(
   Je souhaite donner des cours de Mathématique.",
   skills: "Agrégé en mathématique",
   experiences: "Professeur de mathématique (hypokhâgne)",
-  picture: File.open(Rails.root.join("db/fixtures/users/romain.jpg"))
+  # picture: File.open(Rails.root.join("db/fixtures/users/romain.jpg"))
 )
 
 enzo = User.create!(
@@ -101,7 +101,7 @@ enzo = User.create!(
   par mois, je voudrais animer des ateliers 'Initiation à l'Informatique'.",
   skills: "Architecture Réseau / Machine Learning",
   experiences: "Web Ninja depuis l'âge de 8 ans.",
-  picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
+  # picture: File.open(Rails.root.join("db/fixtures/users/enzo.jpg"))
 )
 
 puts "Creating organizations..."
@@ -775,7 +775,7 @@ nourriture = Mission.create!({
   starting_at: "2018/10/17 14:00:00",
   duration_in_hours: 10,
   recurrent: false,
-  end_candidature_date: "2018/10/17 13:00:00",
+  end_candidature_date: (Date.today - 3),
   organization: association_aurore
 })
 

@@ -13,5 +13,3 @@ class ApplicationsController < ApplicationController
     end
   end
 end
-
-# mission_applications POST   /missions/:mission_id/applications(.:format)
