@@ -14,6 +14,7 @@ gem 'rails-i18n'
 gem 'redis'
 gem 'geocoder'
 gem 'enumerize'
+gem 'has_scope'
 
 
 gem 'autoprefixer-rails'
