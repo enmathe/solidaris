@@ -12,7 +12,6 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'rails-i18n'
 gem 'redis'
-gem 'geocoder'
 gem 'enumerize'
 gem 'has_scope'
 
@@ -36,5 +35,5 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+  gem 'rspec-rails', '~> 3.8'
 end
-

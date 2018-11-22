@@ -3,17 +3,15 @@ class Mission < ApplicationRecord
   belongs_to :organization
   has_many :users, through: :applications
   validates :category, presence: true
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
 
   scope :category, -> category { where("category ILIKE ?", category) unless category == "categories" }
-  # scope :address, -> city { near(address, 1) }
+  scope :address, -> city { where("address ILIKE ?", "%#{city}%") }
   scope :recurrency, -> recurrency { scope_recurrency(recurrency) }
   scope :time_range, -> time_range { scope_time_range(time_range) }
 
 
   extend Enumerize
-  enumerize :category, in: [
+  enumerize :categories, in: [
     :Hebergement,
     :Activite,
     :Collecte,
@@ -23,10 +21,6 @@ class Mission < ApplicationRecord
     :Enseignement,
     :Sante
   ]
-
-  def is_localized
-    self.longitude && self.latitude
-  end
 
   def self.scope_recurrency(recurrency)
     return unless recurrency.present? and recurrency != "both"

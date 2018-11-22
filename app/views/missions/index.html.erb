@@ -2,7 +2,7 @@
   <div id="filter-container">
     <div class="filters">
       <div><%= form_tag missions_path, method: :get do %>
-            <%= text_field_tag :address, params[:address], class: "form-control-index", placeholder: "Votre adresse" %>
+            <%= text_field_tag :address, params[:address], class: "form-control-index", placeholder: "Votre ville" %>
         </div>
         <div class="filter-control-index">
           <select class="select2" onchange="this.form.submit();" name="recurrency">  <!-- form-control-index -->
@@ -57,7 +57,6 @@
         <% end %>
       </div>
     </div>
-    <!-- <div id="map" data-markers="<%= @markers.present? ? @markers.to_json : [] %>"></div> -->
   </div>
 </div>
 

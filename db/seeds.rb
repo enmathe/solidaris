@@ -741,7 +741,7 @@ puts "Creating missions..."
 vetements = Mission.create!({
   title: "Collecte de vêtements",
   category: "Collecte",
-  address: "94 rue des hauts pavés, 44000 Nantes",
+  address: "94 rue des hauts pavés, 44000 Paris",
   volunteers_needed: 0,
   description: "En partenariat avec des écoles (Algérie, Egypte...)
   Orient Events recherche une personne en charge d'organiser
