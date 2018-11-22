@@ -42,4 +42,16 @@ class Mission < ApplicationRecord
 
     self.where("date(starting_at) BETWEEN ? AND ?", starting_on, ending_on)
   end
+
+  def is_coming
+    self.starting_at > Date.current
+  end
+
+  def is_current
+    self.recurrent == true && self.starting_at < Date.current && self.recurrency_ending_on > Date.current
+  end
+
+  def is_today
+    self.starting_at = Date.current
+  end
 end

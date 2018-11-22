@@ -1,67 +1,45 @@
 class Organizations::MissionsController < ApplicationController
   before_action :authenticate_organization!
-  before_action :set_organization
+  before_action :set_organization, only: [:create, :index]
+  before_action :set_mission, only: [:show, :edit, :update, :destroy]
 
   def index
-    @all_missions = Mission.all
-    @missions = []
-    @all_missions.each do |mission|
-      if mission.organization.id == current_organization.id
-        @missions << mission
-      end
-    end
-
-    @coming = []
-    @current = []
-    @past = []
-    @recurrent_current = []
-
-    @missions.each do |mission|
-      if mission.starting_at > Date.current
-        @coming << mission
-      elsif mission.recurrent == true && mission.starting_at < Date.current && mission.recurrency_ending_on > Date.current
-        @recurrent_current << mission
-      elsif mission.recurrent == true && mission.recurrency_ending_on < Date.current
-        @past << mission
-      else mission.recurrent == false && mission.starting_at < Date.current
-        @past << mission
-      end
-    end
+    @coming_missions = coming_organization_missions
+    @current_missions = current_organization_missions
+    @day_missions = day_organization_missions
   end
 
   def show
-    @mission = Mission.find(params[:id])
     @users = @mission.users
   end
 
   def new
-    @mission = Mission.new()
+    @mission = Mission.new
   end
 
   def create
     @mission = Mission.new(mission_params)
-    @mission.organization = Organization.find(current_organization.id)
+    @mission.organization = @organization
 
     if @mission.save
-      redirect_to organizations_missions_path
+      redirect_to organizations_missions_path, :notice => "Votre nouvelle mission a bien été créée!"
     else
       render :new
     end
   end
 
   def edit
-    @mission = Mission.find(params[:id])
   end
 
   def update
-    @mission = Mission.find(params[:id])
-    @organization = current_organization.id
-    @mission.update(mission_params)
-    redirect_to organizations_mission_path(@mission), :notice => "Vos changements ont été enregistrés!"
+    if @mission.update(mission_params)
+      redirect_to organizations_mission_path(@mission), :notice => "Vos changements ont été enregistrés!"
+    else
+      render :edit
+    end
   end
 
   def destroy
-    @mission = Mission.find(params[:id])
     @mission.destroy
     redirect_to organizations_mission_path(@mission), :notice => "Votre mission a été supprimée"
   end
@@ -70,6 +48,26 @@ class Organizations::MissionsController < ApplicationController
 
   def set_organization
     @organization = current_organization
+  end
+
+  def set_mission
+    @mission = Mission.find(params[:id])
+  end
+
+  def organization_missions
+    current_organization.missions
+  end
+
+  def coming_organization_missions
+    organization_missions.select { |mission| mission if mission.is_coming }
+  end
+
+  def current_organization_missions
+    organization_missions.select { |mission| mission if mission.is_current }
+  end
+
+  def day_organization_missions
+    organization_missions.select { |mission| mission if mission.is_today }
   end
 
   def mission_params

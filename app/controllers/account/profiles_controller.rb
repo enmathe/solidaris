@@ -1,6 +1,6 @@
 class Account::ProfilesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, only: [:show, :edit]
+  before_action :set_user
 
   def show
   end
@@ -9,9 +9,8 @@ class Account::ProfilesController < ApplicationController
   end
 
   def update
-    @profile = User.find(current_user.id)
     @profile.update(user_params)
-    redirect_to account_profile_path(@profile), :notice => "Your changes have been saved!"
+    redirect_to account_profile_path(@profile), :notice => "Votre profil a été modifié!"
   end
 
   private

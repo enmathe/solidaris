@@ -10,35 +10,29 @@
   </div>
 </div>
 <div class="wrapper-bottom">
-  <!-- <div class="wrapper-left">
-    <div class="container-grey-left">
-        <div class="container-stats">
-          <div class="stat">
-            <h3>6</h3>
-            <p>besoins en cours</p>
+  <div class="container-grey-right-bottom">
+    <h4>Missions du jour </h4>
+    <div class="flex-container">
+      <% @day_missions.reverse_each do |mission| %>
+        <%= link_to organizations_mission_path(mission) do %>
+          <div class="mini-card-container">
+            <div class="mini-card-description">
+              <%= mini_svg_div(mission.category) %>
+              <h2><%= mission.title %></h2>
+              <p><%= mission.organization.name %></p>
+            </div>
           </div>
-          <div class="stat">
-            <h3>2</h3>
-            <p>besoins postés</p>
-          </div>
-          <div class="stat">
-            <h3>15</h3>
-            <p>besoins récurrents</p>
-          </div>
-          <div class="stat">
-            <h3>8</h3>
-            <p>besoins récurrents</p>
-          </div>
-        </div>
+        <% end %>
+      <% end %>
     </div>
-  </div> -->
+  </div>
   <div class="wrapper-right">
       <div class="container-grey-right">
         <h4>Mes missions en cours </h4>
         <div class="flex-container">
-          <% @recurrent_current.reverse_each do |mission| %>
+          <% @current_missions.reverse_each do |mission| %>
               <div class="missions-cards-dashboard">
-                <%= link_to organizations_mission_path(mission) do %>
+                <%= link_to mission_path(mission) do %>
                   <%= index_svg_div(mission.category) %>
                   <h2><%= mission.title %></h2>
                   <p><%= mission.organization.name%></p>
@@ -57,8 +51,8 @@
     <div class="container-grey-right-bottom">
       <h4>Prochaines missions </h4>
       <div class="flex-container">
-        <% @coming.reverse_each do |mission| %>
-          <%= link_to organizations_mission_path(mission) do %>
+        <% @coming_missions.reverse_each do |mission| %>
+          <%= link_to mission_path(mission) do %>
             <div class="mini-card-container mini-card-description">
                 <%= mini_svg_div(mission.category) %>
                 <h2><%= mission.title %></h2>
@@ -70,4 +64,3 @@
     </div>
   </div>
 </div>
-
