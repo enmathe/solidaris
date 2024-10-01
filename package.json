@@ -2,7 +2,7 @@
   "name": "solidaris",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
+    "@rails/webpacker": "4.0.0",
     "bootstrap": "3",
     "flatpickr": "^4.5.1",
     "gmaps": "^0.4.24",
